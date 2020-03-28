@@ -3,9 +3,9 @@ const app = express();
 
 const { logger, exceptionsLogger } = require("./lib/logging");
 
-require("./lib/db")();
-require("./lib/routes")(app);
+require("./lib/db")(app);
 require("./lib/prod")(app);
+require("./lib/routes")(app);
 exceptionsLogger();
 
 const port = process.env.PORT || 4000;
