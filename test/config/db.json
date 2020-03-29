@@ -1,0 +1,7 @@
+{
+  "dataBaseUrl": {
+    "development": "mongodb+srv://heaty566:334963972131367Thinh@cluster0-2hmvh.mongodb.net/gamesStore?retryWrites=true&w=majority",
+    "production": "mongodb://localhost/gameStore"
+  },
+  "dataBaseOptions": { "useUnifiedTopology": true }
+}

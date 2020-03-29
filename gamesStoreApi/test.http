@@ -1,0 +1,41 @@
+GET  http://localhost:4000/api/users
+# content-type: application/json
+
+###
+GET  http://localhost:4000/api/games/genres
+content-type: application/json
+x-auth-token: 5e809330a3ca955054ef8a20
+
+
+
+
+###
+POST   http://localhost:4000/api/users/register
+content-type: application/json
+
+{
+      "name": "pham vinh nahn",
+      "username": "heat2y566",
+      "password": "password1",
+      "email": "heaty566@gmail.com",
+      "phone": "231232132",
+      "address": "feajnjncs"
+}
+
+###
+POST   http://localhost:4000/api/users/login
+content-type: application/json
+
+{
+      "username": "heaty566",
+      "password": "password1"
+}
+
+###
+POST   http://localhost:4000/api/users/logout
+content-type: application/json
+
+{
+      "token": "5e807b51ccdf1c3de010c020",
+      "userId": "5e80534d98ae5f250406596e"
+}

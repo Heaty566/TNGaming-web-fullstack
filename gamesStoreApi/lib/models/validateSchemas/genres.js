@@ -14,7 +14,7 @@ validateGenre = genre => {
                 "string.empty": formatError("Name", "string.empty"),
                 "string.min": formatError("Name", "string.min", " two characters"),
                 "string.max": formatError("Name", "string.max", " twenty characters"),
-                "string.pattern.base": formatError("Name", "string.pattern.base", "letterOnly"),
+                "string.pattern.base": formatError("Name", "string.pattern.base", "string.letterOnly"),
                 "any.required": formatError("Name", "any.required")
             })
     });
