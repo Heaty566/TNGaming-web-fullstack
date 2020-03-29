@@ -3,13 +3,14 @@ Joi.objectId = require("joi-objectid")(Joi);
 
 const { formatError } = require("../validateSchemas/validateErrorFormat");
 const { validateGenre } = require("./genres");
-const { validateUser, validateLoginUser } = require("./users");
+const { validateUser, validateLoginUser, validateUpdatePassword } = require("./users");
 
 isObjectId = (label, _id) => {
     const schema = Joi.object({
         _id: Joi.objectId()
             .required()
             .messages({
+                "any.required": formatError(label, "any.required"),
                 "string.pattern.name": formatError(label, "objectId")
             })
     });
@@ -17,4 +18,4 @@ isObjectId = (label, _id) => {
     return schema.validate({ _id });
 };
 
-module.exports = { validateGenre, validateUser, validateLoginUser, isObjectId };
+module.exports = { validateGenre, validateUser, validateLoginUser, validateUpdatePassword, isObjectId };

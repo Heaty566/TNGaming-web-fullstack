@@ -1,5 +1,6 @@
-GET  http://localhost:4000/api/users
-# content-type: application/json
+GET  http://localhost:4000/api/users/me
+content-type: application/json
+x-auth-token: 5e80cf5f69f7d91b14e236a2
 
 ###
 GET  http://localhost:4000/api/games/genres
@@ -15,8 +16,9 @@ content-type: application/json
 
 {
       "name": "pham vinh nahn",
-      "username": "heat2y566",
+      "username": "fakeus22er2",
       "password": "password1",
+      "confirm": "password",
       "email": "heaty566@gmail.com",
       "phone": "231232132",
       "address": "feajnjncs"
@@ -39,3 +41,28 @@ content-type: application/json
       "token": "5e807b51ccdf1c3de010c020",
       "userId": "5e80534d98ae5f250406596e"
 }
+###
+POST  http://localhost:4000/api/users/admin/cleantoken
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+
+get  http://localhost:4000/api/users/admin/allusers
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+POST  http://localhost:4000/api/users/admin/toggleAdmin/5e80e16edf73d44828287ec5
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+POST  http://localhost:4000/api/users/admin/toggleDeveloper/5e80e16edf73d44828287ec5
+content-type: application/json
+x-auth-token: 5e80e7a1eb4cb850306153bb
+
+###
+POST  http://localhost:4000/api/users/changePassword
+content-type: application/json
+x-auth-token: 5e80e7a1eb4cb850306153bb

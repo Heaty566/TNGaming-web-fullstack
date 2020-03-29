@@ -4,6 +4,9 @@ const pattern = {
 
     "any.required": "is required",
 
+    //password
+    "string.matchPassword": "doesn't match password",
+
     //format boolean
     "boolean.base": "must be true or false",
 

@@ -9,7 +9,7 @@ const { genresSchema } = require("../models/schemas");
 const { validateGenre, isObjectId } = require("../models/validateSchemas");
 
 //getting all genres
-router.get("/", [isUser, isAdmin], async (req, res) => {
+router.get("/", async (req, res) => {
     const db = req.app.get("db");
 
     const genres = await db.genres.find().toArray();
@@ -18,7 +18,7 @@ router.get("/", [isUser, isAdmin], async (req, res) => {
 });
 
 //inserting new genre
-router.post("/new", async (req, res) => {
+router.post("/new", [isUser, isAdmin], async (req, res) => {
     const db = req.app.get("db");
 
     //validate new genre
@@ -45,7 +45,7 @@ router.post("/new", async (req, res) => {
     }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", [isUser, isAdmin], async (req, res) => {
     const db = req.app.get("db");
 
     //checking Id

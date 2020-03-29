@@ -6,22 +6,23 @@ const router = express.Router();
 
 const { validateUser } = require("../models/validateSchemas");
 const { logger } = require("../logging");
+const { isUser } = require("../middlewares/");
 const { userSchema } = require("../models/schemas");
 
-router.get("/", async (req, res) => {
+router.get("/me", [isUser], async (req, res) => {
     const db = req.app.get("db");
 
-    //get users from database
-    const users = await db.users.find({}).toArray();
+    //get user from database
+    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
 
-    res.json({ success: true, data: users });
+    res.json({ success: true, data: user });
 });
 
 router.post("/register", async (req, res) => {
     const db = req.app.get("db");
 
     //validate user
-    const { error: isUser } = validateUser(_.pick(req.body, ["name", "username", "password", "email", "phone", "address", "isDeveloper"]));
+    const { error: isUser } = validateUser(_.pick(req.body, ["name", "username", "password", "confirm", "email", "phone", "address", "isDeveloper"]));
     if (isUser) return res.status(400).json({ success: false, msg: isUser.details[0].message });
 
     //create new user
@@ -46,6 +47,14 @@ router.post("/register", async (req, res) => {
         logger.error("Error inserting User");
         res.status(400).json({ success: false, msg: "Error inserting user" });
     }
+});
+
+router.post("/changePassword", [isUser], async (req, res) => {
+    const db = req.app.get("db");
+
+    //get user from database
+    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+    console.log(user);
 });
 
 module.exports = router;

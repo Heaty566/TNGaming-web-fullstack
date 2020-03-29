@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 const _ = require("lodash");
 
 const { logger } = require("../logging");
+const { isUser } = require("../middlewares/");
 const { tokenSchema } = require("../models/schemas");
 const { validateLoginUser } = require("../models/validateSchemas");
 const { createToken, decodeToken } = require("../modules/token");
@@ -46,7 +47,7 @@ router.post("/login", async (req, res) => {
     }
 });
 
-router.post("/logout", async (req, res) => {
+router.post("/logout", [isUser], async (req, res) => {
     const db = req.app.get("db");
 
     //get token from database
