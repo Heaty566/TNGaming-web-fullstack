@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const { genres, genresURL, users, usersURL, auth, authURL, admin, adminURL } = require("./routes/");
+const { genres, genresURL, users, usersURL, auth, authURL, admin, adminURL, developer, developerURL } = require("./routes/");
 
 module.exports = function(app) {
     app.use(cors());
@@ -15,6 +15,7 @@ module.exports = function(app) {
     app.use(authURL, auth);
     app.use(genresURL, genres);
     app.use(adminURL, admin);
+    app.use(developerURL, developer);
 
     app.get("/*", (req, res) => {
         res.sendFile(process.cwd() + "/public/index.html");

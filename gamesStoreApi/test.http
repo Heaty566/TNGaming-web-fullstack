@@ -29,7 +29,7 @@ POST   http://localhost:4000/api/users/login
 content-type: application/json
 
 {
-      "username": "fakeuser4",
+      "username": "heaty566",
       "password": "password1"
 }
 
@@ -102,8 +102,8 @@ x-auth-token: 5e81d0df8a33032a8cf21b61
 
 {     
       "collection": "users",
-      "fieldName": "balance",
-      "defaultValue": 0
+      "fieldName": "gamesDev",
+      "defaultValue": []
 }
 
 ###
@@ -113,7 +113,21 @@ x-auth-token: 5e81d0df8a33032a8cf21b61
 
 {     
       "collection": "genres",
-      "fieldName": "age",
+      "fieldName": "gamesDev",
       "defaultValue": []
+}
+
+###
+POST  http://localhost:4000/api/users/developer/games/new
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "name":"phaaa",
+      "price":16.99,
+      "genreId": ["5e7f2655e6e95253a4fb0a99", "5e7f2655e6e95253a4fb0a99"],
+      "description": "33",
+      "available": true,
+      "stock": 5000
 }
 

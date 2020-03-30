@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-var ObjectId = require("mongodb").ObjectID;
+const ObjectId = require("mongodb").ObjectID;
 const bcrypt = require("bcrypt");
 const _ = require("lodash");
 

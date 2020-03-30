@@ -11,6 +11,7 @@ userSchema = user => {
 
         avatar: "",
         balance: 0,
+        gamesDev: [],
         library: [],
         cart: [],
         history: []
