@@ -51,6 +51,21 @@ schemasUserValidate = type => {
                     "any.required": formatError("Email", "any.required")
                 });
 
+        case "oldPassword":
+            return Joi.string()
+                .max(32)
+                .min(8)
+                .regex(/^[a-zA-Z0-9]*$/)
+                .required()
+                .messages({
+                    "string.base": formatError("Old password", "string.base"),
+                    "string.empty": formatError("Old password", "string.empty"),
+                    "string.min": formatError("Old password", "string.min", " eight characters"),
+                    "string.max": formatError("Old password", "string.max", " 32 characters"),
+                    "string.pattern.base": formatError("Old password", "string.pattern.base", "string.letterAndNumber"),
+                    "any.required": formatError("Old password", "any.required")
+                });
+
         case "password":
             return Joi.string()
                 .max(32)
@@ -105,6 +120,18 @@ schemasUserValidate = type => {
                     "any.required": formatError("Address", "any.required")
                 });
 
+        case "balance":
+            return Joi.number()
+                .max(10000)
+                .min(1)
+                .required()
+                .messages({
+                    "number.max": formatError("Balance", "number.max", " $10000"),
+                    "number.min": formatError("Balance", "number.min", " $1"),
+                    "number.base": formatError("Balance", "number.base"),
+                    "any.required": formatError("Balance", "any.required")
+                });
+
         case "isDeveloper":
             return Joi.boolean().messages({
                 "boolean.base": formatError("isDeveloper", "boolean.base")
@@ -120,8 +147,7 @@ validateUser = user => {
         password: schemasUserValidate("password"),
         confirm: schemasUserValidate("confirm"),
         phone: schemasUserValidate("phone"),
-        address: schemasUserValidate("address"),
-        isDeveloper: schemasUserValidate("isDeveloper")
+        address: schemasUserValidate("address")
     });
 
     return schema.validate(user);
@@ -138,6 +164,7 @@ validateLoginUser = user => {
 
 validateUpdatePassword = password => {
     const schema = Joi.object({
+        oldPassword: schemasUserValidate("oldPassword"),
         password: schemasUserValidate("password"),
         confirm: schemasUserValidate("confirm")
     });
@@ -145,4 +172,23 @@ validateUpdatePassword = password => {
     return schema.validate(password);
 };
 
-module.exports = { validateUser, validateLoginUser, validateUpdatePassword };
+validateUpdateProfile = user => {
+    const schema = Joi.object({
+        name: schemasUserValidate("name"),
+        email: schemasUserValidate("email"),
+        phone: schemasUserValidate("phone"),
+        address: schemasUserValidate("address")
+    });
+
+    return schema.validate(user);
+};
+
+validateAddBalance = balance => {
+    const schema = Joi.object({
+        balance: schemasUserValidate("balance")
+    });
+
+    return schema.validate(balance);
+};
+
+module.exports = { validateUser, validateLoginUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance };

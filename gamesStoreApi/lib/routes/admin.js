@@ -7,6 +7,7 @@ const { isObjectId } = require("../models/validateSchemas/");
 const { isAdmin, isUser } = require("../middlewares/");
 const { logger } = require("../logging");
 
+//getting all user
 router.get("/allusers", [isUser, isAdmin], async (req, res) => {
     const db = req.app.get("db");
 
@@ -15,6 +16,51 @@ router.get("/allusers", [isUser, isAdmin], async (req, res) => {
     res.json({ success: true, data: genres });
 });
 
+/*---------------------------------------------------------
+!!!!!!!!!!!!!!---------Caution-----------!!!!!!!!!!!!!!!!!!
+this 2 features was built to help developer deploy website faster,
+so some schema of collections don't have enough feild or empty by the fault
+you should be carefully use it by making sure the server turns off and reading the schema structure
+-----------------------------------------------------------*/
+router.post("/addProperty", [isUser, isAdmin], async (req, res) => {
+    // {collection: String, fieldName: String, defaultValue: any }
+    const db = req.app.get("db");
+
+    const data = await db
+        .collection(req.body.collection)
+        .find()
+        .toArray();
+    data.map(async item => {
+        item[req.body.fieldName] = req.body.defaultValue;
+        await db.collection(req.body.collection).updateOne({ _id: ObjectId(item._id) }, { $set: item });
+    });
+
+    logger.info(`Added ${req.body.fieldName} to ${req.body.collection} collection.`);
+    res.json({ data, success: true });
+});
+
+router.post("/deleteProperty", [isUser, isAdmin], async (req, res) => {
+    // {collection: String, fieldName: String }
+    const db = req.app.get("db");
+
+    const data = await db
+        .collection(req.body.collection)
+        .find()
+        .toArray();
+    data.map(async item => {
+        delete item[req.body.fieldName];
+        await db.collection(req.body.collection).updateOne({ _id: ObjectId(item._id) }, { $set: item });
+    });
+
+    logger.info(`deleted ${req.body.fieldName} to ${req.body.collection} collection.`);
+    res.json({ data, success: true });
+});
+
+/*---------------------------------------------------------
+!!!!!!!!!!!!!!---------Caution-----------!!!!!!!!!!!!!!!!!!
+-----------------------------------------------------------*/
+
+//cleanning all expired token
 router.post("/cleantoken", [isUser, isAdmin], async (req, res) => {
     const db = req.app.get("db");
 

@@ -16,9 +16,9 @@ content-type: application/json
 
 {
       "name": "pham vinh nahn",
-      "username": "fakeus22er2",
+      "username": "fakeuser4",
       "password": "password1",
-      "confirm": "password",
+      "confirm": "password1",
       "email": "heaty566@gmail.com",
       "phone": "231232132",
       "address": "feajnjncs"
@@ -29,7 +29,7 @@ POST   http://localhost:4000/api/users/login
 content-type: application/json
 
 {
-      "username": "heaty566",
+      "username": "fakeuser4",
       "password": "password1"
 }
 
@@ -65,4 +65,55 @@ x-auth-token: 5e80e7a1eb4cb850306153bb
 ###
 POST  http://localhost:4000/api/users/changePassword
 content-type: application/json
-x-auth-token: 5e80e7a1eb4cb850306153bb
+x-auth-token: 5e818b4dc4facd0ea061aedc
+
+{     
+      "oldPassword": "11111111111",
+      "password": "2222222222",
+      "confirm": "2222222222"
+}
+
+
+###
+POST  http://localhost:4000/api/users/changeProfile
+content-type: application/json
+x-auth-token: 5e818b4dc4facd0ea061aedc
+
+{    
+      "name": "pham cccc",
+      "email": "heaty566@gmail.com",
+      "phone": "231232132",
+      "address": "feajnjncs"
+}
+
+###
+POST  http://localhost:4000/api/users/addBalance
+content-type: application/json
+x-auth-token: 5e81e74256157925801e6e8b
+
+{    
+   "balance": 1000
+}
+
+###
+POST  http://localhost:4000/api/users/admin/addProperty
+content-type: application/json
+x-auth-token: 5e81d0df8a33032a8cf21b61
+
+{     
+      "collection": "users",
+      "fieldName": "balance",
+      "defaultValue": 0
+}
+
+###
+POST  http://localhost:4000/api/users/admin/deleteProperty
+content-type: application/json
+x-auth-token: 5e81d0df8a33032a8cf21b61
+
+{     
+      "collection": "genres",
+      "fieldName": "age",
+      "defaultValue": []
+}
+

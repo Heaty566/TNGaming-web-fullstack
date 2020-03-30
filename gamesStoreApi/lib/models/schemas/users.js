@@ -7,7 +7,13 @@ userSchema = user => {
         phone: user.phone,
         address: user.address,
         isDeveloper: user.isDeveloper ? user.isDeveloper : false,
-        isAdmin: user.isAdmin ? user.isAdmin : false
+        isAdmin: user.isAdmin ? user.isAdmin : false,
+
+        avatar: "",
+        balance: 0,
+        library: [],
+        cart: [],
+        history: []
     };
 };
 

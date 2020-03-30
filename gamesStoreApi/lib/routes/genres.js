@@ -19,6 +19,7 @@ router.get("/", async (req, res) => {
 
 //inserting new genre
 router.post("/new", [isUser, isAdmin], async (req, res) => {
+    //{name: "String"}
     const db = req.app.get("db");
 
     //validate new genre
@@ -46,6 +47,7 @@ router.post("/new", [isUser, isAdmin], async (req, res) => {
 });
 
 router.put("/:id", [isUser, isAdmin], async (req, res) => {
+    //{name: "String"}
     const db = req.app.get("db");
 
     //checking Id
