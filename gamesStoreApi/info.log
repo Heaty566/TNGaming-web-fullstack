@@ -7758,3 +7758,3393 @@
   level: 'info',
   timestamp: '2020-03-31T11:56:21.959Z'
 }
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:22:05.814Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:22:05.840Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:22:09.968Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:22:09.994Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:25:06.100Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:25:06.121Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:25:29.820Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:25:29.842Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:26:06.161Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:26:06.187Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:26:15.182Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:26:15.203Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:44:03.470Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:44:03.493Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:03.349Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:03.372Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:07.761Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:07.780Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:13.902Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:13.922Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:19.167Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:46:19.190Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:04.557Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:04.581Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:26.823Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:26.847Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:56.184Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:48:56.207Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:49:12.243Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:49:12.264Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:06.608Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:06.630Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:46.133Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:46.153Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:48.095Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:50:48.118Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:51:32.979Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:51:33.001Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:51:46.716Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:51:46.740Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:52:40.037Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:52:40.381Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:53:20.246Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:53:20.510Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:53:41.367Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:53:41.913Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:54:11.753Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:54:12.096Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:54:14.931Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:54:15.226Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T12:55:13.152Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T12:55:13.562Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:01:33.400Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:01:33.818Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:02:01.455Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:02:01.719Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:02:11.531Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:02:11.853Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:08:30.769Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:08:31.102Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:08:44.409Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:08:44.722Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:09:03.012Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:09:03.351Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:09:19.088Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:09:20.421Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:08.592Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:08.974Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:16.958Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:17.238Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:31.261Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:31.542Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:37.760Z'
+}
+{
+  message: 'connect to test mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:10:38.235Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e8341fb71328d2b90bf6af1',
+  level: 'info',
+  timestamp: '2020-03-31T13:13:31.957Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:14:25.376Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:14:25.839Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e8342335ee37c227c180098',
+  level: 'info',
+  timestamp: '2020-03-31T13:14:27.826Z'
+}
+{
+  message: 'Inserted new game with Id: 5e8342785ee37c227c18009a',
+  level: 'info',
+  timestamp: '2020-03-31T13:15:36.304Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:19:38.897Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:19:39.393Z'
+}
+{
+  message: 'Inserted new game with Id: 5e834373cbc11d17b0505404',
+  level: 'info',
+  timestamp: '2020-03-31T13:19:47.397Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:20:57.113Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:20:57.480Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:21:00.710Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:21:01.031Z'
+}
+{
+  message: 'Inserted new genre with ID: 5e8343eef48f1e42b020c10f ',
+  level: 'info',
+  timestamp: '2020-03-31T13:21:50.308Z'
+}
+{
+  message: 'Inserted new genre with ID: 5e834409f48f1e42b020c110 ',
+  level: 'info',
+  timestamp: '2020-03-31T13:22:17.411Z'
+}
+{
+  message: 'Inserted new game with Id: 5e834428f48f1e42b020c111',
+  level: 'info',
+  timestamp: '2020-03-31T13:22:48.214Z'
+}
+{
+  message: 'Inserted new game with Id: 5e83443bf48f1e42b020c112',
+  level: 'info',
+  timestamp: '2020-03-31T13:23:07.702Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:24:38.158Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:24:38.562Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:46:10.259Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:46:10.591Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:47:34.695Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:47:35.023Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:51:56.911Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:51:57.416Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:55:55.146Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:55:55.607Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:56:57.031Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:56:57.350Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:06.081Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:06.351Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:19.553Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:19.861Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:27.672Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:28.042Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:49.428Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:57:49.690Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T13:58:08.433Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T13:58:08.757Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:00:38.227Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:00:38.693Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:01:18.943Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:01:19.250Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:01:48.342Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:01:48.731Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:02:06.658Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:02:06.963Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:02:33.680Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:02:34.161Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:36.125Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:36.531Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:45.236Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:45.729Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:53.262Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:03:53.711Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:04:39.953Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:04:40.333Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:04:53.085Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:04:53.612Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:05:02.103Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:05:02.442Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:05:13.050Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:05:13.472Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:06:35.335Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:06:35.750Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:06:54.800Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:06:55.124Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:07:41.323Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:07:41.730Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:08:35.839Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:08:36.195Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:09:06.780Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:09:07.152Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:02.499Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:02.759Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:48.010Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:48.368Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:52.464Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:10:52.766Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:06.274Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:06.622Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:34.485Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:34.786Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:40.215Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:40.506Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:44.394Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:11:44.710Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:12:33.337Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:12:33.663Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:07.703Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:08.081Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:28.203Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:28.580Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:52.437Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:13:52.701Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:14:22.745Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:14:23.049Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:14:45.654Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:14:45.981Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:15:29.500Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:15:29.828Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:05.526Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:05.808Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:15.903Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:16.162Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:19.737Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:16:20.047Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:17:32.969Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:17:33.329Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:18:47.345Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:18:47.678Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:18:53.074Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:18:53.403Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:19:08.486Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:19:08.878Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:19:32.658Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:19:32.946Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:20:36.212Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:20:37.612Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:22:10.448Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:22:10.755Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:22:20.701Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:22:21.532Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:19.282Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:19.661Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:22.796Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:23.072Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:28.818Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:29.176Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:46.122Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:23:46.476Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:24:22.473Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:24:22.806Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:25:26.496Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:25:26.826Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:12.459Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:12.761Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:28.977Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:29.316Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:43.444Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:26:43.749Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:27:01.100Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:27:01.370Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:30:23.795Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:30:24.169Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:30:25.577Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:30:25.949Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:34:50.999Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:34:51.452Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:37:05.012Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:37:05.337Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:37:22.939Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:37:23.342Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:42:38.216Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:42:38.629Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:42:56.742Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:42:57.093Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:16.103Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:16.406Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:34.972Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:35.298Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:58.295Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:43:58.635Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:11.349Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:11.767Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:40.995Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:41.332Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:47.030Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:44:47.356Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:45:16.139Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:45:16.480Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:48:02.102Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:48:02.434Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:49:47.085Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:49:47.412Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:23.983Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:24.330Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:45.573Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:45.915Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:52.870Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:51:53.146Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:03.805Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:04.121Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:05.772Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:06.092Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:12.890Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:13.195Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:15.548Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:16.040Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:21.298Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T14:52:21.657Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:04:10.617Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:04:11.304Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:06:25.887Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:06:26.386Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:06:48.640Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:06:48.962Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:07:24.258Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:07:24.706Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:15.930Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:16.402Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:54.120Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:54.471Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:58.512Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:08:58.866Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:09:38.018Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:09:38.516Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:10:34.690Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:10:35.239Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:10:52.718Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:10:53.439Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:15:39.874Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:15:40.329Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:16:11.968Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:16:12.333Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:03.712Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:04.031Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:13.368Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:13.733Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:35.275Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:18:35.615Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:19:42.215Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:19:43.678Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:21:58.491Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:21:58.818Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:23:39.873Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:23:40.301Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:23:52.019Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:23:52.459Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:19.322Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:19.602Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:30.530Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:31.007Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:47.921Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:24:48.339Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:25:26.234Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:25:26.588Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:25:54.929Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:25:55.390Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:26:06.626Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:26:07.080Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:28:51.656Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:28:52.065Z'
+}
+{
+  message: 'Inserted new game with Id: 5e8361bf895d95177c4e0198',
+  level: 'info',
+  timestamp: '2020-03-31T15:29:03.767Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:29:49.094Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:29:49.710Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:11.031Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:11.358Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:16.971Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:17.305Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:55.094Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:30:55.458Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:33:53.852Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:33:54.187Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e83633a0c37762fe0c0ad31',
+  level: 'info',
+  timestamp: '2020-03-31T15:35:22.573Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:36:55.767Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:36:56.186Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:37:31.106Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:37:31.805Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:37:59.784Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:00.844Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:10.157Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:10.708Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:14.007Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:14.315Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:36.016Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:36.324Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:46.069Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:38:46.626Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:43:13.968Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:43:14.453Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:47:24.432Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:47:24.758Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:48:42.154Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:48:42.506Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:15.814Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:16.059Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:19.496Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:19.808Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:33.169Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:49:33.486Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:50:04.471Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:50:04.925Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:53:31.458Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:53:31.837Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:53:53.121Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:53:53.569Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:54:09.161Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:54:09.688Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:54:12.501Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:54:12.914Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:01.249Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:01.689Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:13.213Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:13.661Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:45.017Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:45.287Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:51.291Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:55:51.812Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:34.432Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:35.021Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:39.373Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:39.783Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:58.121Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:56:58.536Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:57:17.005Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:57:17.385Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:57:36.020Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:57:36.458Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:58:01.201Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:58:02.045Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:58:33.340Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:58:34.268Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:59:33.645Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:59:34.104Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T15:59:53.318Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T15:59:53.954Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:08.262Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:08.911Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:14.347Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:14.835Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:18.322Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:18.773Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:22.937Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:01:23.467Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:02:10.060Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:02:10.451Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:04:56.286Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:04:56.823Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:09.928Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:10.315Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:29.604Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:30.014Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:38.302Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:38.600Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:59.215Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:05:59.760Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:15.212Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:15.650Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:39.651Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:40.105Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:44.485Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:44.840Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:53.505Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:07:54.213Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:07.276Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:07.819Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:09.944Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:10.257Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:47.356Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:09:47.698Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:10:35.639Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:10:36.261Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:13:44.328Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:13:44.712Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:13:55.266Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:13:55.627Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:17:06.443Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:17:06.768Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:17:45.096Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:17:45.482Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:22.395Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:22.754Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:27.364Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:27.709Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:50.440Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:18:50.765Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:19:16.083Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:19:16.377Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:21:41.442Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:21:41.795Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:22:41.127Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:22:41.713Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:23:03.169Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:23:03.542Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:23:51.915Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:23:52.392Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:24:51.442Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:24:51.817Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:10.018Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:10.644Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:19.317Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:19.888Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:48.229Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:25:48.855Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:26:18.831Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:26:19.234Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:26:30.397Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:26:30.789Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:05.340Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:05.934Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:12.970Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:13.706Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:44.840Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:27:45.619Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:28:10.705Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:28:11.048Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:29:51.157Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:29:51.528Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:32:08.289Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:32:08.663Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:32:33.001Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:32:33.383Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:33:15.388Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:33:15.728Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:34:12.757Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:34:13.294Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:34:45.658Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:34:46.026Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:37:55.608Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:37:55.974Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:10.065Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:10.404Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:15.629Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:15.941Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:39.358Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:39.659Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:49.021Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:38:49.321Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:40:08.958Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:40:09.321Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:40:13.039Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:40:13.356Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:42:49.963Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:42:49.991Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e837330dc71522a74f7e358',
+  level: 'info',
+  timestamp: '2020-03-31T16:43:28.562Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:57:47.971Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:57:48.027Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:57:53.937Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:57:54.050Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:58:01.857Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:58:01.900Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:58:08.587Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:58:08.617Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:05.748Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:05.807Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:12.303Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:12.333Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:15.360Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:15.390Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:24.827Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:24.948Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:27.642Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:27.689Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:39.568Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T16:59:39.625Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:00:30.699Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:00:30.724Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:01:57.811Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:01:57.851Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:19.060Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:19.112Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:33.321Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:33.374Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:38.491Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:38.539Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:40.986Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:02:41.016Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:03:01.336Z'
+}
+{
+  message: 'connect to gameStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:03:01.368Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:03:50.550Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:03:50.941Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:04:58.343Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:04:58.803Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:06:24.399Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:06:24.769Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:07:27.560Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:07:27.965Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:20.230Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:20.634Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:22.702Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:23.277Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:28.903Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:09:29.392Z'
+}
+{
+  message: 'Inserted new genre with ID: 5e837a246e6c5b53a4476bd7 ',
+  level: 'info',
+  timestamp: '2020-03-31T17:13:08.749Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:14:54.773Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:14:55.227Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:15:00.459Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:15:00.949Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:21.601Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:22.161Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:26.234Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:26.601Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:42.865Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:16:43.252Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:17:54.803Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:17:57.543Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:17:57.898Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:18:26.217Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:18:26.556Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:19:10.338Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:19:10.758Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:19:36.695Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:19:37.186Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:20:18.155Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:20:21.286Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:20:21.659Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:21:01.726Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:21:02.338Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:21:15.090Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:21:15.415Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:14.702Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:15.071Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:27.374Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:27.631Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:54.643Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:23:54.892Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:17.361Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:17.727Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:20.306Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:20.635Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:36.457Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:36.748Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:52.148Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:26:52.625Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:14.224Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:14.603Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:18.519Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:18.869Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:25.511Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:25.855Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:34.603Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:34.944Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:38.481Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:38.846Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:53.543Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:28:53.813Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:06.693Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:07.028Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:20.132Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:20.571Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:28.090Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:28.398Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:35.475Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:35.807Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:49.524Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:29:49.918Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:30:55.977Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:30:56.449Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:31:12.792Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:31:13.098Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:33:21.672Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:33:22.147Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:33:29.437Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:33:29.769Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:00.665Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:01.008Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:48.899Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:49.294Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:53.094Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:34:53.379Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:06.149Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:06.471Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:31.933Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:32.200Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:39.372Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:39.725Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:44.100Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:35:44.452Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:38:05.832Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:38:06.214Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:38:13.207Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:38:13.498Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:11.391Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:11.820Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:51.274Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:51.621Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:58.303Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:39:58.629Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:40:04.613Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:40:04.995Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:41:19.948Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:41:20.254Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:43:23.676Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:43:24.014Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:43:46.505Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:43:46.845Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:46:22.066Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:46:22.370Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:46:58.943Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:46:59.225Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:47:20.053Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:47:20.394Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:47:33.964Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:47:34.301Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:18.070Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:18.325Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:28.569Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:28.839Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:30.917Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:31.205Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:44.718Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:48:45.008Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:02.568Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:02.881Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:06.089Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:06.353Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:26.543Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:26.783Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:35.463Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:49:35.744Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:50:04.478Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:50:04.829Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-03-31T17:50:19.093Z'
+}
+{
+  message: 'connect to gamesStore mongoDB successfully',
+  level: 'info',
+  timestamp: '2020-03-31T17:50:19.416Z'
+}

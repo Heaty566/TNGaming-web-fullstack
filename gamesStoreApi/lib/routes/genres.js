@@ -8,13 +8,6 @@ const { logger } = require("../logging");
 const { genresSchema } = require("../models/schemas");
 const { validateGenre, isObjectId } = require("../models/validateSchemas");
 
-const glob = require("glob");
-router.get("/all", async (req, res) => {
-    const all = glob.sync("./public/images/**/*.jpg");
-    const images = all.map(item => item.replace("./public", ""));
-    res.json(images);
-});
-
 //getting all genres
 router.get("/", async (req, res) => {
     const db = req.app.get("db");

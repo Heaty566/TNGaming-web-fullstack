@@ -16,6 +16,7 @@ module.exports = async function(app) {
         const db = client.db(dbInfo.database);
         db.users = db.collection("users");
         db.games = db.collection("games");
+        db.orders = db.collection("orders");
         db.tokens = db.collection("tokens");
         db.genres = db.collection("genres");
 

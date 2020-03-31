@@ -56,7 +56,7 @@ router.patch("/games/restock/:id", [isUser, isDeveloper], async (req, res) => {
     if (game.developerId != req.user._id) return res.status(403).json({ success: false, msg: "Forbidden" });
     game.stock = Number(game.stock) + Number(req.body.stock);
 
-    const updateGame = await db.games.updateOne({ _id: ObjectId(req.params.id) }, { $set: game });
+    const updateGame = await db.games.updateOne({ _id: ObjectId(req.params.id) }, { $set: { stock: game.stock } });
     if (!updateGame) {
         logger.error("Error restock game");
         return res.status(400).json({ success: false, msg: "Updating game failed" });
@@ -89,6 +89,11 @@ router.post("/games/new", [isUser, isDeveloper], async (req, res) => {
         const game = gameSchema(_.pick(req.body, ["name", "price", "genreId", "description", "available", "stock"]));
 
         const uniqueGenres = req.body.genreId.filter((value, index, array) => array.indexOf(value) === index);
+        uniqueGenres.map(async item => {
+            const genre = await db.genres.findOne({ _id: ObjectId(item) });
+            if (!genre) return res.status(404).json({ success: false, msg: "Genre with the given Id was not found" });
+        });
+
         game.genreId = uniqueGenres;
         game.developerId = user._id;
         game.images = images;

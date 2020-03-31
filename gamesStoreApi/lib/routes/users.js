@@ -37,7 +37,7 @@ router.post("/addBalance", [isUser], async (req, res) => {
     user.balance = Number(user.balance) + Number(req.body.balance);
 
     //update new password
-    const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
+    const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: { balance: user.balance } });
     if (!updateUser) {
         logger.error("Error adding balance");
         return res.status(400).json({ success: false, msg: "adding balance failed" });
@@ -100,7 +100,7 @@ router.post("/changePassword", [isUser], async (req, res) => {
     user.password = await bcrypt.hash(req.body.password, salt);
 
     //update new password
-    const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
+    const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: { password: user.password } });
     if (!updateUser) {
         logger.error("Error updating password");
         return res.status(400).json({ success: false, msg: "Update password failed" });
@@ -157,7 +157,7 @@ router.post("/uploadAvatar", [isUser], (req, res) => {
 
         user.avatar = `${req.file.destination}/${req.file.filename}`.replace("./public", "");
 
-        const image = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
+        const image = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: { avatar: user.avatar } });
         if (!image) return res.status(400).json({ success: false, msg: "Updating user failed" });
 
         res.json({ success: true, msg: "Updated avatar" });
