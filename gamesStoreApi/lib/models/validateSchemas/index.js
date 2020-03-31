@@ -3,7 +3,7 @@ Joi.objectId = require("joi-objectid")(Joi);
 
 const { formatError } = require("../validateSchemas/validateErrorFormat");
 const { validateGenre } = require("./genres");
-const { validateGame } = require("./games");
+const { validateGame, validateGameRestock, validateGameUpdate } = require("./games");
 const { validateUser, validateLoginUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance } = require("./users");
 
 isObjectId = (label, _id) => {
@@ -19,4 +19,15 @@ isObjectId = (label, _id) => {
     return schema.validate({ _id });
 };
 
-module.exports = { validateGenre, validateUser, validateLoginUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance, validateGame, isObjectId };
+module.exports = {
+    validateGenre,
+    validateUser,
+    validateLoginUser,
+    validateUpdatePassword,
+    validateUpdateProfile,
+    validateAddBalance,
+    validateGame,
+    validateGameUpdate,
+    validateGameRestock,
+    isObjectId
+};

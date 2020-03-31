@@ -131,3 +131,33 @@ x-auth-token: 5e822d942c931e228873c9b5
       "stock": 5000
 }
 
+
+
+###
+PATCH   http://localhost:4000/api/users/developer/games/restock/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "stock": 5000
+}
+
+###
+PUT   http://localhost:4000/api/users/developer/games/update/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "name":"222222222222222222222",
+      "price":16.99,
+      "genreId": ["", "5e7f2655e6e95253a4fb0a99"],
+      "description": "33",
+      "available": true
+}
+
+###
+Delete   http://localhost:4000/api/users/developer/games/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+

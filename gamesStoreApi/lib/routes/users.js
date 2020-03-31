@@ -1,14 +1,17 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-var ObjectId = require("mongodb").ObjectID;
+const ObjectId = require("mongodb").ObjectID;
+const rimraf = require("rimraf");
 const _ = require("lodash");
 const router = express.Router();
 
+const { uploadAvatar } = require("../modules/uploadImage/");
 const { validateUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance } = require("../models/validateSchemas");
 const { logger } = require("../logging");
 const { isUser } = require("../middlewares/");
 const { userSchema } = require("../models/schemas");
 
+//get me
 router.get("/me", [isUser], async (req, res) => {
     const db = req.app.get("db");
 
@@ -31,7 +34,7 @@ router.post("/addBalance", [isUser], async (req, res) => {
     if (!user) return res.status(404).json({ success: false, msg: "User with the given Id was not found" });
 
     //update user
-    user.balance += req.body.balance;
+    user.balance = Number(user.balance) + Number(req.body.balance);
 
     //update new password
     const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
@@ -43,6 +46,7 @@ router.post("/addBalance", [isUser], async (req, res) => {
     res.json({ success: true, msg: "Added balance" });
 });
 
+//register user
 router.post("/register", async (req, res) => {
     //{name: "String", username: "String", email: "String", password: "String", confirm: "String", phone: "String", address: "String"}
     const db = req.app.get("db");
@@ -75,6 +79,7 @@ router.post("/register", async (req, res) => {
     }
 });
 
+//change password
 router.post("/changePassword", [isUser], async (req, res) => {
     //{confirm: "String", password: "String", "oldPassword": "String"}
     const db = req.app.get("db");
@@ -104,6 +109,7 @@ router.post("/changePassword", [isUser], async (req, res) => {
     res.json({ success: true, msg: "Updated password" });
 });
 
+//change profile
 router.post("/changeProfile", [isUser], async (req, res) => {
     //{name: String, email: Email, phone: String, address: String}
     const db = req.app.get("db");
@@ -130,6 +136,32 @@ router.post("/changeProfile", [isUser], async (req, res) => {
     }
 
     res.json({ success: true, msg: "Updated profile" });
+});
+
+//update avatar
+router.post("/uploadAvatar", [isUser], (req, res) => {
+    //{avatar: Image}
+    const db = req.app.get("db");
+    uploadAvatar(req, res, async error => {
+        if (error) {
+            if (error.code === "LIMIT_FILE_SIZE") return res.status(400).json({ success: false, msg: "This file must be smaller or equal 1mb" });
+            return res.status(400).json({ success: false, msg: error });
+        }
+
+        const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+        if (!user) return res.status(404).json({ success: false, msg: "User with the given Id was not found" });
+
+        rimraf(user.avatar, err => {
+            if (err) logger.error("Error Deleting avatar folder");
+        });
+
+        user.avatar = `${req.file.destination}/${req.file.filename}`;
+
+        const image = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
+        if (!image) return res.status(400).json({ success: false, msg: "Updating user failed" });
+
+        res.json({ success: true, msg: "Updated avatar" });
+    });
 });
 
 module.exports = router;

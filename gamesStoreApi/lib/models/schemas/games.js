@@ -5,7 +5,8 @@ gameSchema = game => {
         genreId: game.genreId,
         description: game.description.trim(),
         available: game.available ? game.available : false,
-        stock: game.stock ? game.stock : 0
+        stock: game.stock ? game.stock : 0,
+        images: []
     };
 };
 

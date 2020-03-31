@@ -51,6 +51,7 @@ schemasGamesValidate = type => {
                 .min(1)
                 .required()
                 .messages({
+                    "string.empty": formatError("Genre", "string.empty"),
                     "array.max": formatError("Genre", "array.max", " twenty genres"),
                     "array.min": formatError("Genre", "array.min", " one genre"),
                     "any.required": formatError("Genre", "any.required")
@@ -89,4 +90,24 @@ validateGame = game => {
     return schema.validate(game);
 };
 
-module.exports = { validateGame };
+validateGameUpdate = game => {
+    const schema = Joi.object({
+        name: schemasGamesValidate("name"),
+        price: schemasGamesValidate("price"),
+        genreId: schemasGamesValidate("genreId"),
+        description: schemasGamesValidate("description"),
+        available: schemasGamesValidate("available")
+    });
+
+    return schema.validate(game);
+};
+
+validateGameRestock = stock => {
+    const schema = Joi.object({
+        stock: schemasGamesValidate("stock")
+    });
+
+    return schema.validate({ stock });
+};
+
+module.exports = { validateGame, validateGameRestock, validateGameUpdate };
