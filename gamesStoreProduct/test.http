@@ -1,0 +1,64 @@
+###
+POST   http://localhost:4000/api/users/games/addGameTo/cart/5e83443bf48f1e42b020c112
+content-type: application/json
+x-auth-token: 5e8363400c37762fe0c0ad32
+
+###
+POST   http://localhost:4000/api/users/games/deleteGameFromWishList/5e83443bf48f1e42b020c112
+content-type: application/json
+x-auth-token: 5e8342655ee37c227c180099
+
+
+###
+POST http://localhost:4000/api/users/admin/games/genres/new
+content-type: application/json
+x-auth-token: 5e8343dbf48f1e42b020c10e
+
+{
+      "name":"ttt"
+}
+
+###
+POST http://localhost:4000/api/users/login
+content-type: application/json
+
+{
+      "username":"heaty5666",
+      "password":"password1"
+}
+
+
+###
+POST http://localhost:4000/api/users/register
+content-type: application/json
+
+{
+      "name": "pham vinh nhan",
+      "username":"heaty5666",
+      "password":"password1",
+      "confirm": "password1",
+      "phone": "210201002",
+      "address": "2300",
+      "email": "heaty566@gmail.com"
+}
+
+###
+POST   http://localhost:4000/api/users/games/addGameTo/cart/5e83443bf48f1e42b020c112
+content-type: application/json
+x-auth-token: 5e8363400c37762fe0c0ad32
+
+###
+GET http://localhost:4000/api/games/all/4
+content-type: application/json
+
+###
+GET http://localhost:4000/api/games/sortByGenre/5e837a246e6c5b53a4476bd7
+content-type: application/json
+
+###
+GET http://localhost:4000/api/games/5e8342785ee37c227c18009a
+content-type: application/json
+
+###
+GET http://localhost:4000/api/games/sortByKey/p
+content-type: application/json

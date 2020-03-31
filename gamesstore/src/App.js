@@ -7,7 +7,7 @@ function App() {
         <div className="App">
             <Image />
             <h1>We are still building...</h1>
-            <h2>23.00 before mid-night</h2>
+            <h2>11h00 before mid-night</h2>
         </div>
     );
 }

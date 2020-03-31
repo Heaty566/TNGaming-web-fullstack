@@ -1,2 +1,0 @@
-#root,body,html{margin:0;padding:0;height:100%;background:#1b2838}.App{min-height:100vh;flex-direction:column;color:#fefefe;-webkit-animation:in 4s linear infinite;animation:in 4s linear infinite}.App,.background{display:flex;justify-content:center;align-items:center}.background{border:1px solid red;width:100%;position:fixed;flex-wrap:wrap;height:100vh;opacity:.3}img{flex:33% 1}@-webkit-keyframes in{0%{opacity:0}}@keyframes in{0%{opacity:0}}
-/*# sourceMappingURL=main.8d823a84.chunk.css.map */

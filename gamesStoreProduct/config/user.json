@@ -1,0 +1,7 @@
+{
+    "tokenKey": "12345678",
+    "uploadURL": {
+        "uploadAvatarUrl": "./public/images",
+        "uploadImagesGameUrl": "./public/images"
+    }
+}
