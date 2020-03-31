@@ -3,10 +3,10 @@ const ObjectId = require("mongodb").ObjectID;
 const router = express.Router();
 const _ = require("lodash");
 
-const { gameSchema } = require("../models/schemas/");
 const { logger } = require("../logging");
-const { validateGame } = require("../models/validateSchemas/");
 const { isUser, isDeveloper } = require("../middlewares/");
+const { gameSchema } = require("../models/schemas/");
+const { validateGame } = require("../models/validateSchemas/");
 
 router.post("/games/new", [isUser, isDeveloper], async (req, res) => {
     //{name: String, price: Number, genreId: genre,  decription: String, available: boolean, stock: number}
