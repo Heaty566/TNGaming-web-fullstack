@@ -1,0 +1,163 @@
+GET  http://localhost:4000/api/users/me
+content-type: application/json
+x-auth-token: 5e80cf5f69f7d91b14e236a2
+
+###
+GET  http://localhost:4000/api/games/genres
+content-type: application/json
+x-auth-token: 5e809330a3ca955054ef8a20
+
+
+
+
+###
+POST   http://localhost:4000/api/users/register
+content-type: application/json
+
+{
+      "name": "pham vinh nahn",
+      "username": "fakeuser4",
+      "password": "password1",
+      "confirm": "password1",
+      "email": "heaty566@gmail.com",
+      "phone": "231232132",
+      "address": "feajnjncs"
+}
+
+###
+POST   http://localhost:4000/api/users/login
+content-type: application/json
+
+{
+      "username": "heaty566",
+      "password": "password1"
+}
+
+###
+POST   http://localhost:4000/api/users/logout
+content-type: application/json
+
+{
+      "token": "5e807b51ccdf1c3de010c020",
+      "userId": "5e80534d98ae5f250406596e"
+}
+###
+POST  http://localhost:4000/api/users/admin/cleantoken
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+
+get  http://localhost:4000/api/users/admin/allusers
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+POST  http://localhost:4000/api/users/admin/toggleAdmin/5e80e16edf73d44828287ec5
+content-type: application/json
+x-auth-token: 5e80d479a916f64a84075fbc
+
+###
+POST  http://localhost:4000/api/users/admin/toggleDeveloper/5e80e16edf73d44828287ec5
+content-type: application/json
+x-auth-token: 5e80e7a1eb4cb850306153bb
+
+###
+POST  http://localhost:4000/api/users/changePassword
+content-type: application/json
+x-auth-token: 5e818b4dc4facd0ea061aedc
+
+{     
+      "oldPassword": "11111111111",
+      "password": "2222222222",
+      "confirm": "2222222222"
+}
+
+
+###
+POST  http://localhost:4000/api/users/changeProfile
+content-type: application/json
+x-auth-token: 5e818b4dc4facd0ea061aedc
+
+{    
+      "name": "pham cccc",
+      "email": "heaty566@gmail.com",
+      "phone": "231232132",
+      "address": "feajnjncs"
+}
+
+###
+POST  http://localhost:4000/api/users/addBalance
+content-type: application/json
+x-auth-token: 5e81e74256157925801e6e8b
+
+{    
+   "balance": 1000
+}
+
+###
+POST  http://localhost:4000/api/users/admin/addProperty
+content-type: application/json
+x-auth-token: 5e81d0df8a33032a8cf21b61
+
+{     
+      "collection": "users",
+      "fieldName": "gamesDev",
+      "defaultValue": []
+}
+
+###
+POST  http://localhost:4000/api/users/admin/deleteProperty
+content-type: application/json
+x-auth-token: 5e81d0df8a33032a8cf21b61
+
+{     
+      "collection": "genres",
+      "fieldName": "gamesDev",
+      "defaultValue": []
+}
+
+###
+POST  http://localhost:4000/api/users/developer/games/new
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "name":"phaaa",
+      "price":16.99,
+      "genreId": ["5e7f2655e6e95253a4fb0a99", "5e7f2655e6e95253a4fb0a99"],
+      "description": "33",
+      "available": true,
+      "stock": 5000
+}
+
+
+
+###
+PATCH   http://localhost:4000/api/users/developer/games/restock/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "stock": 5000
+}
+
+###
+PUT   http://localhost:4000/api/users/developer/games/update/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+{     
+      "name":"222222222222222222222",
+      "price":16.99,
+      "genreId": ["", "5e7f2655e6e95253a4fb0a99"],
+      "description": "33",
+      "available": true
+}
+
+###
+Delete   http://localhost:4000/api/users/developer/games/5e8302745b89a83d5c4b9436
+content-type: application/json
+x-auth-token: 5e822d942c931e228873c9b5
+
+

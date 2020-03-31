@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const axios = require("axios");
 
 const { logger, exceptionsLogger } = require("./lib/logging");
 
