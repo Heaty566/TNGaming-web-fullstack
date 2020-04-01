@@ -150,10 +150,10 @@ router.post("/uploadAvatar", [isUser], (req, res) => {
 
         const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
         if (!user) return res.status(404).json({ success: false, msg: "User with the given Id was not found" });
-
-        rimraf(user.avatar, err => {
-            if (err) logger.error("Error Deleting avatar folder");
-        });
+        if (user.avatar)
+            rimraf(user.avatar, err => {
+                if (err) logger.error("Error Deleting avatar folder");
+            });
 
         user.avatar = `${req.file.destination}/${req.file.filename}`.replace("./public", "");
 

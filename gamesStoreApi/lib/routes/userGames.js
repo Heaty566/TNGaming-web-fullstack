@@ -38,7 +38,7 @@ router.post("/addGameTo/:compartment/:gameId", [isUser], async (req, res) => {
     res.json({ success: true });
 });
 
-router.post("/deleteGameFrom/:compartment/:gameId", [isUser], async (req, res) => {
+router.post("/removeGameFrom/:compartment/:gameId", [isUser], async (req, res) => {
     //{gameId: _id}
     const db = req.app.get("db");
 
@@ -77,12 +77,13 @@ router.post("/order", [isUser], async (req, res) => {
 
     const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
     if (!user) return res.status(404).json({ success: false, msg: `User with the given Id was not found` });
+    if (!user.cart.length) return res.status(400).json({ success: false, msg: "Your cart is empty" });
 
     Promise.all(
         user.cart.map(async item => {
             const game = await db.games.findOne({ _id: ObjectId(item) });
-
             if (!game) return res.status(404).json({ success: false, msg: "Game with the given Id was not found" });
+            if (user.library.includes(item)) res.status(400).json({ success: false, msg: `You already have ${game.name} in your library` });
             return game.price;
         })
     ).then(async resolve => {
@@ -100,15 +101,17 @@ router.post("/order", [isUser], async (req, res) => {
         }
 
         user.balance -= order.totalPrice;
+        user.cart = [];
+        user.library = user.library.concat(order.cart);
         user.history.push(String(insertOrder.insertedId));
 
-        const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: { history: user.history, balance: user.balance } });
+        const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
         if (!updateUser) {
             logger.error("Error Adding Order to User Failed");
             return res.status(400).json({ success: false, msg: " Adding Order to User" });
+        } else {
+            res.json({ success: true, data: insertOrder.insertedId });
         }
-
-        res.json({ success: true, data: insertOrder.insertedId });
     });
 });
 

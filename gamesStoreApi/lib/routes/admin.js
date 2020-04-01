@@ -11,9 +11,9 @@ const { logger } = require("../logging");
 router.get("/allusers", [isUser, isAdmin], async (req, res) => {
     const db = req.app.get("db");
 
-    const genres = await db.genres.find().toArray();
+    const users = await db.users.find().toArray();
 
-    res.json({ success: true, data: genres });
+    res.json({ success: true, data: users });
 });
 
 /*---------------------------------------------------------

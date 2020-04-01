@@ -36,7 +36,8 @@ router.post("/login", async (req, res) => {
             success: true,
             data: {
                 token: tokenDB.insertedId,
-                user: _.pick(user, ["_id", "username", "name", "isDeveloper", "isAdmin"])
+                user: _.pick(user, ["_id", "username", "name", "isDeveloper", "isAdmin"]),
+                success: true
             }
         });
     } catch (ex) {
@@ -49,17 +50,18 @@ router.post("/login", async (req, res) => {
 
 router.post("/logout", [isUser], async (req, res) => {
     const db = req.app.get("db");
+    const tokenId = req.header("x-auth-token");
 
     //get token from database
-    const logout = await db.tokens.findOne({ _id: ObjectId(req.body.token) });
+    const logout = await db.tokens.findOne({ _id: ObjectId(tokenId) });
     if (!logout) return res.status(404).json({ success: false, msg: "failed to logout" });
 
     //decode token
     const decode = await decodeToken(logout.token);
-    if (decode._id === req.body.userId) {
-        await db.tokens.deleteOne({ _id: ObjectId(req.body.token) }).then(() => res.json({ success: true }));
+    if (decode._id === req.user._id) {
+        await db.tokens.deleteOne({ _id: ObjectId(tokenId) }).then(() => res.json({ success: true }));
     } else {
-        res.json({ success: false, msg: "logout failed" });
+        res.status(400).json({ success: false, msg: "logout failed" });
     }
 });
 

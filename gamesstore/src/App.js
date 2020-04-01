@@ -1,18 +1,8 @@
 import React from "react";
-import "./App.css";
-import Logo from "./logo";
+import "./services/";
 
 function App() {
-    return (
-        <div className="App">
-            <div className="background"></div>
-            <img src={process.env.PUBLIC_URL + "/background.jpg"} alt="background" className="background-image" />
-            <div className="main-content">
-                <Logo />
-                <h1>We are still building ....</h1>
-            </div>
-        </div>
-    );
+    return <div className="App">22</div>;
 }
 
 export default App;

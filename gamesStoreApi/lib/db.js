@@ -21,6 +21,6 @@ module.exports = async function(app) {
         db.genres = db.collection("genres");
 
         app.set("db", db);
-        logger.info(`connect to ${dbInfo.database} mongoDB successfully`);
+        logger.info(`connect to ${dbInfo.database} mongoDB on ${dbInfo.hosts[0].host} successfully`);
     });
 };
