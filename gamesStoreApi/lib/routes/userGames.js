@@ -22,9 +22,9 @@ router.post("/addGameTo/:compartment/:gameId", [isUser], async (req, res) => {
 
     const game = await db.games.findOne({ _id: ObjectId(req.params.gameId) });
     if (!game) return res.status(404).json({ success: false, msg: `Game with the given Id was not found` });
-    const isNew = user[req.params.compartment].indexOf(String(req.params.gameId));
+    const isNew = user[req.params.compartment].map(item => item.toString()).indexOf(req.params.gameId);
 
-    if (isNew === -1) user[req.params.compartment].push(String(game._id));
+    if (isNew === -1) user[req.params.compartment].push(game._id);
 
     const updateUser = await db.users.updateOne(
         { _id: ObjectId(req.user._id) },
@@ -54,7 +54,7 @@ router.post("/removeGameFrom/:compartment/:gameId", [isUser], async (req, res) =
     const game = await db.games.findOne({ _id: ObjectId(req.params.gameId) });
     if (!game) return res.status(404).json({ success: false, msg: `Game with the given Id was not found` });
 
-    const isNew = user[req.params.compartment].indexOf(req.params.gameId);
+    const isNew = user[req.params.compartment].map(id => id.toString()).indexOf(req.params.gameId);
 
     if (isNew !== -1) user[req.params.compartment] = user[req.params.compartment].filter((item, index) => index !== isNew);
 
@@ -70,49 +70,75 @@ router.post("/removeGameFrom/:compartment/:gameId", [isUser], async (req, res) =
     res.json({ success: true });
 });
 
-router.post("/order", [isUser], async (req, res) => {
-    //{userId: id, gamesId: id }
+router.post("/purchase", [isUser], async (req, res) => {
+    //{userId}
 
+    //gettting user
     const db = req.app.get("db");
-
     const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
-    if (!user) return res.status(404).json({ success: false, msg: `User with the given Id was not found` });
-    if (!user.cart.length) return res.status(400).json({ success: false, msg: "Your cart is empty" });
+    if (!user) return res.status(404).json({ success: false, msg: "User with the given Id was not found" });
 
+    //checking cart empty
+    if (!user.cart.length) return res.status(400).json({ success: false, msg: "Empty cart" });
+
+    //checking Id game
     Promise.all(
-        user.cart.map(async item => {
-            const game = await db.games.findOne({ _id: ObjectId(item) });
-            if (!game) return res.status(404).json({ success: false, msg: "Game with the given Id was not found" });
-            if (user.library.includes(item)) res.status(400).json({ success: false, msg: `You already have ${game.name} in your library` });
-            return game.price;
+        user.cart.map(async gameId => {
+            const game = await db.games.findOne({ _id: ObjectId(gameId) });
+            if (!game) return Promise.reject({ success: false, msg: "The game in your cart doesn't exist" });
+
+            const isUnique = user.library.map(id => id.toString()).includes(game._id.toString());
+            if (isUnique) return Promise.reject({ success: false, msg: `you owned ${game.name}` });
+
+            return Promise.resolve(game);
         })
-    ).then(async resolve => {
-        const totalPrice = resolve.reduce((total, cur) => {
-            return Number(total) + Number(cur);
+    )
+        .then(async games => {
+            const totalPrice = games.map(game => game.price).reduce((total, current) => total + current);
+            //checking balance is enought to buy
+            if (user.balance < totalPrice) return res.status(400).json({ success: false, msg: "Your balance doesn't enough money" });
+
+            //create order schema
+            // inserting order
+            const order = await db.orders.insertOne(orderSchema({ userId: user._id, cart: games, totalPrice }));
+            if (!order) {
+                logger.error("Error Inseting game Order");
+                res.status(400).json({ success: false, msg: "Update your order failed" });
+            }
+
+            //minus user balance
+            //set cart history and library
+            user.balance -= totalPrice;
+            user.library = user.library.concat(games.map(game => game._id));
+            user.cart = [];
+            user.history.push(order.insertedId);
+
+            //updateing user
+            const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
+            if (!updateUser) {
+                logger.error("Update user on order failed");
+                return res.status(400).json({ success: false, msg: "Update your account failed" });
+            }
+
+            return Promise.all(
+                games.map(async game => {
+                    const developer = await db.users.findOne({ _id: ObjectId(game.developerId) });
+                    if (!developer) {
+                        logger.error("Update find developer on order failed");
+                        return Promise.reject({ success: false, msg: "Update your account failed" });
+                    }
+                    developer.balance += game.price;
+                    await db.users.updateOne({ _id: ObjectId(game.developerId) }, { $set: developer });
+                    return Promise.resolve();
+                })
+            );
+        })
+        .then(() => res.json({ success: true, msg: "Purchase success" }))
+        .catch(ex => {
+            return res.status(400).json(ex);
         });
 
-        const order = orderSchema({ userId: req.user._id, cart: user.cart, totalPrice });
-        if (user.balance < order.totalPrice) return res.status(402).json({ success: false, msg: "Your balance is not enough" });
-
-        const insertOrder = await db.orders.insertOne({ order });
-        if (!insertOrder) {
-            logger.error("Error Order Failed");
-            return res.status(400).json({ success: false, msg: "Order Failed" });
-        }
-
-        user.balance -= order.totalPrice;
-        user.cart = [];
-        user.library = user.library.concat(order.cart);
-        user.history.push(String(insertOrder.insertedId));
-
-        const updateUser = await db.users.updateOne({ _id: ObjectId(req.user._id) }, { $set: user });
-        if (!updateUser) {
-            logger.error("Error Adding Order to User Failed");
-            return res.status(400).json({ success: false, msg: " Adding Order to User" });
-        } else {
-            res.json({ success: true, data: insertOrder.insertedId });
-        }
-    });
+    //updateing developer balance
 });
 
 module.exports = router;

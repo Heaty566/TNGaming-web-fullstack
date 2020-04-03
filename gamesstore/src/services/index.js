@@ -1,6 +1,6 @@
 //combine user service
 import { loginUser, addBalance, changeUserPassword, logoutUser, getUser, registerUser, updateProfile, uploadAvatar } from "./users/users";
-import { addGameToWishList, removeGameFromWishList, addGameToCart, removeGameFromCart, order } from "./users/games";
+import { addGameToWishList, removeGameFromWishList, addGameToCart, removeGameFromCart, purchaseGames } from "./users/games";
 
 //combine admin service
 import { allUsers, cleanToken, toggleUserAdmin, toggleUserDeveloper } from "./admin/users";
@@ -16,7 +16,7 @@ const adminService = {
 
 const usersService = {
     users: { logoutUser, loginUser, addBalance, changeUserPassword, getUser, registerUser, updateProfile, uploadAvatar },
-    games: { addGameToWishList, removeGameFromWishList, addGameToCart, removeGameFromCart, order }
+    games: { addGameToWishList, removeGameFromWishList, addGameToCart, removeGameFromCart, purchaseGames }
 };
 
 const gamesService = {

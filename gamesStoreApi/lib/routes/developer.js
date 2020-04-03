@@ -8,7 +8,7 @@ const { logger } = require("../logging");
 const { uploadImageGame } = require("../modules/uploadImage/");
 const { isUser, isDeveloper } = require("../middlewares/");
 const { gameSchema } = require("../models/schemas/");
-const { validateGame, validateGameRestock, validateGameUpdate, isObjectId } = require("../models/validateSchemas/");
+const { validateGameNew, validateGameRestock, validateGameUpdate, isObjectId } = require("../models/validateSchemas/");
 
 //update game
 router.put("/games/:id", [isUser, isDeveloper], async (req, res) => {
@@ -68,7 +68,6 @@ router.patch("/games/restock/:id", [isUser, isDeveloper], async (req, res) => {
 router.post("/games/new", [isUser, isDeveloper], async (req, res) => {
     //{name: String, price: Number, genreId: genre,  decription: String, available: boolean, stock: number, imagesGame: Image limits 10}
     const db = req.app.get("db");
-
     uploadImageGame(req, res, async error => {
         if (error) {
             if (error.code === "LIMIT_FILE_SIZE") return res.status(400).json({ success: false, msg: "This file must be smaller or equal 2mb" });
@@ -78,7 +77,9 @@ router.post("/games/new", [isUser, isDeveloper], async (req, res) => {
         const images = req.files.map(file => `${file.destination}/${file.filename}`.replace("./public", ""));
 
         //validate game
-        const { validateGame: isGame } = validateGame(_.pick(req.body, ["name", "price", "genreId", "description", "available", "stock"]));
+        const { error: isGame } = validateGameNew(
+            _.pick(req.body, ["name", "price", "genreId", "description", "available", "stock", "date", "publisher"])
+        );
         if (isGame) return res.status(400).json({ success: false, msg: isGame.details[0].message });
 
         //find user from database

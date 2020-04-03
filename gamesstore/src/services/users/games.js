@@ -21,7 +21,7 @@ export async function removeGameFromCart(token, gameId) {
     return data;
 }
 
-export async function order(token) {
-    const { data } = await http.post(`${endPoint}/order`, null, configHeader(token)).catch(ex => ex.response);
+export async function purchaseGames(token) {
+    const { data } = await http.post(`${endPoint}/purchase`, null, configHeader(token)).catch(ex => ex.response);
     return data;
 }
