@@ -19,7 +19,10 @@ const Global = createGlobalStyle`
 `;
 
 const AppStyle = styled.header`
-    display: flex;
+    background: ${colors.divBackground[2]};
+    height: 60px;
+    width: 100vw;
+    position: fixed;
 `;
 
 function App() {

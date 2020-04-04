@@ -1,11 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 // import {co} from"../../../constant/colors"
 
-const container = styled.div``;
+const Container = styled.div`
+    a {
+        text-decoration: none;
+    }
+`;
 
-function NavBrand() {
-    return <h1>brand</h1>;
-}
+const NavBrand = ({ iconURL, URL }) => {
+    return (
+        <Container>
+            <Link to={URL}>
+                <img src={process.env.PUBLIC_URL + iconURL} alt="logo" />
+            </Link>
+        </Container>
+    );
+};
 
 export default NavBrand;
