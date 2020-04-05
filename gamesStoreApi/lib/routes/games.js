@@ -54,7 +54,7 @@ router.get("/sortByKey/:key/:page", async (req, res) => {
 
     const games = await db.games.find().toArray();
 
-    const search = games.filter(item => item.name.toLowerCase().includes(req.params.key.toLowerCase()));
+    const search = games.filter((item) => item.name.toLowerCase().includes(req.params.key.toLowerCase()));
 
     const filter = _(search)
         .slice((req.params.page - 1) * config.page.pageSize)

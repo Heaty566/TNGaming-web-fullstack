@@ -9,11 +9,17 @@ const Container = styled.div`
     }
 `;
 
+const Image = styled.img`
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+`;
+
 const NavBrand = ({ iconURL, URL }) => {
     return (
         <Container>
             <Link to={URL}>
-                <img src={process.env.PUBLIC_URL + iconURL} alt="logo" />
+                <Image src={process.env.PUBLIC_URL + iconURL} alt="logo" />
             </Link>
         </Container>
     );

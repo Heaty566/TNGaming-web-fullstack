@@ -63,7 +63,7 @@ router.post("/register", async (req, res) => {
     if (isUnique) return res.status(400).json({ success: false, msg: "Username is taken" });
 
     //hashing password
-    const salt = await bcrypt.genSalt(6);
+    const salt = await bcrypt.genSalt(13);
     user.password = await bcrypt.hash(user.password, salt);
 
     //inserting new into database
@@ -142,7 +142,7 @@ router.post("/changeProfile", [isUser], async (req, res) => {
 router.post("/uploadAvatar", [isUser], (req, res) => {
     //{avatar: Image}
     const db = req.app.get("db");
-    uploadAvatar(req, res, async error => {
+    uploadAvatar(req, res, async (error) => {
         if (error) {
             if (error.code === "LIMIT_FILE_SIZE") return res.status(400).json({ success: false, msg: "This file must be smaller or equal 1mb" });
             return res.status(400).json({ success: false, msg: error });
@@ -151,7 +151,7 @@ router.post("/uploadAvatar", [isUser], (req, res) => {
         const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
         if (!user) return res.status(404).json({ success: false, msg: "User with the given Id was not found" });
         if (user.avatar)
-            rimraf(user.avatar, err => {
+            rimraf(user.avatar, (err) => {
                 if (err) logger.error("Error Deleting avatar folder");
             });
 

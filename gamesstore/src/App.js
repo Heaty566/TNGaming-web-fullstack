@@ -1,14 +1,21 @@
 import React from "react";
-import "./services/";
 import styled, { createGlobalStyle } from "styled-components";
+import { Switch, Route, Redirect } from "react-router-dom";
+
 import { colors } from "./js/constant/";
 
 import Navbar from "./js/containers/Navbar";
+import BuildingFeature from "./js/components/notification/buldingFreature";
 
 const Global = createGlobalStyle`
     body, #root {
         min-height: 100vh;
         background: ${colors.divBackground[1]};
+    }
+
+    #root {
+        display: grid;
+        grid-template-rows: 60px auto;
     }
 
     *{
@@ -18,20 +25,34 @@ const Global = createGlobalStyle`
     }
 `;
 
-const AppStyle = styled.header`
+const HeaderStyle = styled.header`
     background: ${colors.divBackground[2]};
     height: 60px;
     width: 100vw;
     position: fixed;
 `;
 
+const MainStyle = styled.div`
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 18vw 5fr 18vw;
+`;
+
 function App() {
     return (
         <React.Fragment>
             <Global />
-            <AppStyle>
+            <HeaderStyle>
                 <Navbar />
-            </AppStyle>
+            </HeaderStyle>
+            <MainStyle>
+                <Switch>
+                    <Route path="/building" component={BuildingFeature} />
+                    <Redirect from="/" to="/home" />
+                </Switch>
+            </MainStyle>
         </React.Fragment>
     );
 }

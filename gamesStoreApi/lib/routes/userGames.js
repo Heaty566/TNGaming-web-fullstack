@@ -22,7 +22,7 @@ router.post("/addGameTo/:compartment/:gameId", [isUser], async (req, res) => {
 
     const game = await db.games.findOne({ _id: ObjectId(req.params.gameId) });
     if (!game) return res.status(404).json({ success: false, msg: `Game with the given Id was not found` });
-    const isNew = user[req.params.compartment].map(item => item.toString()).indexOf(req.params.gameId);
+    const isNew = user[req.params.compartment].map((item) => item.toString()).indexOf(req.params.gameId);
 
     if (isNew === -1) user[req.params.compartment].push(game._id);
 
@@ -54,7 +54,7 @@ router.post("/removeGameFrom/:compartment/:gameId", [isUser], async (req, res) =
     const game = await db.games.findOne({ _id: ObjectId(req.params.gameId) });
     if (!game) return res.status(404).json({ success: false, msg: `Game with the given Id was not found` });
 
-    const isNew = user[req.params.compartment].map(id => id.toString()).indexOf(req.params.gameId);
+    const isNew = user[req.params.compartment].map((id) => id.toString()).indexOf(req.params.gameId);
 
     if (isNew !== -1) user[req.params.compartment] = user[req.params.compartment].filter((item, index) => index !== isNew);
 
@@ -83,18 +83,18 @@ router.post("/purchase", [isUser], async (req, res) => {
 
     //checking Id game
     Promise.all(
-        user.cart.map(async gameId => {
+        user.cart.map(async (gameId) => {
             const game = await db.games.findOne({ _id: ObjectId(gameId) });
             if (!game) return Promise.reject({ success: false, msg: "The game in your cart doesn't exist" });
 
-            const isUnique = user.library.map(id => id.toString()).includes(game._id.toString());
+            const isUnique = user.library.map((id) => id.toString()).includes(game._id.toString());
             if (isUnique) return Promise.reject({ success: false, msg: `you owned ${game.name}` });
 
             return Promise.resolve(game);
         })
     )
-        .then(async games => {
-            const totalPrice = games.map(game => game.price).reduce((total, current) => total + current);
+        .then(async (games) => {
+            const totalPrice = games.map((game) => game.price).reduce((total, current) => total + current);
             //checking balance is enought to buy
             if (user.balance < totalPrice) return res.status(400).json({ success: false, msg: "Your balance doesn't enough money" });
 
@@ -109,7 +109,7 @@ router.post("/purchase", [isUser], async (req, res) => {
             //minus user balance
             //set cart history and library
             user.balance -= totalPrice;
-            user.library = user.library.concat(games.map(game => game._id));
+            user.library = user.library.concat(games.map((game) => game._id));
             user.cart = [];
             user.history.push(order.insertedId);
 
@@ -121,7 +121,7 @@ router.post("/purchase", [isUser], async (req, res) => {
             }
 
             return Promise.all(
-                games.map(async game => {
+                games.map(async (game) => {
                     const developer = await db.users.findOne({ _id: ObjectId(game.developerId) });
                     if (!developer) {
                         logger.error("Update find developer on order failed");
@@ -129,12 +129,12 @@ router.post("/purchase", [isUser], async (req, res) => {
                     }
                     developer.balance += game.price;
                     await db.users.updateOne({ _id: ObjectId(game.developerId) }, { $set: developer });
-                    return Promise.resolve();
+                    return Promise.resolve({ success: true, msg: "Purchase success" });
                 })
             );
         })
-        .then(() => res.json({ success: true, msg: "Purchase success" }))
-        .catch(ex => {
+        .then((result) => res.json(result))
+        .catch((ex) => {
             return res.status(400).json(ex);
         });
 

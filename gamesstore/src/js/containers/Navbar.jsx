@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { icons } from "../constant/";
-import NavBrand from "../components/navbarCreator/navBrand";
+import NavBrand from "../components/navbar/navBrand";
+import NavSearch from "../components/navbar/navSearch";
 
 const Container = styled.div`
     height: inherit;
@@ -16,7 +17,7 @@ function Navbar() {
     return (
         <Container>
             <NavBrand iconURL={icons.logo} URL="/home" />
-            <p>search box </p>
+            <NavSearch />
             <p>group btn</p>
         </Container>
     );

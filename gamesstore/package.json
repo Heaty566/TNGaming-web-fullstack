@@ -10,13 +10,18 @@
         "@testing-library/user-event": "^7.2.1",
         "axios": "^0.19.2",
         "joi-objectid": "^3.0.1",
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
         "node-sass": "^4.13.1",
+        "npm": "^6.14.4",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "react-redux": "^7.2.0",
         "react-router-dom": "^5.1.2",
         "react-scripts": "3.4.1",
         "redux": "^4.0.5",
-        "styled-components": "^5.0.1"
+        "styled-components": "^5.0.1",
+        "use-debounce": "^3.4.1"
     },
     "scripts": {
         "start": "react-scripts start",
