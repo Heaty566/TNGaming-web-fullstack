@@ -16,10 +16,10 @@ const {
     userGames,
     userGamesURL,
     games,
-    gamesURL
+    gamesURL,
 } = require("./routes/");
 
-module.exports = function(app) {
+module.exports = function (app) {
     app.use(cors());
     app.use(express.json());
     app.use(bodyParser.json());

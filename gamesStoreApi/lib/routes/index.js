@@ -5,7 +5,7 @@ const userGames = require("./userGames");
 const games = require("./games");
 const auth = require("./auth");
 const admin = require("./admin");
-const developer = require("./developer");
+const developer = require("./developers");
 
 //setting URL
 const genresURL = "/api/users/admin/games/genres";
@@ -30,5 +30,5 @@ module.exports = {
     userGames,
     userGamesURL,
     games,
-    gamesURL
+    gamesURL,
 };
