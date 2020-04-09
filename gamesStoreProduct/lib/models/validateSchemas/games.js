@@ -74,17 +74,40 @@ schemasGamesValidate = type => {
                     "boolean.base": formatError("available", "boolean.base"),
                     "any.required": formatError("available", "any.required")
                 });
+        case "publisher":
+            return Joi.string()
+                .max(50)
+                .min(1)
+                .regex(/^[a-zA-Z0-9- ]*$/)
+                .required()
+                .messages({
+                    "string.base": formatError("publisher", "string.base"),
+                    "string.empty": formatError("publisher", "string.empty"),
+                    "string.min": formatError("publisher", "string.min", " one character"),
+                    "string.max": formatError("publisher", "string.max", " 50 characters"),
+                    "string.pattern.base": formatError("publisher", "string.pattern.base", "string.letterOnly"),
+                    "any.required": formatError("publisher", "any.required")
+                });
+        case "date":
+            return Joi.date()
+                .required()
+                .messages({
+                    "date.base": formatError("Date", "date.base"),
+                    "any.required": formatError("Date", "any.required")
+                });
     }
 };
 
-validateGame = game => {
+validateGameNew = game => {
     const schema = Joi.object({
         name: schemasGamesValidate("name"),
         price: schemasGamesValidate("price"),
         genreId: schemasGamesValidate("genreId"),
         description: schemasGamesValidate("description"),
         available: schemasGamesValidate("available"),
-        stock: schemasGamesValidate("stock")
+        stock: schemasGamesValidate("stock"),
+        date: schemasGamesValidate("date"),
+        publisher: schemasGamesValidate("publisher")
     });
 
     return schema.validate(game);
@@ -96,7 +119,9 @@ validateGameUpdate = game => {
         price: schemasGamesValidate("price"),
         genreId: schemasGamesValidate("genreId"),
         description: schemasGamesValidate("description"),
-        available: schemasGamesValidate("available")
+        available: schemasGamesValidate("available"),
+        date: schemasGamesValidate("date"),
+        publisher: schemasGamesValidate("publisher")
     });
 
     return schema.validate(game);
@@ -110,4 +135,4 @@ validateGameRestock = stock => {
     return schema.validate({ stock });
 };
 
-module.exports = { validateGame, validateGameRestock, validateGameUpdate };
+module.exports = { validateGameNew, validateGameRestock, validateGameUpdate };

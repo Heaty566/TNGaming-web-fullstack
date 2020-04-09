@@ -4,33 +4,17 @@ import config from "../../../config/http.json";
 const endPoint = config.endPointURL.adminURL;
 
 export async function cleanToken(token) {
-    const data = await http
-        .post(`${endPoint}/cleantoken`, null, configHeader(token))
-        .then((res) => res.data)
-        .catch((ex) => ex.response);
-    return data;
+    return await http.post(`${endPoint}/cleantoken`, null, configHeader(token));
 }
 
 export async function allUsers(token) {
-    const data = await http
-        .get(`${endPoint}/allusers`, configHeader(token))
-        .then((res) => res.data)
-        .catch((ex) => ex.response);
-    return data;
+    return await http.get(`${endPoint}/allusers`, configHeader(token));
 }
 
 export async function toggleUserDeveloper(token, userId) {
-    const data = await http
-        .post(`${endPoint}/toggleDeveloper/${userId}`, null, configHeader(token))
-        .then((res) => res.data)
-        .catch((ex) => ex.response);
-    return data;
+    return await http.post(`${endPoint}/toggleDeveloper/${userId}`, null, configHeader(token));
 }
 
 export async function toggleUserAdmin(token, userId) {
-    const data = await http
-        .post(`${endPoint}/toggleAdmin/${userId}`, null, configHeader(token))
-        .then((res) => res.data)
-        .catch((ex) => ex.response);
-    return data;
+    return await http.post(`${endPoint}/toggleAdmin/${userId}`, null, configHeader(token));
 }

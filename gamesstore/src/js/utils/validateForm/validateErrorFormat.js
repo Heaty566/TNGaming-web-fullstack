@@ -28,10 +28,10 @@ const pattern = {
     "string.empty": "is not allowed to be empty",
     "string.pattern.base": "must contain",
     "string.min": "must contain at least",
-    "string.max": "must be less than or equal to"
+    "string.max": "must be less than or equal to",
 };
 
-formatError = (label, type, option = "") => {
+const formatError = (label, type, option = "") => {
     return `${label} ${pattern[type]}${pattern[option] ? pattern[option] : option}`;
 };
 

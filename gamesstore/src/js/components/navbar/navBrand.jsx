@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-// import {co} from"../../../constant/colors"
+
+import { styles } from "../../constant/";
+const { maxHeightWidth, noDecorateAndList } = styles;
 
 const Container = styled.div`
     a {
-        text-decoration: none;
+        ${noDecorateAndList}
     }
 `;
 
 const Image = styled.img`
-    height: 100%;
-    width: 100%;
+    ${maxHeightWidth}
     object-fit: cover;
 `;
 

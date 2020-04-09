@@ -3,7 +3,7 @@ Joi.objectId = require("joi-objectid")(Joi);
 
 const { formatError } = require("./validateErrorFormat");
 
-schemasGamesValidate = type => {
+const schemasGamesValidate = (type) => {
     switch (type) {
         case "name":
             return Joi.string()
@@ -17,7 +17,7 @@ schemasGamesValidate = type => {
                     "string.min": formatError("Name", "string.min", " one character"),
                     "string.max": formatError("Name", "string.max", " 50 characters"),
                     "string.pattern.base": formatError("Name", "string.pattern.base", "string.letterOnly"),
-                    "any.required": formatError("Name", "any.required")
+                    "any.required": formatError("Name", "any.required"),
                 });
 
         case "price":
@@ -29,7 +29,7 @@ schemasGamesValidate = type => {
                     "number.max": formatError("price", "number.max", " $5000"),
                     "number.min": formatError("price", "number.min", " $0"),
                     "number.base": formatError("price", "number.base"),
-                    "any.required": formatError("price", "any.required")
+                    "any.required": formatError("price", "any.required"),
                 });
 
         case "stock":
@@ -41,7 +41,7 @@ schemasGamesValidate = type => {
                     "number.max": formatError("stock", "number.max", " 5000"),
                     "number.min": formatError("stock", "number.min", " one"),
                     "number.base": formatError("stock", "number.base"),
-                    "any.required": formatError("stock", "any.required")
+                    "any.required": formatError("stock", "any.required"),
                 });
 
         case "genreId":
@@ -54,7 +54,7 @@ schemasGamesValidate = type => {
                     "string.empty": formatError("Genre", "string.empty"),
                     "array.max": formatError("Genre", "array.max", " twenty genres"),
                     "array.min": formatError("Genre", "array.min", " one genre"),
-                    "any.required": formatError("Genre", "any.required")
+                    "any.required": formatError("Genre", "any.required"),
                 });
 
         case "description":
@@ -65,14 +65,14 @@ schemasGamesValidate = type => {
                 .messages({
                     "string.base": formatError("Description", "string.base"),
                     "string.max": formatError("Description", "string.max", " 50000 characters"),
-                    "any.required": formatError("Description", "any.required")
+                    "any.required": formatError("Description", "any.required"),
                 });
         case "available":
             return Joi.boolean()
                 .required()
                 .messages({
                     "boolean.base": formatError("available", "boolean.base"),
-                    "any.required": formatError("available", "any.required")
+                    "any.required": formatError("available", "any.required"),
                 });
         case "publisher":
             return Joi.string()
@@ -86,19 +86,21 @@ schemasGamesValidate = type => {
                     "string.min": formatError("publisher", "string.min", " one character"),
                     "string.max": formatError("publisher", "string.max", " 50 characters"),
                     "string.pattern.base": formatError("publisher", "string.pattern.base", "string.letterOnly"),
-                    "any.required": formatError("publisher", "any.required")
+                    "any.required": formatError("publisher", "any.required"),
                 });
         case "date":
             return Joi.date()
                 .required()
                 .messages({
                     "date.base": formatError("Date", "date.base"),
-                    "any.required": formatError("Date", "any.required")
+                    "any.required": formatError("Date", "any.required"),
                 });
+        default:
+            break;
     }
 };
 
-validateGameNew = game => {
+const validateGameNew = (game) => {
     const schema = Joi.object({
         name: schemasGamesValidate("name"),
         price: schemasGamesValidate("price"),
@@ -107,13 +109,13 @@ validateGameNew = game => {
         available: schemasGamesValidate("available"),
         stock: schemasGamesValidate("stock"),
         date: schemasGamesValidate("date"),
-        publisher: schemasGamesValidate("publisher")
+        publisher: schemasGamesValidate("publisher"),
     });
 
     return schema.validate(game);
 };
 
-validateGameUpdate = game => {
+const validateGameUpdate = (game) => {
     const schema = Joi.object({
         name: schemasGamesValidate("name"),
         price: schemasGamesValidate("price"),
@@ -121,15 +123,15 @@ validateGameUpdate = game => {
         description: schemasGamesValidate("description"),
         available: schemasGamesValidate("available"),
         date: schemasGamesValidate("date"),
-        publisher: schemasGamesValidate("publisher")
+        publisher: schemasGamesValidate("publisher"),
     });
 
     return schema.validate(game);
 };
 
-validateGameRestock = stock => {
+const validateGameRestock = (stock) => {
     const schema = Joi.object({
-        stock: schemasGamesValidate("stock")
+        stock: schemasGamesValidate("stock"),
     });
 
     return schema.validate({ stock });

@@ -15,7 +15,7 @@ const imagesGameFilter = (req, file, cb) => {
     }
 };
 
-const storage = multer.diskStorage({
+const storageGameImages = multer.diskStorage({
     destination: async function(req, file, callback) {
         const dest = `${config.uploadURL.uploadImagesGameUrl}/${req.user._id}/games/${req.developer.unique}`;
         mkdirp.sync(dest, null);
@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 });
 
 const uploadImageGame = multer({
-    storage,
+    storage: storageGameImages,
     fileFilter: imagesGameFilter,
     limits: { fileSize: 2 * 1024 * 1024 }
 }).array("imagesGame", 10);

@@ -1,0 +1,15 @@
+{
+    "navbar": {
+        "navBrand": "/home",
+        "searchBoxURL": "/games"
+    },
+    "login": {
+        "nextURL": "/home",
+        "signUpInstead": "/users/register"
+    },
+
+    "register": {
+        "nextURL": "/home",
+        "signInInstead": "/users/login"
+    }
+}

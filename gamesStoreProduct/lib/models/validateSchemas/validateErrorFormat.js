@@ -5,6 +5,9 @@ const pattern = {
     //password
     "string.matchPassword": "doesn't match password",
 
+    //format date
+
+    "date.base": "must be a valid date",
     //format array
     "array.base": "must be an array",
     "array.max": "must contain less than or equal to",

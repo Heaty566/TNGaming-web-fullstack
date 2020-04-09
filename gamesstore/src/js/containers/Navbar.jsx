@@ -1,26 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { useCookies } from "react-cookie";
 
-import { icons } from "../constant/";
+import { updateUser } from "../../js/stores/auth";
+import { store } from "../../js/stores/configStore";
+import config from "../../config/linkURL.json";
 import NavBrand from "../components/navbar/navBrand";
 import NavSearch from "../components/navbar/navSearch";
+import { usersService } from "../services/";
+
+import { icons, styles } from "../constant/";
+const { flexBetween } = styles;
 
 const Container = styled.div`
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 18vw;
+  height: inherit;
+  padding: 0 18vw;
+
+  ${flexBetween}
 `;
 
 function Navbar() {
-    return (
-        <Container>
-            <NavBrand iconURL={icons.logo} URL="/home" />
-            <NavSearch />
-            <p>group btn</p>
-        </Container>
-    );
+  const [cookies, setCookie, removeCookie] = useCookies([]);
+  const auth = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (cookies["x-auth-token"] && !auth.token)
+      usersService.users
+        .loginUserWithCookie(cookies["x-auth-token"])
+        .then(({ data }) => {
+          const user = data.data;
+          store.dispatch({
+            type: updateUser.type,
+            payload: { user, token: cookies["x-auth-token"] },
+          });
+        })
+        .catch(() => removeCookie("x-auth-token"));
+  }, [cookies, removeCookie, auth.token]);
+
+  return (
+    <Container>
+      <NavBrand iconURL={icons.logo} URL={config.navbar.navBrand} />
+      <NavSearch />
+      <p>group btn</p>
+    </Container>
+  );
 }
 
 export default Navbar;

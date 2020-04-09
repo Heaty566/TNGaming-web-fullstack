@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDebounce } from "use-debounce";
 import styled from "styled-components";
 
 import Spinner from "../loading/spinner";
+import config from "../../../config/linkURL.json";
 import { store } from "../../stores/configStore";
 import { onChangeSearchBox } from "../../stores/searchBox";
-import { icons } from "../../constant/";
+import { icons, colors, styles } from "../../constant/";
+const { noDecorateAndList, noBorderAndOutline } = styles;
 
 const SearchContainer = styled.div`
-    background: #ffffff;
+    background: ${colors.divBackground[4]};
     padding: 2px 0;
     width: 36.6vw;
     position: relative;
@@ -34,8 +36,8 @@ const SearchInput = styled.div`
         transition: 0.2s;
         margin-left: 5px;
         font-size: 12px;
-        border: none;
-        outline: none;
+
+        ${noBorderAndOutline}
         &::placeholder {
             opacity: 0.6;
         }
@@ -75,8 +77,7 @@ const SearchResult = styled.div`
     a {
         transition: 100ms;
         color: black;
-        text-decoration: none;
-        list-style: none;
+        ${noDecorateAndList}
         display: block;
     }
 
@@ -86,15 +87,22 @@ const SearchResult = styled.div`
 `;
 
 function SearchNav() {
+    const history = useHistory();
+    const searchBox = useSelector((state) => state.entities.searchBox);
+
     const [search, setSearch] = useState("");
     const [select, setSelect] = useState(-1);
     const [active, setActive] = useState(false);
     const [value] = useDebounce(search, 1000);
-    const searchBox = useSelector((state) => state.entities.searchBox);
 
     const handleOnKeyDown = useCallback(
         (keyCode) => {
             switch (keyCode) {
+                case 13: {
+                    if (select !== -1) history.push(config.navbar.searchBoxURL + "/" + searchBox.results[select]._id);
+                    break;
+                }
+
                 case 38:
                     setSelect(select - 1);
                     if (select <= 0) setSelect(searchBox.results.length - 1);
@@ -108,14 +116,15 @@ function SearchNav() {
                     setSelect(-1);
             }
         },
-        [select, searchBox]
+        [select, searchBox, history]
     );
+
     useEffect(() => {
         if (value) store.dispatch({ type: onChangeSearchBox.type, payload: value });
     }, [value]);
 
     return (
-        <SearchContainer>
+        <SearchContainer onKeyDown={({ keyCode }) => handleOnKeyDown(keyCode)}>
             <SearchInput>
                 <img src={process.env.PUBLIC_URL + icons.search} alt="search" />
                 <input
@@ -124,14 +133,12 @@ function SearchNav() {
                     autoComplete="off"
                     spellCheck="off"
                     onFocus={() => setActive(true)}
-                    onBlur={() => setActive(false)}
-                    onKeyDown={({ keyCode }) => handleOnKeyDown(keyCode)}
                     value={search}
                     onChange={({ currentTarget: input }) => setSearch(input.value)}
                 />
             </SearchInput>
             {active && (
-                <SearchResult>
+                <SearchResult onBlur={() => setActive(false)}>
                     {searchBox.results.length
                         ? searchBox.results.map((option, index) => (
                               <ResultColums
@@ -140,7 +147,7 @@ function SearchNav() {
                                   onMouseEnter={() => setSelect(index)}
                                   onMouseLeave={() => setSelect(-1)}
                               >
-                                  <Link to="#">{option.name}</Link>
+                                  <Link to={config.navbar.searchBoxURL + "/" + option._id}>{option.name}</Link>
                               </ResultColums>
                           ))
                         : searchBox.loading && <Spinner height="14px" border="5px" />}

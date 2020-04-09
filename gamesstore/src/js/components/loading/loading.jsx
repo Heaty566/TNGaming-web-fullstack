@@ -1,5 +1,4 @@
 import React from "react";
-import { colors } from "../../constant";
 import styled, { keyframes } from "styled-components";
 
 const loadingAnimation = (start, time) => {
@@ -20,11 +19,12 @@ const LoadingContainer = styled.div`
 
     span {
         margin: 0 2px;
-        background: ${colors.buttonBackground[2]};
         display: block;
+        background: ${(props) => props.color};
         height: ${(props) => props.height};
         width: ${(props) => props.width};
     }
+
     span:nth-child(1) {
         animation: ${loadingAnimation(20)} 1s infinite;
     }
@@ -41,9 +41,9 @@ const LoadingContainer = styled.div`
     }
 `;
 
-const Loading = ({ height, width }) => {
+const Loading = ({ height, width, color }) => {
     return (
-        <LoadingContainer height={height} width={width}>
+        <LoadingContainer height={height} width={width} color={color}>
             <span></span>
             <span></span>
             <span></span>
