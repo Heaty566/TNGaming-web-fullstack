@@ -4,4 +4,5 @@ export default {
   visibilityOn: "/pages/icons/visibility_on.svg",
   visibilityOff: "/pages/icons/visibility_off.svg",
   login: "/pages/icons/login.svg",
+  dropdownArrow: "/pages/icons/dropdown_arrow.svg",
 };

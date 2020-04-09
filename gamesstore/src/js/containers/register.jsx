@@ -66,17 +66,7 @@ function Register() {
     }
 
     setForm({ name, username, password, confirm, email, phone, address });
-  }, [
-    name,
-    username,
-    password,
-    confirm,
-    email,
-    phone,
-    address,
-    auth.token,
-    history,
-  ]);
+  }, [name, username, password, confirm, email, phone, address, auth, history]);
 
   async function handleOnSumbit(event) {
     event.preventDefault();
@@ -90,7 +80,6 @@ function Register() {
 
     store.dispatch({ type: registerUser.type, payload: form });
   }
-
   return (
     <Container>
       <ContainerRegister onSubmit={handleOnSumbit}>

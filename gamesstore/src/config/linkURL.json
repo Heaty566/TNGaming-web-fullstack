@@ -1,7 +1,13 @@
 {
     "navbar": {
-        "navBrand": "/home",
-        "searchBoxURL": "/games"
+        "navBrandURL": "/home",
+        "searchBoxURL": "/games",
+        "signInURL": "/users/login",
+        "groupBtn": {
+            "profileURL": "/users/me",
+            "adminDashboard": "/users/admin/dashboard",
+            "developerDashboard": "/users/developer/dashboard"
+        }
     },
     "login": {
         "nextURL": "/home",

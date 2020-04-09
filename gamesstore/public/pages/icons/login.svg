@@ -1,1 +1,11 @@
-<svg id="Capa_1" enable-background="new 0 0 515.556 515.556" height="24" viewBox="0 0 515.556 515.556" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m96.667 0v96.667h64.444v-32.223h257.778v386.667h-257.778v-32.222h-64.444v96.667h386.667v-515.556z"/><path  d="m157.209 331.663 45.564 45.564 119.449-119.449-119.448-119.449-45.564 45.564 41.662 41.662h-166.65v64.445h166.65z"/></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M4.5 0V4.50001H7.49998V2.99998H19.5V21H7.49998V19.5H4.5V24H22.5V0H4.5Z" fill="#FEFEFE"/>
+<path d="M7.31836 15.4395L9.43944 17.5605L15 12L9.43948 6.43945L7.3184 8.56053L9.25784 10.5H1.5V13.5H9.25784L7.31836 15.4395Z" fill="#FEFEFE"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>

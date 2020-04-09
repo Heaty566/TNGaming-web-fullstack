@@ -1,7 +1,9 @@
 const Joi = require("@hapi/joi");
 Joi.objectId = require("joi-objectid")(Joi);
 
-const { formatError } = require("./validateErrorFormat");
+const {
+    formatError
+} = require("./validateErrorFormat");
 
 const schemasGamesValidate = (type) => {
     switch (type) {
@@ -134,7 +136,13 @@ const validateGameRestock = (stock) => {
         stock: schemasGamesValidate("stock"),
     });
 
-    return schema.validate({ stock });
+    return schema.validate({
+        stock
+    });
 };
 
-module.exports = { validateGameNew, validateGameRestock, validateGameUpdate };
+module.exports = {
+    validateGameNew,
+    validateGameRestock,
+    validateGameUpdate
+};

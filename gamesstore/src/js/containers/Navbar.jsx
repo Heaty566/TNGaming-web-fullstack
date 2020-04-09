@@ -17,8 +17,8 @@ const { flexBetween } = styles;
 
 const Container = styled.div`
   height: inherit;
-  padding: 0 18vw;
-
+  padding: ${(props) => (props.isLogin ? "0 3.6vw" : "0 18vw")};
+  position: relative;
   ${flexBetween}
 `;
 
@@ -41,8 +41,8 @@ function Navbar() {
   }, [cookies, removeCookie, auth.token]);
 
   return (
-    <Container>
-      <NavBrand iconURL={icons.logo} URL={config.navbar.navBrand} />
+    <Container isLogin={auth.token ? true : false}>
+      <NavBrand iconURL={icons.logo} URL={config.navbar.navBrandURL} />
       <NavSearch />
       <NavGroupBtn />
     </Container>

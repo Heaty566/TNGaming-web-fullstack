@@ -38,7 +38,15 @@ exports.login = async (req, res) => {
 
   //create new Token
   const token = createToken(
-    _.pick(user, ["_id", "username", "name", "isDeveloper", "isAdmin"])
+    _.pick(user, [
+      "_id",
+      "username",
+      "name",
+      "isDeveloper",
+      "isAdmin",
+      "balance",
+      "avatar",
+    ])
   );
 
   //create new token in db
@@ -55,6 +63,8 @@ exports.login = async (req, res) => {
           "name",
           "isDeveloper",
           "isAdmin",
+          "balance",
+          "avatar",
         ]),
         success: true,
       },

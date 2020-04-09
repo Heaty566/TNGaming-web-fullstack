@@ -20,9 +20,14 @@ exports.get_me = [
     const db = req.app.get("db");
 
     //get user from database
-    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+    const user = await db.users.findOne({
+      _id: ObjectId(req.user._id),
+    });
 
-    res.json({ success: true, data: user });
+    res.json({
+      success: true,
+      data: user,
+    });
   },
 ];
 
@@ -35,33 +40,47 @@ exports.add_balance = [
     //validate balance
     const { error } = validateAddBalance(_.pick(req.body, ["balance"]));
     if (error)
-      return res
-        .status(400)
-        .json({ success: false, msg: error.details[0].message });
+      return res.status(400).json({
+        success: false,
+        msg: error.details[0].message,
+      });
 
     //get user from database
-    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+    const user = await db.users.findOne({
+      _id: ObjectId(req.user._id),
+    });
     if (!user)
-      return res
-        .status(404)
-        .json({ success: false, msg: "User with the given Id was not found" });
+      return res.status(404).json({
+        success: false,
+        msg: "User with the given Id was not found",
+      });
 
     //update user
     user.balance = Number(user.balance) + Number(req.body.balance);
 
     //update new password
     const updateUser = await db.users.updateOne(
-      { _id: ObjectId(req.user._id) },
-      { $set: { balance: user.balance } }
+      {
+        _id: ObjectId(req.user._id),
+      },
+      {
+        $set: {
+          balance: user.balance,
+        },
+      }
     );
     if (!updateUser) {
       logger.error("Error adding balance");
-      return res
-        .status(400)
-        .json({ success: false, msg: "adding balance failed" });
+      return res.status(400).json({
+        success: false,
+        msg: "adding balance failed",
+      });
     }
 
-    res.json({ success: true, msg: "Added balance" });
+    res.json({
+      success: true,
+      msg: "Added balance",
+    });
   },
 ];
 
@@ -82,9 +101,10 @@ exports.register = async (req, res) => {
     ])
   );
   if (isUser)
-    return res
-      .status(400)
-      .json({ success: false, msg: isUser.details[0].message });
+    return res.status(400).json({
+      success: false,
+      msg: isUser.details[0].message,
+    });
 
   //create new user
   const user = userSchema(
@@ -99,27 +119,36 @@ exports.register = async (req, res) => {
   );
 
   //checking user is unique
-  const isUnique = await db.users.findOne({ username: user.username });
+  const isUnique = await db.users.findOne({
+    username: user.username,
+  });
   if (isUnique)
-    return res.status(400).json({ success: false, msg: "Username is taken" });
+    return res.status(400).json({
+      success: false,
+      msg: "Username is taken",
+    });
 
   //hashing password
   const salt = await bcrypt.genSalt(13);
   user.password = await bcrypt.hash(user.password, salt);
 
   //inserting new into database
-  setTimeout(async () => {
-    try {
-      const newUser = await db.users.insertOne(user);
-      const newUserId = newUser.insertedId;
 
-      logger.info(`Inserted a new user with ID: ${newUserId}`);
-      res.json({ success: true });
-    } catch (ex) {
-      logger.error("Error inserting User");
-      res.status(400).json({ success: false, msg: "Error inserting user" });
-    }
-  }, 10000);
+  try {
+    const newUser = await db.users.insertOne(user);
+    const newUserId = newUser.insertedId;
+
+    logger.info(`Inserted a new user with ID: ${newUserId}`);
+    res.json({
+      success: true,
+    });
+  } catch (ex) {
+    logger.error("Error inserting User");
+    res.status(400).json({
+      success: false,
+      msg: "Error inserting user",
+    });
+  }
 };
 
 exports.change_password = [
@@ -132,23 +161,28 @@ exports.change_password = [
       _.pick(req.body, ["confirm", "password", "oldPassword"])
     );
     if (error)
-      return res
-        .status(400)
-        .json({ success: false, msg: error.details[0].message });
+      return res.status(400).json({
+        success: false,
+        msg: error.details[0].message,
+      });
 
     //get user from database
-    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+    const user = await db.users.findOne({
+      _id: ObjectId(req.user._id),
+    });
     if (!user)
-      return res
-        .status(404)
-        .json({ success: false, msg: "User with the given Id was not found" });
+      return res.status(404).json({
+        success: false,
+        msg: "User with the given Id was not found",
+      });
 
     //checking is correct password
     const isCorrect = await bcrypt.compare(req.body.oldPassword, user.password);
     if (!isCorrect)
-      return res
-        .status(400)
-        .json({ success: false, msg: "Old password doesn't match" });
+      return res.status(400).json({
+        success: false,
+        msg: "Old password doesn't match",
+      });
 
     //hashing new password
     const salt = await bcrypt.genSalt(6);
@@ -156,17 +190,27 @@ exports.change_password = [
 
     //update new password
     const updateUser = await db.users.updateOne(
-      { _id: ObjectId(req.user._id) },
-      { $set: { password: user.password } }
+      {
+        _id: ObjectId(req.user._id),
+      },
+      {
+        $set: {
+          password: user.password,
+        },
+      }
     );
     if (!updateUser) {
       logger.error("Error updating password");
-      return res
-        .status(400)
-        .json({ success: false, msg: "Update password failed" });
+      return res.status(400).json({
+        success: false,
+        msg: "Update password failed",
+      });
     }
 
-    res.json({ success: true, msg: "Updated password" });
+    res.json({
+      success: true,
+      msg: "Updated password",
+    });
   },
 ];
 
@@ -181,16 +225,20 @@ exports.update_profile = [
       _.pick(req.body, ["name", "email", "phone", "address"])
     );
     if (error)
-      return res
-        .status(400)
-        .json({ success: false, msg: error.details[0].message });
+      return res.status(400).json({
+        success: false,
+        msg: error.details[0].message,
+      });
 
     //get user from database
-    const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+    const user = await db.users.findOne({
+      _id: ObjectId(req.user._id),
+    });
     if (!user)
-      return res
-        .status(404)
-        .json({ success: false, msg: "User with the given Id was not found" });
+      return res.status(404).json({
+        success: false,
+        msg: "User with the given Id was not found",
+      });
 
     //update user
     user.name = req.body.name;
@@ -200,17 +248,25 @@ exports.update_profile = [
 
     //update new password
     const updateUser = await db.users.updateOne(
-      { _id: ObjectId(req.user._id) },
-      { $set: user }
+      {
+        _id: ObjectId(req.user._id),
+      },
+      {
+        $set: user,
+      }
     );
     if (!updateUser) {
       logger.error("Error updating profile");
-      return res
-        .status(400)
-        .json({ success: false, msg: "Update profile failed" });
+      return res.status(400).json({
+        success: false,
+        msg: "Update profile failed",
+      });
     }
 
-    res.json({ success: true, msg: "Updated profile" });
+    res.json({
+      success: true,
+      msg: "Updated profile",
+    });
   },
 ];
 
@@ -222,27 +278,29 @@ exports.update_avatar = [
     uploadAvatar(req, res, async (error) => {
       if (error) {
         if (error.code === "LIMIT_FILE_SIZE")
-          return res
-            .status(400)
-            .json({
-              success: false,
-              msg: "This file must be smaller or equal 1mb",
-            });
-        return res.status(400).json({ success: false, msg: error });
+          return res.status(400).json({
+            success: false,
+            msg: "This file must be smaller or equal 1mb",
+          });
+        return res.status(400).json({
+          success: false,
+          msg: error,
+        });
       }
 
-      const user = await db.users.findOne({ _id: ObjectId(req.user._id) });
+      const user = await db.users.findOne({
+        _id: ObjectId(req.user._id),
+      });
       if (!user)
-        return res
-          .status(404)
-          .json({
-            success: false,
-            msg: "User with the given Id was not found",
-          });
-      if (user.avatar)
-        rimraf(user.avatar, (err) => {
+        return res.status(404).json({
+          success: false,
+          msg: "User with the given Id was not found",
+        });
+      if (user.avatar) {
+        rimraf("./public" + user.avatar, (err) => {
           if (err) logger.error("Error Deleting avatar folder");
         });
+      }
 
       user.avatar = `${req.file.destination}/${req.file.filename}`.replace(
         "./public",
@@ -250,15 +308,25 @@ exports.update_avatar = [
       );
 
       const image = await db.users.updateOne(
-        { _id: ObjectId(req.user._id) },
-        { $set: { avatar: user.avatar } }
+        {
+          _id: ObjectId(req.user._id),
+        },
+        {
+          $set: {
+            avatar: user.avatar,
+          },
+        }
       );
       if (!image)
-        return res
-          .status(400)
-          .json({ success: false, msg: "Updating user failed" });
+        return res.status(400).json({
+          success: false,
+          msg: "Updating user failed",
+        });
 
-      res.json({ success: true, msg: "Updated avatar" });
+      res.json({
+        success: true,
+        msg: "Updated avatar",
+      });
     });
   },
 ];

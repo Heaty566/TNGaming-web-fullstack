@@ -40,9 +40,10 @@ const Global = createGlobalStyle`
 `;
 
 const HeaderStyle = styled.header`
-  background: ${colors.divBackground[2]};
+  background: ${colors.divBackground[0]};
   height: 60px;
   width: 100vw;
+  z-index: 9999;
   position: fixed;
 `;
 
@@ -50,6 +51,9 @@ const MainStyle = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 60px);
   display: grid;
   grid-template-columns: 18vw 5fr 18vw;
 `;
