@@ -5,10 +5,12 @@ import { useCookies } from "react-cookie";
 
 import { updateUser } from "../../js/stores/auth";
 import { store } from "../../js/stores/configStore";
+import { usersService } from "../services/";
 import config from "../../config/linkURL.json";
+
 import NavBrand from "../components/navbar/navBrand";
 import NavSearch from "../components/navbar/navSearch";
-import { usersService } from "../services/";
+import NavGroupBtn from "../components/navbar/navGroupBtn";
 
 import { icons, styles } from "../constant/";
 const { flexBetween } = styles;
@@ -42,7 +44,7 @@ function Navbar() {
     <Container>
       <NavBrand iconURL={icons.logo} URL={config.navbar.navBrand} />
       <NavSearch />
-      <p>group btn</p>
+      <NavGroupBtn />
     </Container>
   );
 }
