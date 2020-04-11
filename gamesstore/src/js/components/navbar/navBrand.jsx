@@ -7,22 +7,22 @@ const { maxHeightWidth, noDecorateAndList } = styles;
 
 const Container = styled.div`
     a {
-        ${noDecorateAndList}
+        /* ${noDecorateAndList} */
     }
 `;
 
 const Image = styled.img`
-    ${maxHeightWidth}
+    /* ${maxHeightWidth} */
     object-fit: cover;
 `;
 
 const NavBrand = ({ iconURL, URL }) => {
     return (
-        <Container>
+        <div className="logo">
             <Link to={URL}>
                 <Image src={process.env.PUBLIC_URL + iconURL} alt="logo" />
             </Link>
-        </Container>
+        </div>
     );
 };
 

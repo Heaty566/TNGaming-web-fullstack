@@ -19,11 +19,11 @@ const InputStyled = styled.input`
     ${(props) => props.addStyle}
 `;
 
-const FormInput = ({ onChange, type = "text", ...rest }) => {
+const FormInput = ({ type = "text", track, ...rest }) => {
     return (
         <InputStyled
             type={type}
-            onChange={({ currentTarget: input }) => onChange(input.value)}
+            ref={track}
             {...rest}
             autoCapitalize="off"
             autoComplete="off"

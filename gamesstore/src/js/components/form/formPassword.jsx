@@ -29,22 +29,26 @@ const PasswordStyle = styled.input`
     ${(props) => props.addStyle}
 `;
 
-function FormPassword({ onChange, ...rest }) {
+function FormPassword({ track, ...rest }) {
     const [seen, setSeen] = useState(false);
 
     return (
         <PasswordContainer>
             <PasswordStyle
                 type={seen ? "text" : "password"}
-                onChange={({ currentTarget: input }) => onChange(input.value)}
                 {...rest}
+                ref={track}
                 autoCapitalize="off"
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck="false"
             />
 
-            <img src={seen ? icons.visibilityOn : icons.visibilityOff} alt="see" onClick={() => setSeen(!seen)} />
+            <img
+                src={seen ? icons.visibilityOn : icons.visibilityOff}
+                alt="see"
+                onClick={() => setSeen(!seen)}
+            />
         </PasswordContainer>
     );
 }

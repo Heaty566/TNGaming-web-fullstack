@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -7,7 +8,6 @@ import { updateError } from "../stores/auth";
 import { registerUser } from "../stores/users";
 import { store } from "../stores/configStore";
 import { users as validate } from "../utils/validateForm/";
-import { usePrevious } from "../utils/hooks/userPrevious";
 import config from "../../config/linkURL.json";
 
 import FromInput from "../components/form/formInput";
@@ -21,159 +21,133 @@ import { styles } from "../constant/";
 const { flexCenter, gridFullMain, flexBetween } = styles;
 
 const Container = styled.div`
-  ${flexCenter}
-  ${gridFullMain}
+    ${flexCenter}
+    ${gridFullMain}
     position: relative;
-  background-image: url("/pages/images/background-pc.jpg");
-  background-size: cover;
+    background-image: url("/pages/images/background-pc.jpg");
+    background-size: cover;
 `;
 
 const ContainerRegister = styled.form`
-  ${flexBetween}
-  position: absolute;
-  flex-direction: column;
-  z-index: 10;
-  min-width: 350px;
+    ${flexBetween}
+    position: absolute;
+    flex-direction: column;
+    z-index: 10;
+    min-width: 350px;
 `;
 
 const FormColums = styled.div`
-  margin: 10px 0;
-  width: 100%;
+    margin: 10px 0;
+    width: 100%;
 
-  &:last-child {
-    ${flexBetween}
-  }
+    &:last-child {
+        ${flexBetween}
+    }
 `;
 
 function Register() {
-  document.title = "Register | TNGaming";
-  const history = useHistory();
-  const auth = useSelector((state) => state.auth);
+    document.title = "Register | TNGaming";
+    const history = useHistory();
+    const auth = useSelector((state) => state.auth);
+    const { register, handleSubmit } = useForm();
 
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirm, setConfirm] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [form, setForm] = useState({});
-  const preForm = usePrevious(form);
+    useEffect(() => {
+        if (auth.token) {
+            return history.push(config.register.nextURL);
+        }
+    }, [auth, history]);
 
-  useEffect(() => {
-    if (auth.token) {
-      return history.push(config.register.nextURL);
+    async function handleOnSumbit(data) {
+        const { error } = validate.validateUser(data);
+        if (error) {
+            store.dispatch({ type: updateError.type, payload: { msg: "" } });
+            return store.dispatch({
+                type: updateError.type,
+                payload: { msg: error.details[0].message },
+            });
+        } else store.dispatch({ type: updateError.type, payload: { msg: "" } });
+        store.dispatch({ type: registerUser.type, payload: data });
     }
 
-    setForm({ name, username, password, confirm, email, phone, address });
-  }, [name, username, password, confirm, email, phone, address, auth, history]);
+    return (
+        <Container>
+            <ContainerRegister onSubmit={handleSubmit(handleOnSumbit)}>
+                <FormColums>
+                    <FormTittle tittle="Sign Up" />
+                </FormColums>
 
-  async function handleOnSumbit(event) {
-    event.preventDefault();
-    const { error } = validate.validateUser(form);
-    if (error) {
-      return store.dispatch({
-        type: updateError.type,
-        payload: { msg: error.details[0].message },
-      });
-    } else store.dispatch({ type: updateError.type, payload: { msg: "" } });
+                {auth.error && (
+                    <FormColums>
+                        <FormError value={auth.error} />
+                    </FormColums>
+                )}
 
-    store.dispatch({ type: registerUser.type, payload: form });
-  }
-  return (
-    <Container>
-      <ContainerRegister onSubmit={handleOnSumbit}>
-        <FormColums>
-          <FormTittle tittle="Sign Up" />
-        </FormColums>
+                <FormColums>
+                    <FromInput
+                        track={register()}
+                        name="name"
+                        placeholder="Fullname"
+                    />
+                </FormColums>
 
-        {auth.error && (
-          <FormColums>
-            <FormError value={auth.error} />
-          </FormColums>
-        )}
+                <FormColums>
+                    <FromInput
+                        track={register()}
+                        name="username"
+                        placeholder="Username"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FromInput
-            value={name}
-            name="name"
-            placeholder="Fullname"
-            onChange={setName}
-          />
-        </FormColums>
+                <FormColums>
+                    <FormPassword
+                        track={register()}
+                        name="password"
+                        placeholder="password"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FromInput
-            value={username}
-            name="username"
-            placeholder="Username"
-            onChange={setUsername}
-          />
-        </FormColums>
+                <FormColums>
+                    <FormPassword
+                        track={register()}
+                        name="confirm"
+                        placeholder="Confirm Password"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FormPassword
-            value={password}
-            name="password"
-            placeholder="password"
-            onChange={setPassword}
-          />
-        </FormColums>
+                <FormColums>
+                    <FromInput
+                        track={register()}
+                        name="email"
+                        placeholder="Email"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FormPassword
-            value={confirm}
-            name="confirm"
-            placeholder="Confirm Password"
-            onChange={setConfirm}
-          />
-        </FormColums>
+                <FormColums>
+                    <FromInput
+                        track={register()}
+                        name="phone"
+                        placeholder="Phone"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FromInput
-            value={email}
-            name="email"
-            placeholder="Email"
-            onChange={setEmail}
-          />
-        </FormColums>
+                <FormColums>
+                    <FromInput
+                        track={register()}
+                        name="address"
+                        placeholder="Address"
+                    />
+                </FormColums>
 
-        <FormColums>
-          <FromInput
-            value={phone}
-            name="phone"
-            placeholder="Phone"
-            onChange={setPhone}
-          />
-        </FormColums>
-
-        <FormColums>
-          <FromInput
-            value={address}
-            name="address"
-            placeholder="Address"
-            onChange={setAddress}
-          />
-        </FormColums>
-
-        <FormColums>
-          <FormLink
-            label="Sign In instead"
-            URL={config.register.signInInstead}
-          />
-          <FormBtn
-            label="Next"
-            isLoading={auth.loading}
-            isDisable={
-              JSON.stringify(form) === JSON.stringify(preForm) && auth.error
-                ? true
-                : false
-            }
-          />
-        </FormColums>
-      </ContainerRegister>
-    </Container>
-  );
+                <FormColums>
+                    <FormLink
+                        label="Sign In instead"
+                        URL={config.register.signInInstead}
+                    />
+                    <FormBtn label="Next" isLoading={auth.loading} />
+                </FormColums>
+            </ContainerRegister>
+        </Container>
+    );
 }
 
 export default Register;

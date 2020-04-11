@@ -16,37 +16,37 @@ import { icons, styles } from "../constant/";
 const { flexBetween } = styles;
 
 const Container = styled.div`
-  height: inherit;
-  padding: ${(props) => (props.isLogin ? "0 3.6vw" : "0 18vw")};
-  position: relative;
-  ${flexBetween}
+    height: inherit;
+    padding: ${(props) => (props.isLogin ? "0 3.6vw" : "0 18vw")};
+    position: relative;
+    ${flexBetween}
 `;
 
 function Navbar() {
-  const [cookies, setCookie, removeCookie] = useCookies([]);
-  const auth = useSelector((state) => state.auth);
+    const [cookies, setCookie, removeCookie] = useCookies([]);
+    const auth = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    if (cookies["x-auth-token"] && !auth.token)
-      usersService.users
-        .loginUserWithCookie(cookies["x-auth-token"])
-        .then(({ data }) => {
-          const user = data.data;
-          store.dispatch({
-            type: updateUser.type,
-            payload: { user, token: cookies["x-auth-token"] },
-          });
-        })
-        .catch(() => removeCookie("x-auth-token"));
-  }, [cookies, removeCookie, auth.token]);
+    useEffect(() => {
+        if (cookies["x-auth-token"] && !auth.token)
+            usersService.users
+                .loginUserWithCookie(cookies["x-auth-token"])
+                .then(({ data }) => {
+                    const user = data.data;
+                    store.dispatch({
+                        type: updateUser.type,
+                        payload: { user, token: cookies["x-auth-token"] },
+                    });
+                })
+                .catch(() => removeCookie("x-auth-token"));
+    }, [cookies, removeCookie, auth.token]);
 
-  return (
-    <Container isLogin={auth.token ? true : false}>
-      <NavBrand iconURL={icons.logo} URL={config.navbar.navBrandURL} />
-      <NavSearch />
-      <NavGroupBtn />
-    </Container>
-  );
+    return (
+        <Container isLogin={auth.token ? true : false}>
+            <NavBrand iconURL={icons.logo} URL={config.navbar.navBrandURL} />
+            <NavSearch />
+            <NavGroupBtn />
+        </Container>
+    );
 }
 
 export default Navbar;

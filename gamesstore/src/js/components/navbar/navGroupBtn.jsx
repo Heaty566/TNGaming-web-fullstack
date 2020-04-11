@@ -1,10 +1,13 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Cookies from "universal-cookie";
 
 import config from "../../../config/linkURL.json";
+import { updateUser } from "../../stores/auth";
+import { store } from "../../stores/configStore";
+
 import { colors, icons, styles, animations } from "../../constant/";
 const {
     flexBetween,
@@ -124,7 +127,10 @@ function NavGroupBtn() {
 
     const handleLogout = () => {
         cookies.remove("x-auth-token");
-        window.location.reload();
+        store.dispatch({
+            type: updateUser.type,
+            payload: { user: "", token: "" },
+        });
     };
 
     const auth = useSelector((state) => state.auth);
@@ -132,14 +138,19 @@ function NavGroupBtn() {
         <UserContainer
             onClick={() => setActive(active === "on" ? "off" : "on")}
         >
-            <img
-                src={process.env.PUBLIC_URL + auth.user.avatar}
-                alt={auth.name}
-            />
+            {auth.user.avatar && (
+                <img
+                    src={process.env.PUBLIC_URL + auth.user.avatar}
+                    alt={auth.name}
+                />
+            )}
             <p className="user">{auth.user.name}</p>
 
             <button className="dropdown-btn">
-                <img src={process.env.PUBLIC_URL + icons.dropdownArrow} />
+                <img
+                    src={process.env.PUBLIC_URL + icons.dropdownArrow}
+                    alt="menu"
+                />
             </button>
 
             <DropdownMenu

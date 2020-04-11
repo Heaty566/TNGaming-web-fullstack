@@ -2,6 +2,7 @@
     "tokenKey": "12345678",
     "uploadURL": {
         "uploadAvatarUrl": "./public/images",
-        "uploadImagesGameUrl": "./public/images"
+        "uploadImagesGameUrl": "./public/images",
+        "uploadSliceShowURL": "./public/pages/sliceshows"
     }
 }

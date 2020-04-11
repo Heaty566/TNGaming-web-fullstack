@@ -12,7 +12,6 @@ const Button = styled.button`
     font-weight: bold;
     background: ${colors.buttonBackground[3]};
     color: ${colors.fontColor[0]};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
     &:active {
         filter: brightness(1.2);
     }
@@ -21,13 +20,15 @@ const Button = styled.button`
     ${(props) => props.addStyle};
 `;
 
-const FormBtn = ({ label, type = "submit", isLoading, isDisable }) => {
+const FormBtn = ({ label, type = "submit", isLoading }) => {
     return isLoading ? (
-        <Loading height="24px" width="15px" color={colors.buttonBackground[3]} />
+        <Loading
+            height="24px"
+            width="15px"
+            color={colors.buttonBackground[3]}
+        />
     ) : (
-        <Button type={type} disabled={isDisable}>
-            {label}
-        </Button>
+        <Button type={type}>{label}</Button>
     );
 };
 
