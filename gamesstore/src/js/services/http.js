@@ -1,7 +1,8 @@
 import axios from "axios";
-import config from "../../config/http.json";
+import config from "../config/http.json";
 
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? config.serverURL.development : config.serverURL.production;
+axios.defaults.baseURL =
+    process.env.NODE_ENV === "development" ? config.serverURL.development : config.serverURL.production;
 
 export const configHeader = (token) => {
     return {

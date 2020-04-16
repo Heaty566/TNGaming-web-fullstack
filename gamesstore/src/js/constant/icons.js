@@ -6,4 +6,6 @@ export default {
     login: "/pages/icons/login.svg",
     dropdownArrow: "/pages/icons/dropdown_arrow.svg",
     dropdownTriangles: "/pages/icons/dropdown_triangle.svg",
+    games: "/pages/icons/games.svg",
+    navMenu: "/pages/icons/nav-menu.svg",
 };

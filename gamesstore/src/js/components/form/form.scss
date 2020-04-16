@@ -1,0 +1,126 @@
+.form {
+    &__container {
+        min-height: inherit;
+
+        @include FlexCenter;
+    }
+
+    &__background {
+        &-img {
+            &-desktop {
+                @include ImageBox;
+                background-image: url("/pages/images/background-desktop.jpg");
+            }
+            &-mobile {
+                background-image: url("/pages/images/background-mobile.jpg");
+            }
+        }
+    }
+
+    &__column {
+        @include FlexBetween;
+    }
+
+    .login {
+        @include BorderRadius;
+        animation: fadeIn 0.25s ease-out;
+        background: $primary-color-lighter;
+        padding: 50px 25px;
+        width: 350px;
+    }
+
+    .register {
+        @include BorderRadius;
+        animation: fadeIn 0.25s ease-out;
+        background: $primary-color-lighter;
+        padding: 50px 50px;
+        width: 400px;
+    }
+
+    &__title {
+        color: $primary-color-font;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    &__error {
+        color: $primary-color-font;
+        font-size: 14px;
+        background: $error-color-main;
+        @include BorderRadius;
+        margin-bottom: 20px;
+        padding: 6px 10px;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    &__input {
+        font-size: 14px;
+        padding: 6px 10px;
+        @include BorderRadius;
+        @include NoBorderOutline;
+        color: $primary-color-font;
+        background: $secondary-color-main;
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        letter-spacing: 0.5px;
+        &::placeholder {
+            transition: 0.2s ease-in-out;
+            color: $primary-color-font;
+            opacity: 0.5;
+        }
+
+        &:focus::placeholder {
+            opacity: 1;
+        }
+    }
+
+    &__password {
+        @include FlexAround;
+        padding: 6px 10px;
+        @include BorderRadius;
+        background: $secondary-color-main;
+        margin-bottom: 20px;
+        input {
+            @include NoBorderOutline;
+            color: $primary-color-font;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            background: transparent;
+            letter-spacing: 0.5px;
+            &::placeholder {
+                transition: 0.2s ease-in-out;
+                color: $primary-color-font;
+                opacity: 0.5;
+            }
+
+            &:focus::placeholder {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn {
+        @include NoBorderOutline;
+        @include BorderRadius;
+        background: $secondary-color-main;
+        font-size: 14px;
+        font-weight: bold;
+        color: $primary-color-font;
+        letter-spacing: 1px;
+        padding: 6px 18px;
+        &:active {
+            background: $primary-color-main;
+        }
+    }
+
+    &__link {
+        margin: 6px 0;
+        color: $primary-color-font;
+
+        &:hover {
+            border-bottom: 0.5px solid $primary-color-font;
+        }
+    }
+}

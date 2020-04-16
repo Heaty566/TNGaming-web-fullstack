@@ -1,0 +1,212 @@
+.navbar {
+    @include FlexBetween;
+    @include FullDimension;
+    position: relative;
+    padding: 0 60px;
+    &__brand {
+        flex: 1;
+    }
+
+    .searchbox {
+        position: relative;
+        &__input {
+            @include FlexBetween;
+            @include BorderRadius;
+            flex-direction: row-reverse;
+            width: 250px;
+            padding-left: 15px;
+            height: 28px;
+
+            background: $secondary-color-main;
+            img {
+                opacity: 0.5;
+                width: 18px;
+                margin-right: 5px;
+                transition: 0.4s ease-in-out;
+            }
+
+            input {
+                color: $primary-color-font;
+                width: inherit;
+                display: block;
+                height: 100%;
+                font-weight: normal;
+                background: none;
+                font-size: 14px;
+                border: none;
+                letter-spacing: 0.5px;
+                outline: none;
+                &::placeholder {
+                    transition: 0.4s ease-in-out;
+                    color: $primary-color-font;
+                    opacity: 0.5;
+                }
+
+                &:focus {
+                    & + img {
+                        opacity: 1;
+                    }
+
+                    &::placeholder {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__result {
+            left: 0;
+            top: 35px;
+            background: $primary-color-lighter;
+            animation: fadeIn 0.25s ease-in-out forwards;
+            width: 100%;
+            position: absolute;
+            padding: 15px 0 10px 0;
+            border-radius: 0 0 2px 2px;
+            a {
+                cursor: pointer;
+                padding: 0 15px 15px 15px;
+                color: $primary-color-font;
+                @include FlexBetween;
+                opacity: 0.5;
+                transition: 0.2s ease-in-out;
+            }
+
+            .column-active {
+                opacity: 1;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+
+                top: -7px;
+                left: 10px;
+                height: 0;
+                width: 0;
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-bottom: 7px solid $primary-color-lighter;
+            }
+        }
+    }
+
+    &__groupbtn {
+        @include FlexAround;
+        & > * {
+            margin-left: 25px;
+        }
+
+        .btn__link {
+            letter-spacing: 0.5px;
+            color: $primary-color-font;
+            font-weight: 500;
+            padding: 6px 13px;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                color: $support-color-main;
+            }
+        }
+
+        .outline {
+            color: $support-color-main;
+            border: 1px solid $support-color-main;
+
+            &:hover {
+                color: $primary-color-font;
+                border: 1px solid $primary-color-font;
+            }
+        }
+    }
+
+    &__user {
+        @include FlexBetween;
+        cursor: pointer;
+        .name {
+            letter-spacing: 0.5px;
+            margin: 0 5px;
+            color: $primary-color-font;
+        }
+
+        .avatar {
+            max-height: 32px;
+            max-width: 32px;
+            @include ImageBox;
+        }
+    }
+
+    &__drawer {
+        padding: 20px;
+        color: $primary-color-font;
+        letter-spacing: 1px;
+        position: fixed;
+        width: 350px;
+        background: $primary-color-lighter;
+        height: 100vh;
+        z-index: 9999;
+        top: 0;
+        right: 0;
+    }
+
+    .drawer {
+        &__active {
+            animation: sliceInFromRight 0.5s ease-in-out forwards;
+        }
+
+        &__unactive {
+            animation: sliceOutFromRight 0.5s ease-in-out forwards;
+        }
+
+        &__inital {
+            transform: translateX(100%);
+        }
+
+        &__column {
+            @include FlexBetween;
+            margin-bottom: 20px;
+        }
+
+        &__link,
+        &__btn {
+            opacity: 0.5;
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            color: $primary-color-font;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &__btn {
+            text-align: start;
+            background: transparent;
+            cursor: pointer;
+            @include NoBorderOutline;
+        }
+
+        &__divider {
+            display: block;
+            margin-bottom: 20px;
+            opacity: 0.3;
+            border: 0.5px solid $primary-color-font;
+        }
+
+        &__background {
+            background: $primary-color-main;
+            opacity: 0.5;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+        }
+    }
+
+    .menu-btn {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,33 @@
+.aboutus {
+    padding: 5vh 12vw;
+    animation: fadeIn 0.5s ease-in-out;
+    color: $primary-color-font;
+    & > * {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-indent: 10px;
+        opacity: 0.5;
+        letter-spacing: 0.5px;
+        line-height: 30px;
+    }
+
+    .members {
+        display: flex;
+        &__card {
+            img {
+                object-fit: cover;
+                height: 150px;
+                width: 150px;
+            }
+            h4 {
+                text-align: center;
+            }
+        }
+    }
+}

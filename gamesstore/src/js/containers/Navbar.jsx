@@ -1,51 +1,41 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { useCookies } from "react-cookie";
+
+import Cookies from "universal-cookie";
 
 import { updateUser } from "../../js/stores/auth";
 import { store } from "../../js/stores/configStore";
 import { usersService } from "../services/";
-import config from "../../config/linkURL.json";
 
 import NavBrand from "../components/navbar/navBrand";
-import NavSearch from "../components/navbar/navSearch";
-import NavGroupBtn from "../components/navbar/navGroupBtn";
+import NavGroupBtn from "../components/navbar/navGrourpBtn";
 
-import { icons, styles } from "../constant/";
-const { flexBetween } = styles;
-
-const Container = styled.div`
-    height: inherit;
-    padding: ${(props) => (props.isLogin ? "0 3.6vw" : "0 18vw")};
-    position: relative;
-    ${flexBetween}
-`;
+import { navbar } from "../config/linkURL.json";
+import { icons } from "../constant/";
 
 function Navbar() {
-    const [cookies, setCookie, removeCookie] = useCookies([]);
+    const cookie = new Cookies();
     const auth = useSelector((state) => state.auth);
 
     useEffect(() => {
-        if (cookies["x-auth-token"] && !auth.token)
+        if (cookie.get("x-auth-token") && !auth.token)
             usersService.users
-                .loginUserWithCookie(cookies["x-auth-token"])
+                .loginUserWithCookie(cookie.get("x-auth-token"))
                 .then(({ data }) => {
                     const user = data.data;
                     store.dispatch({
                         type: updateUser.type,
-                        payload: { user, token: cookies["x-auth-token"] },
+                        payload: { user, token: cookie.get("x-auth-token") },
                     });
                 })
-                .catch(() => removeCookie("x-auth-token"));
-    }, [cookies, removeCookie, auth.token]);
+                .catch(() => cookie.remove("x-auth-token"));
+    }, [cookie, auth.token]);
 
     return (
-        <Container isLogin={auth.token ? true : false}>
-            <NavBrand iconURL={icons.logo} URL={config.navbar.navBrandURL} />
-            <NavSearch />
+        <div className="navbar">
+            <NavBrand brandURL={icons.logo} linkURL={navbar.navBrandURL} />
             <NavGroupBtn />
-        </Container>
+        </div>
     );
 }
 

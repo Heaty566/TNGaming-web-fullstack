@@ -1,0 +1,31 @@
+{
+    "navbar": {
+        "navBrandURL": "/home",
+        "searchBoxURL": "/games/search",
+        "searchPushToGame": "/game",
+        "loginURL": "/users/login",
+        "registerURL": "/users/register",
+        "aboutUsURL": "/aboutus",
+        "storeURL": "/games/",
+        "userBtn": {
+            "profileURL": "/users/me",
+            "libraryURL": "#",
+            "communityURL": "#",
+            "adminDashboardURL": "/users/admin/dashboard",
+            "developerDashboardURL": "/users/developer/dashboard",
+            "logoutURL": "/home"
+        }
+    },
+    "login": {
+        "nextURL": "/home",
+        "registerInstead": "/users/register"
+    },
+
+    "register": {
+        "nextURL": "/home",
+        "loginInstead": "/users/login"
+    },
+    "introduction": {
+        "bannerURL": "/store"
+    }
+}

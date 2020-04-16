@@ -1,0 +1,49 @@
+@import "./constant.scss";
+@import "./js/components/navbar/navbar.scss";
+@import "./js/components/form/form.scss";
+@import "./js/components/footer/footer.scss";
+@import "./js/containers/scss/home.scss";
+@import "./js/containers/scss/aboutus.scss";
+
+html,
+body,
+#root {
+    z-index: -999;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+.layout__container {
+    @include FullDimension;
+    display: flex;
+    flex-direction: column;
+    z-index: -999;
+    position: relative;
+    background: $primary-color-light;
+
+    position: relative;
+}
+
+.navbar__container {
+    @include FullDimension;
+    background: $primary-color-main;
+    height: $navbar-height;
+
+    position: fixed;
+}
+
+.main__container {
+    padding-top: $navbar-height;
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+// .footer__container {
+// }

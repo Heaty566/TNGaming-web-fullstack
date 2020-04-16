@@ -11,9 +11,7 @@ const { createToken, decodeToken } = require("../utils/token");
 exports.login = async (req, res) => {
     const db = req.app.get("db");
     //validate User
-    const { error: isLoginUser } = validateLoginUser(
-        _.pick(req.body, ["username", "password"])
-    );
+    const { error: isLoginUser } = validateLoginUser(_.pick(req.body, ["username", "password"]));
     if (isLoginUser)
         return res.status(400).json({
             success: false,
@@ -38,22 +36,12 @@ exports.login = async (req, res) => {
 
     //create new Token
     const token = createToken(
-        _.pick(user, [
-            "_id",
-            "username",
-            "name",
-            "isDeveloper",
-            "isAdmin",
-            "balance",
-            "avatar",
-        ])
+        _.pick(user, ["_id", "username", "name", "isDeveloper", "isAdmin", "balance", "avatar"])
     );
 
     //create new token in db
     try {
-        const tokenDB = await db
-            .collection("tokens")
-            .insertOne(tokenSchema(token));
+        const tokenDB = await db.collection("tokens").insertOne(tokenSchema(token));
 
         res.json({
             success: true,

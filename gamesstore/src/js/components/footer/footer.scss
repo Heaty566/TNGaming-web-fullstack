@@ -1,0 +1,32 @@
+.footer {
+    padding: 50px 60px;
+    background-color: $primary-color-lighter;
+    @include FlexStretch;
+
+    &__wrapper {
+        &-right,
+        &-left {
+            & > * {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    h3 {
+        color: $primary-color-font;
+    }
+
+    a {
+        font-weight: 500;
+        display: block;
+        font-size: 14px;
+        color: $primary-color-font;
+
+        border-bottom: 1px solid $primary-color-font;
+    }
+
+    p {
+        color: $primary-color-font;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,64 @@
+.introduction {
+    padding: 12.5vh 12vw;
+    animation: fadeIn 0.5s ease-in-out;
+    min-height: 100vh;
+    z-index: 1;
+    @include FlexStretch;
+
+    &__banner {
+        @include FlexStretch;
+    }
+
+    .banner {
+        &__image {
+            margin-right: 70px;
+            flex: 1;
+            img {
+                width: 100%;
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+
+        &__content {
+            display: flex;
+            color: $primary-color-font;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .content__title {
+                letter-spacing: 2px;
+                text-align: end;
+                margin-bottom: 50px;
+                h4 {
+                    opacity: 0.5;
+                }
+            }
+
+            p {
+                max-width: 590px;
+                text-indent: 10px;
+                opacity: 0.5;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+                line-height: 30px;
+            }
+
+            .content__link {
+                background-color: $secondary-color-main;
+                color: $primary-color-font;
+                font-size: 18px;
+                font-weight: bold;
+                @include BorderRadius;
+                letter-spacing: 2px;
+                padding: 10px 30px;
+                transition: 0.1s ease-in-out;
+
+                &:active {
+                    background-color: $primary-color-main;
+                }
+            }
+        }
+    }
+}

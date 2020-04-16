@@ -17963,3 +17963,143 @@
   level: 'info',
   timestamp: '2020-04-11T08:17:18.477Z'
 }
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-13T08:09:47.058Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-13T08:09:47.902Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-13T13:08:06.697Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-13T13:08:07.057Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e946a8a7b2f7847e4c085d5',
+  level: 'info',
+  timestamp: '2020-04-13T13:35:06.224Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-13T15:48:52.184Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-13T15:48:52.568Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-14T06:35:47.664Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-14T06:35:48.317Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-14T08:27:42.712Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-14T08:27:43.490Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T10:53:41.700Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T10:53:42.290Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:19:42.035Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:19:42.492Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:20:23.115Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:20:23.729Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:20:34.198Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:20:34.623Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:24:23.851Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:24:24.550Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:25:43.543Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:25:43.978Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T13:25:48.402Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-15T13:25:48.757Z'
+}
+{
+  message: 'Inserted a new user with ID: 5e970db50991aa57bc73a4cf',
+  level: 'info',
+  timestamp: '2020-04-15T13:35:49.407Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-16T03:14:48.005Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-16T03:14:48.509Z'
+}

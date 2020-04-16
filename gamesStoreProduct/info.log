@@ -1,25 +1,55 @@
 {
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-15T16:57:18.619Z'
+}
+{
   message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
   level: 'info',
-  timestamp: '2020-04-09T06:28:56.032Z'
+  timestamp: '2020-04-15T16:57:19.020Z'
 }
 {
   message: 'Listening on port 4000',
   level: 'info',
-  timestamp: '2020-04-09T06:29:23.065Z'
+  timestamp: '2020-04-16T16:07:13.276Z'
 }
 {
   message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
   level: 'info',
-  timestamp: '2020-04-09T06:29:23.364Z'
+  timestamp: '2020-04-16T16:07:13.768Z'
 }
 {
   message: 'Listening on port 4000',
   level: 'info',
-  timestamp: '2020-04-09T06:35:33.191Z'
+  timestamp: '2020-04-16T16:08:45.824Z'
 }
 {
   message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
   level: 'info',
-  timestamp: '2020-04-09T06:35:33.560Z'
+  timestamp: '2020-04-16T16:08:46.420Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-16T16:11:49.338Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-16T16:11:49.836Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-16T16:12:07.154Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-16T16:12:07.624Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-16T16:12:27.360Z'
 }

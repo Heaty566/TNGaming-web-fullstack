@@ -1,5 +1,5 @@
 import { http } from "../http";
-import config from "../../../config/http.json";
+import config from "../../config/http.json";
 
 const endPoint = config.endPointURL.gamesURL;
 
