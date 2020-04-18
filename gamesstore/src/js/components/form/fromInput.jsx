@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormInput = ({ name, placeholder, track, type = "text" }) => {
+const FormInput = ({ name, placeholder, track, type = "text", ...rest }) => {
     return (
         <input
             className="form__input"
@@ -11,6 +11,7 @@ const FormInput = ({ name, placeholder, track, type = "text" }) => {
             autoCapitalize="off"
             placeholder={placeholder}
             ref={track}
+            {...rest}
         />
     );
 };

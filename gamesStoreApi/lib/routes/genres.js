@@ -4,7 +4,7 @@ const router = express.Router();
 const genresController = require("../controllers/genres");
 
 //getting all genres
-router.get("/", genresController.get_all_genres);
+router.get("/all", genresController.get_all_genres);
 
 //inserting new genre
 router.post("/new", genresController.add_new_genre);

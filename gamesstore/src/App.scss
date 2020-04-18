@@ -4,11 +4,13 @@
 @import "./js/components/footer/footer.scss";
 @import "./js/containers/scss/home.scss";
 @import "./js/containers/scss/aboutus.scss";
+@import "./js/components/dashboard/dashboard.scss";
 
 html,
 body,
 #root {
     z-index: -999;
+    font-size: 14px;
     position: relative;
 }
 

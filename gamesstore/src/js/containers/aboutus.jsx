@@ -1,6 +1,8 @@
 import React from "react";
 
 const AboutUs = () => {
+    document.title = "About Us | TNGaming";
+
     return (
         <div className="aboutus">
             <h2>Learning by listening makes your product’s more productive</h2>
@@ -24,12 +26,12 @@ const AboutUs = () => {
             </p>
             <h3>Extra Story</h3>
             <p>
-                It’s me, Simon, if you are enjoyed with this project, I will tell about the biggest motivation
-                that helps me to build it everyday, That’s Thinh (my wife), we have been apart halfway around
-                the world for years because of some personal reasons, and I really hope I would meet her one
-                day soon and we would be forever. However, I have to finish my college in VN, and then apply
-                for my master's degree in the US to come back with her. I don’t know what tomorrow will be
-                like but I will try my best even until my last breath.
+                It’s me, Simon, if you enjoy with this project, I will tell about the biggest motivation that
+                helps me to build it everyday, That’s Thinh (my wife), we have been apart halfway around the
+                world for years because of some personal reasons, and I really hope I would meet her one day
+                soon and we would be forever. However, I have to finish my college in VN, and then apply for
+                my master's degree in the US to come back with her. I don’t know what adversities wait for us
+                forward, I will try my best even until my last breath.
             </p>
         </div>
     );

@@ -41,7 +41,7 @@ const LoadingContainer = styled.div`
     }
 `;
 
-const Loading = ({ height, width, color }) => {
+const Wave = ({ height, width, color }) => {
     return (
         <LoadingContainer height={height} width={width} color={color}>
             <span></span>
@@ -52,4 +52,4 @@ const Loading = ({ height, width, color }) => {
     );
 };
 
-export default Loading;
+export default Wave;

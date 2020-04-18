@@ -1,8 +1,8 @@
 .navbar {
-    @include FlexBetween;
-    @include FullDimension;
     position: relative;
     padding: 0 60px;
+    @include FlexBetween;
+    @include FullDimension;
     &__brand {
         flex: 1;
     }
@@ -10,13 +10,13 @@
     .searchbox {
         position: relative;
         &__input {
-            @include FlexBetween;
-            @include BorderRadius;
             flex-direction: row-reverse;
             width: 250px;
             padding-left: 15px;
             height: 28px;
 
+            @include FlexBetween;
+            @include BorderRadius;
             background: $secondary-color-main;
             img {
                 opacity: 0.5;
@@ -26,7 +26,6 @@
             }
 
             input {
-                color: $primary-color-font;
                 width: inherit;
                 display: block;
                 height: 100%;
@@ -36,10 +35,13 @@
                 border: none;
                 letter-spacing: 0.5px;
                 outline: none;
+
+                color: $primary-color-font;
                 &::placeholder {
                     transition: 0.4s ease-in-out;
-                    color: $primary-color-font;
                     opacity: 0.5;
+
+                    color: $primary-color-font;
                 }
 
                 &:focus {
@@ -57,19 +59,20 @@
         &__result {
             left: 0;
             top: 35px;
-            background: $primary-color-lighter;
             animation: fadeIn 0.25s ease-in-out forwards;
             width: 100%;
             position: absolute;
             padding: 15px 0 10px 0;
             border-radius: 0 0 2px 2px;
+
+            background: $primary-color-lighter;
             a {
                 cursor: pointer;
                 padding: 0 15px 15px 15px;
-                color: $primary-color-font;
-                @include FlexBetween;
                 opacity: 0.5;
                 transition: 0.2s ease-in-out;
+                color: $primary-color-font;
+                @include FlexBetween;
             }
 
             .column-active {
@@ -99,19 +102,19 @@
 
         .btn__link {
             letter-spacing: 0.5px;
-            color: $primary-color-font;
             font-weight: 500;
             padding: 6px 13px;
             transition: 0.2s ease-in-out;
 
+            color: $primary-color-font;
             &:hover {
                 color: $support-color-main;
             }
         }
 
         .outline {
-            color: $support-color-main;
             border: 1px solid $support-color-main;
+            color: $support-color-main;
 
             &:hover {
                 color: $primary-color-font;
@@ -121,8 +124,8 @@
     }
 
     &__user {
-        @include FlexBetween;
         cursor: pointer;
+        @include FlexBetween;
         .name {
             letter-spacing: 0.5px;
             margin: 0 5px;
@@ -138,15 +141,15 @@
 
     &__drawer {
         padding: 20px;
-        color: $primary-color-font;
         letter-spacing: 1px;
         position: fixed;
         width: 350px;
-        background: $primary-color-lighter;
         height: 100vh;
-        z-index: 9999;
+        z-index: 999;
         top: 0;
         right: 0;
+        color: $primary-color-font;
+        background: $primary-color-lighter;
     }
 
     .drawer {
@@ -173,8 +176,8 @@
             display: block;
             width: 100%;
             font-size: 14px;
-            color: $primary-color-font;
             transition: 0.4s ease-in-out;
+            color: $primary-color-font;
             &:hover {
                 opacity: 1;
             }
@@ -195,7 +198,6 @@
         }
 
         &__background {
-            background: $primary-color-main;
             opacity: 0.5;
             position: fixed;
             top: 0;
@@ -203,6 +205,7 @@
             width: 100vw;
             height: 100vh;
             z-index: 10;
+            background: $primary-color-main;
         }
     }
 

@@ -9,7 +9,6 @@ const AdminRouter = ({ component: Component, ...rest }) => {
         <Route
             {...rest}
             render={(props) => {
-                //     if (auth.user.isAdmin) {
                 if (true) {
                     return <Component {...props} />;
                 } else {

@@ -29,7 +29,7 @@ function Navbar() {
                     });
                 })
                 .catch(() => cookie.remove("x-auth-token"));
-    }, [cookie, auth.token]);
+    }, [auth, cookie]);
 
     return (
         <div className="navbar">

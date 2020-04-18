@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { introduction } from "../config/linkURL.json";
 
 const Home = () => {
+    document.title = "Home | TNGaming";
+
     return (
         <div className="introduction">
             <div className="introduction__banner">

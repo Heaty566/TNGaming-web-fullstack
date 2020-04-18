@@ -20,14 +20,14 @@ import {
 
 //combine admin service
 import { allUsers, cleanToken, toggleUserAdmin, toggleUserDeveloper } from "./admin/users";
-import { addNewGenre, updateGenre } from "./admin/genres";
+import { addNewGenre, updateGenre, getAllGenres } from "./admin/genres";
 
 //combine game service
 import { getGame, getGameByGenre, getGameBySearchKey, getGames } from "./games/games";
 
 const adminService = {
     users: { allUsers, cleanToken, toggleUserDeveloper, toggleUserAdmin },
-    genres: { addNewGenre, updateGenre },
+    genres: { addNewGenre, updateGenre, getAllGenres },
 };
 
 const usersService = {

@@ -3,30 +3,38 @@
     animation: fadeIn 0.5s ease-in-out;
     min-height: 100vh;
     z-index: 1;
+
     @include FlexStretch;
 
     &__banner {
-        @include FlexStretch;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        column-gap: 50px;
+        row-gap: 50px;
     }
 
     .banner {
         &__image {
             margin-right: 70px;
-            flex: 1;
+            width: 100%;
+
             img {
-                width: 100%;
+                width: inherit;
                 object-fit: contain;
-                height: 100%;
+                height: inherit;
             }
         }
 
         &__content {
             display: flex;
-            color: $primary-color-font;
+
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
 
+            color: $primary-color-font;
             .content__title {
                 letter-spacing: 2px;
                 text-align: end;
@@ -46,15 +54,15 @@
             }
 
             .content__link {
-                background-color: $secondary-color-main;
-                color: $primary-color-font;
                 font-size: 18px;
                 font-weight: bold;
-                @include BorderRadius;
                 letter-spacing: 2px;
                 padding: 10px 30px;
                 transition: 0.1s ease-in-out;
 
+                @include BorderRadius;
+                background-color: $secondary-color-main;
+                color: $primary-color-font;
                 &:active {
                     background-color: $primary-color-main;
                 }

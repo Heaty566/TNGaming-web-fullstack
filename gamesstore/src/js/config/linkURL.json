@@ -11,8 +11,8 @@
             "profileURL": "/users/me",
             "libraryURL": "#",
             "communityURL": "#",
-            "adminDashboardURL": "/users/admin/dashboard",
-            "developerDashboardURL": "/users/developer/dashboard",
+            "adminDashboardURL": "/users/dashboard",
+            "developerDashboardURL": "/users/dashboard",
             "logoutURL": "/home"
         }
     },
@@ -27,5 +27,38 @@
     },
     "introduction": {
         "bannerURL": "/store"
+    },
+    "dashboard": {
+        "contronller": [
+            {
+                "section": { "label": "User", "isAdmin": true, "isDeveloper": false },
+                "options": [
+                    {
+                        "label": "Overview",
+                        "linkURL": "/user/overview",
+                        "isAdmin": true,
+                        "isDeveloper": false
+                    },
+                    { "label": "Set Role", "linkURL": "/user/setrole", "isAdmin": true, "isDeveloper": false }
+                ]
+            },
+            {
+                "section": { "label": "Developer", "isAdmin": true, "isDeveloper": true },
+                "options": []
+            },
+            {
+                "section": { "label": "Game", "isAdmin": true, "isDeveloper": false },
+                "options": [
+                    { "label": "Overview", "linkURL": "#", "isAdmin": true, "isDeveloper": true },
+                    {
+                        "label": "Add New Game",
+                        "linkURL": "/game/addnewgame",
+                        "isAdmin": true,
+                        "isDeveloper": true
+                    },
+                    { "label": "Edit Game", "linkURL": "#", "isAdmin": true, "isDeveloper": true }
+                ]
+            }
+        ]
     }
 }

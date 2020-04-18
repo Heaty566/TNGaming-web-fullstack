@@ -21,6 +21,7 @@ function NavUser() {
             type: updateUser.type,
             payload: { user: "", token: "" },
         });
+        window.location.reload();
     };
 
     const drawerClass = active ? "drawer__active" : active !== null ? "drawer__unactive" : "drawer__inital";

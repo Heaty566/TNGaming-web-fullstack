@@ -22,52 +22,53 @@
     }
 
     .login {
-        @include BorderRadius;
         animation: fadeIn 0.25s ease-out;
-        background: $primary-color-lighter;
         padding: 50px 25px;
         width: 350px;
+        @include BorderRadius;
+        background: $primary-color-lighter;
     }
 
     .register {
-        @include BorderRadius;
         animation: fadeIn 0.25s ease-out;
-        background: $primary-color-lighter;
         padding: 50px 50px;
         width: 400px;
+        @include BorderRadius;
+        background: $primary-color-lighter;
     }
 
     &__title {
-        color: $primary-color-font;
         letter-spacing: 1px;
         margin-bottom: 30px;
+        color: $primary-color-font;
     }
 
     &__error {
-        color: $primary-color-font;
-        font-size: 14px;
-        background: $error-color-main;
-        @include BorderRadius;
+        font-size: 1em;
         margin-bottom: 20px;
         padding: 6px 10px;
         animation: fadeIn 0.4s ease-in-out;
+        @include BorderRadius;
+        background: $error-color-main;
+        color: $primary-color-font;
     }
 
     &__input {
-        font-size: 14px;
+        font-size: 1em;
         padding: 6px 10px;
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 200px;
+        letter-spacing: 0.5px;
         @include BorderRadius;
         @include NoBorderOutline;
         color: $primary-color-font;
         background: $secondary-color-main;
-        display: block;
-        margin-bottom: 20px;
-        width: 100%;
-        letter-spacing: 0.5px;
         &::placeholder {
             transition: 0.2s ease-in-out;
-            color: $primary-color-font;
             opacity: 0.5;
+            color: $primary-color-font;
         }
 
         &:focus::placeholder {
@@ -76,23 +77,24 @@
     }
 
     &__password {
-        @include FlexAround;
         padding: 6px 10px;
+        margin-bottom: 20px;
+        max-width: 200px;
+        @include FlexAround;
         @include BorderRadius;
         background: $secondary-color-main;
-        margin-bottom: 20px;
         input {
-            @include NoBorderOutline;
-            color: $primary-color-font;
-            font-size: 14px;
+            font-size: 1em;
             display: block;
             width: 100%;
             background: transparent;
             letter-spacing: 0.5px;
+            @include NoBorderOutline;
+            color: $primary-color-font;
             &::placeholder {
                 transition: 0.2s ease-in-out;
-                color: $primary-color-font;
                 opacity: 0.5;
+                color: $primary-color-font;
             }
 
             &:focus::placeholder {
@@ -101,15 +103,73 @@
         }
     }
 
+    &__select {
+        position: relative;
+        max-width: 200px;
+        .select {
+            &__box {
+                cursor: pointer;
+                padding: 6px 10px;
+
+                @include FlexBetween;
+                @include BorderRadius;
+                background: $secondary-color-main;
+                input {
+                    @include NoBorderOutline;
+                    background: none;
+                    color: $primary-color-font;
+                    font-size: 1em;
+                    margin-right: 5px;
+                }
+            }
+
+            &__dropdown {
+                z-index: 200;
+                position: absolute;
+                width: 100%;
+                overflow: hidden;
+                outline: none;
+                border-radius: 0 0 2px 2px;
+                top: 35px;
+                border: 1px solid $primary-color-main;
+                li {
+                    cursor: pointer;
+                    padding: 6px 10px;
+                    color: $primary-color-font;
+                    background: $secondary-color-main;
+                    p {
+                        opacity: 0.6;
+                    }
+                    &:hover {
+                        p {
+                            opacity: 1;
+                        }
+                        background-color: $primary-color-lighter;
+                    }
+                }
+            }
+        }
+    }
+
+    &__selectmultiple {
+        .active {
+            p {
+                opacity: 1 !important;
+            }
+            background-color: $primary-color-lighter !important;
+        }
+    }
+
     &__btn {
         @include NoBorderOutline;
         @include BorderRadius;
-        background: $secondary-color-main;
-        font-size: 14px;
+        font-size: 1em;
         font-weight: bold;
-        color: $primary-color-font;
         letter-spacing: 1px;
         padding: 6px 18px;
+        max-width: 150px;
+        background: $secondary-color-main;
+        color: $primary-color-font;
         &:active {
             background: $primary-color-main;
         }
@@ -121,6 +181,99 @@
 
         &:hover {
             border-bottom: 0.5px solid $primary-color-font;
+        }
+    }
+
+    &__datepicker {
+        max-width: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2px;
+        overflow: hidden;
+        @include BorderRadius;
+        select {
+            padding: 6px 10px;
+            color: $primary-color-font;
+            background: $secondary-color-main;
+            @include NoBorderOutline;
+        }
+    }
+
+    &__checkbox {
+        input {
+            display: none;
+        }
+
+        p {
+            margin-top: 5px;
+            max-width: 200px;
+            word-wrap: break-word;
+            color: $primary-color-font;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            color: $primary-color-font;
+
+            &::before {
+                content: "";
+                flex: 1;
+                margin-right: 5px;
+                max-width: 20px;
+                height: 20px;
+                @include FlexCenter;
+                background: $secondary-color-main;
+            }
+        }
+
+        input:checked + label::before {
+            content: "\2713";
+        }
+    }
+
+    &__textarea {
+        @include BorderRadius;
+        background: $secondary-color-main;
+        textarea {
+            background: none;
+            min-height: 400px;
+            min-width: 100%;
+            font-size: 14px;
+            color: $primary-color-font;
+            padding: 10px;
+
+            outline: none;
+            border: none;
+            display: block;
+        }
+        p {
+            padding: 0 10px;
+            text-align: end;
+
+            font-size: 12px;
+        }
+    }
+
+    &__image {
+        input {
+            background-color: none;
+            background: red;
+            display: none;
+            @include NoBorderOutline;
+        }
+
+        label {
+            max-width: 200px;
+            padding: 6px 10px;
+            background: $secondary-color-main;
+            color: $primary-color-font;
+            @include FlexBetween;
+            @include BorderRadius;
+            img {
+                margin-left: 5px;
+            }
         }
     }
 }
