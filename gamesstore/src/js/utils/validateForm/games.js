@@ -1,9 +1,7 @@
 const Joi = require("@hapi/joi");
 Joi.objectId = require("joi-objectid")(Joi);
 
-const {
-    formatError
-} = require("./validateErrorFormat");
+const { formatError } = require("./validateErrorFormat");
 
 const schemasGamesValidate = (type) => {
     switch (type) {
@@ -59,6 +57,17 @@ const schemasGamesValidate = (type) => {
                     "any.required": formatError("Genre", "any.required"),
                 });
 
+        case "images":
+            return Joi.array()
+                .max(10)
+                .min(3)
+                .required()
+                .messages({
+                    "object.max": formatError("Images", "array.max", " ten images"),
+                    "object.min": formatError("Images", "array.min", " tree images"),
+                    "any.required": formatError("Images", "any.required"),
+                });
+
         case "description":
             return Joi.string()
                 .allow("")
@@ -87,7 +96,11 @@ const schemasGamesValidate = (type) => {
                     "string.empty": formatError("publisher", "string.empty"),
                     "string.min": formatError("publisher", "string.min", " one character"),
                     "string.max": formatError("publisher", "string.max", " 50 characters"),
-                    "string.pattern.base": formatError("publisher", "string.pattern.base", "string.letterOnly"),
+                    "string.pattern.base": formatError(
+                        "publisher",
+                        "string.pattern.base",
+                        "string.letterOnly"
+                    ),
                     "any.required": formatError("publisher", "any.required"),
                 });
         case "date":
@@ -102,47 +115,43 @@ const schemasGamesValidate = (type) => {
     }
 };
 
-const validateGameNew = (game) => {
-    const schema = Joi.object({
-        name: schemasGamesValidate("name"),
-        price: schemasGamesValidate("price"),
-        genreId: schemasGamesValidate("genreId"),
-        description: schemasGamesValidate("description"),
-        available: schemasGamesValidate("available"),
-        stock: schemasGamesValidate("stock"),
-        date: schemasGamesValidate("date"),
-        publisher: schemasGamesValidate("publisher"),
-    });
+export default {
+    validateGameNew: (game) => {
+        const schema = Joi.object({
+            name: schemasGamesValidate("name"),
+            price: schemasGamesValidate("price"),
+            genreId: schemasGamesValidate("genreId"),
+            description: schemasGamesValidate("description"),
+            available: schemasGamesValidate("available"),
+            stock: schemasGamesValidate("stock"),
+            date: schemasGamesValidate("date"),
+            publisher: schemasGamesValidate("publisher"),
+            imagesGame: schemasGamesValidate("images"),
+        });
 
-    return schema.validate(game);
-};
+        return schema.validate(game);
+    },
+    validateGameUpdate: (game) => {
+        const schema = Joi.object({
+            name: schemasGamesValidate("name"),
+            price: schemasGamesValidate("price"),
+            genreId: schemasGamesValidate("genreId"),
+            description: schemasGamesValidate("description"),
+            available: schemasGamesValidate("available"),
+            date: schemasGamesValidate("date"),
+            publisher: schemasGamesValidate("publisher"),
+        });
 
-const validateGameUpdate = (game) => {
-    const schema = Joi.object({
-        name: schemasGamesValidate("name"),
-        price: schemasGamesValidate("price"),
-        genreId: schemasGamesValidate("genreId"),
-        description: schemasGamesValidate("description"),
-        available: schemasGamesValidate("available"),
-        date: schemasGamesValidate("date"),
-        publisher: schemasGamesValidate("publisher"),
-    });
+        return schema.validate(game);
+    },
 
-    return schema.validate(game);
-};
+    validateGameRestock: (stock) => {
+        const schema = Joi.object({
+            stock: schemasGamesValidate("stock"),
+        });
 
-const validateGameRestock = (stock) => {
-    const schema = Joi.object({
-        stock: schemasGamesValidate("stock"),
-    });
-
-    return schema.validate({
-        stock
-    });
-};
-
-module.exports = {
-    validateGameNew,
-    validateGameRestock,
-    validateGameUpdate
+        return schema.validate({
+            stock,
+        });
+    },
 };

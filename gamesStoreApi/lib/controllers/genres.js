@@ -4,15 +4,18 @@ const ObjectId = require("mongodb").ObjectID;
 const { isUser, isAdmin } = require("../middlewares/");
 const { logger } = require("../logging");
 const { genresSchema } = require("../models/schemas");
-const { validateGenre, isObjectId } = require("../models/validateSchemas");
+const { genresValidator, isObjectId } = require("../models/validateSchemas");
 
-exports.get_all_genres = async (req, res) => {
-    const db = req.app.get("db");
+exports.get_all_genres = [
+    isUser,
+    async (req, res) => {
+        const db = req.app.get("db");
 
-    const genres = await db.genres.find().toArray();
+        const genres = await db.genres.find().toArray();
 
-    res.json({ success: true, data: genres });
-};
+        res.json({ success: true, data: genres });
+    },
+];
 
 exports.add_new_genre = [
     isUser,
@@ -22,7 +25,7 @@ exports.add_new_genre = [
         const db = req.app.get("db");
 
         //validate new genre
-        const { error } = validateGenre(_.pick(req.body, ["name"]));
+        const { error } = genresValidator.validateGenre(_.pick(req.body, ["name"]));
         if (error) return res.status(400).json({ success: false, msg: error.details[0].message });
 
         //create new genre from schema
@@ -33,6 +36,7 @@ exports.add_new_genre = [
         if (isUnique) return res.status(400).json({ success: false, msg: "Genre is existed" });
 
         //inserting new into database
+
         try {
             const newGenre = await db.genres.insertOne(genre);
             const newGenreId = newGenre.insertedId;
@@ -70,7 +74,8 @@ exports.update_genre = [
 
         //getting genre from databse
         const genre = await db.genres.findOne({ _id: ObjectId(req.params.id) });
-        if (!genre) return res.status(404).json({ success: false, message: "Genre with the given Id was not found" });
+        if (!genre)
+            return res.status(404).json({ success: false, message: "Genre with the given Id was not found" });
 
         //updating genre
         genre.name = updateGenre.name;

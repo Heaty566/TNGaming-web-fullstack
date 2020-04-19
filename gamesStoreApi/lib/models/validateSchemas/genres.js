@@ -2,7 +2,7 @@ const Joi = require("@hapi/joi");
 
 const { formatError } = require("./validateErrorFormat");
 
-schemasGenreValidate = type => {
+schemasGenreValidate = (type) => {
     switch (type) {
         case "name":
             return Joi.string()
@@ -16,17 +16,17 @@ schemasGenreValidate = type => {
                     "string.min": formatError("Name", "string.min", " two characters"),
                     "string.max": formatError("Name", "string.max", " twenty characters"),
                     "string.pattern.base": formatError("Name", "string.pattern.base", "string.letterOnly"),
-                    "any.required": formatError("Name", "any.required")
+                    "any.required": formatError("Name", "any.required"),
                 });
     }
 };
 
-validateGenre = genre => {
-    const schema = Joi.object({
-        name: schemasGenreValidate("name")
-    });
+module.exports = {
+    validateGenre: (genre) => {
+        const schema = Joi.object({
+            name: schemasGenreValidate("name"),
+        });
 
-    return schema.validate(genre);
+        return schema.validate(genre);
+    },
 };
-
-module.exports = { validateGenre };

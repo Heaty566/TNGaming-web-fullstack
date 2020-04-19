@@ -1,10 +1,9 @@
 const Joi = require("@hapi/joi");
 Joi.objectId = require("joi-objectid")(Joi);
 
-const { formatError } = require("../validateSchemas/validateErrorFormat");
-const { validateGenre } = require("./genres");
-const { validateGameNew, validateGameRestock, validateGameUpdate } = require("./games");
-const { validateUser, validateLoginUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance } = require("./users");
+const gamesValidator = require("./games");
+const genresValidator = require("./genres");
+const usersValidator = require("./users");
 
 isObjectId = (label, _id) => {
     const schema = Joi.object({
@@ -12,22 +11,11 @@ isObjectId = (label, _id) => {
             .required()
             .messages({
                 "any.required": formatError(label, "any.required"),
-                "string.pattern.name": formatError(label, "objectId")
-            })
+                "string.pattern.name": formatError(label, "objectId"),
+            }),
     });
 
     return schema.validate({ _id });
 };
 
-module.exports = {
-    validateGenre,
-    validateUser,
-    validateLoginUser,
-    validateUpdatePassword,
-    validateUpdateProfile,
-    validateAddBalance,
-    validateGameNew,
-    validateGameUpdate,
-    validateGameRestock,
-    isObjectId
-};
+module.exports = { gamesValidator, genresValidator, usersValidator, isObjectId };

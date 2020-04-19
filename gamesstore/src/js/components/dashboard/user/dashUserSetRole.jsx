@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
-import { adminService } from "../../../services/";
 import FormSelect from "../../form/formSelect";
 import FormBtn from "../../form/formBtn";
 import FormCheck from "../../form/formCheck";
+import { adminService } from "../../../services/";
 
 function DashUserSetRole() {
     const token = useSelector((state) => state.auth.token);
@@ -13,7 +13,7 @@ function DashUserSetRole() {
 
     useEffect(() => {
         if (token)
-            adminService.users.allUsers(token).then(({ data }) => {
+            adminService.allUsers(token).then(({ data }) => {
                 setUsers(data.data);
             });
     }, [token]);
@@ -24,7 +24,7 @@ function DashUserSetRole() {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        adminService.users.toggleUserAdmin(token, usedId);
+        adminService.toggleUserAdmin(token, usedId);
     };
 
     return (

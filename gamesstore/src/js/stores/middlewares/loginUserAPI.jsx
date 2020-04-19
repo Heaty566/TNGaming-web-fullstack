@@ -3,13 +3,13 @@ import Cookies from "universal-cookie";
 import config from "../../config/config.json";
 import { updateMessage } from "../notification";
 import { loginUser, updateUser, updateLoading, updateError } from "../auth";
-import { usersService } from "../../services";
+import { authService } from "../../services/";
 
 export const loginUserAPI = ({ dispatch }) => (next) => async (action) => {
     if (action.type !== loginUser.type) return next(action);
 
     dispatch({ type: updateLoading.type });
-    usersService.users
+    authService
         .loginUser(action.payload)
         .then(({ data }) => {
             const { user, token } = data.data;

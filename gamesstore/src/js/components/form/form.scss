@@ -43,14 +43,23 @@
         color: $primary-color-font;
     }
 
-    &__error {
+    &__alert {
         font-size: 1em;
         margin-bottom: 20px;
         padding: 6px 10px;
+        word-wrap: break-word;
         animation: fadeIn 0.4s ease-in-out;
         @include BorderRadius;
-        background: $error-color-main;
-        color: $primary-color-font;
+
+        &-success {
+            color: $secondary-color-font;
+            background: $success-color-main;
+        }
+
+        &-error {
+            color: $primary-color-font;
+            background: $error-color-main;
+        }
     }
 
     &__input {
@@ -59,7 +68,7 @@
         display: block;
         margin-bottom: 20px;
         width: 100%;
-        max-width: 200px;
+
         letter-spacing: 0.5px;
         @include BorderRadius;
         @include NoBorderOutline;
@@ -79,7 +88,7 @@
     &__password {
         padding: 6px 10px;
         margin-bottom: 20px;
-        max-width: 200px;
+
         @include FlexAround;
         @include BorderRadius;
         background: $secondary-color-main;
@@ -127,8 +136,9 @@
                 z-index: 200;
                 position: absolute;
                 width: 100%;
-                overflow: hidden;
                 outline: none;
+                max-height: 500px;
+                overflow: auto;
                 border-radius: 0 0 2px 2px;
                 top: 35px;
                 border: 1px solid $primary-color-main;
@@ -164,6 +174,7 @@
         @include NoBorderOutline;
         @include BorderRadius;
         font-size: 1em;
+        cursor: pointer;
         font-weight: bold;
         letter-spacing: 1px;
         padding: 6px 18px;
@@ -277,3 +288,12 @@
         }
     }
 }
+
+// .alert {
+//     &__error {
+//         background: $error-color-main;
+//     }
+//     &__success {
+//         background: $success-color-main;
+//     }
+// }

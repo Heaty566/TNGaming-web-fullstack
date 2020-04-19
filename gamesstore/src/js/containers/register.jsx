@@ -3,17 +3,18 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
+import { colors } from "../constant/";
 import { store } from "../stores/configStore";
 import { updateError } from "../stores/auth";
 import { registerUser } from "../stores/users";
-import { users as validate } from "../utils/validateForm/";
+import { usersValidator } from "../utils/validateForm/";
 import { register as registerLink } from "../config/linkURL.json";
 
 import FormInput from "../components/form/fromInput";
 import FormPassword from "../components/form/formPassword";
 import FormBtn from "../components/form/formBtn";
 import FormLink from "../components/form/formLink";
-import FormError from "../components/form/formError";
+import FormAlert from "../components/form/formAlert";
 
 const Register = () => {
     document.title = "Register | TNGaming";
@@ -23,7 +24,7 @@ const Register = () => {
     const { register, handleSubmit } = useForm();
 
     async function handOnSubmit(data) {
-        const { error } = validate.validateUser(data);
+        const { error } = usersValidator.validateUser(data);
         if (error) {
             store.dispatch({ type: updateError.type, payload: { msg: "" } });
             return store.dispatch({
@@ -44,7 +45,7 @@ const Register = () => {
         <div className="form form__container form__background-img-desktop">
             <form className="register" onSubmit={handleSubmit(handOnSubmit)}>
                 <h3 className="form__title">Register</h3>
-                {auth.error && <FormError error={auth.error} />}
+                {auth.error && <FormAlert error={auth.error} />}
                 <FormInput placeholder="Name" name="name" track={register} />
                 <FormInput placeholder="Username" name="username" track={register} />
                 <FormPassword placeholder="Password" name="password" track={register} />
@@ -54,7 +55,7 @@ const Register = () => {
                 <FormInput placeholder="Phone" name="phone" track={register} />
                 <div className="form__column">
                     <FormLink label="Register instead" linkURL={registerLink.loginInstead} />
-                    <FormBtn label="Next" isLoading={auth.loading} />
+                    <FormBtn label="Next" isLoading={auth.loading} color={colors.primaryColorMain} />
                 </div>
             </form>
         </div>

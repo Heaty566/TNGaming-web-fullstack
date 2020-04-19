@@ -18,14 +18,15 @@ const imagesGameFilter = (req, file, cb) => {
 const storageGameImages = multer.diskStorage({
     destination: async function (req, file, callback) {
         const dest = `${config.uploadURL.uploadImagesGameUrl}/${req.user._id}/games/${req.developer.unique}`;
+
         req.imageDestination = dest;
         mkdirp.sync(dest, null);
         callback(null, dest);
     },
     filename: function (req, file, callback) {
-        const newFileName = `${req.developer.unique}-${
-            file.fieldname
-        }-${Date.now()}${path.extname(file.originalname).toLocaleLowerCase()}`;
+        const newFileName = `${req.developer.unique}-${file.fieldname}-${Date.now()}${path
+            .extname(file.originalname)
+            .toLocaleLowerCase()}`;
 
         callback(null, newFileName);
     },

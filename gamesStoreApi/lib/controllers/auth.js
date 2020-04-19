@@ -5,13 +5,16 @@ const _ = require("lodash");
 const { logger } = require("../logging");
 const { isUser } = require("../middlewares/");
 const { tokenSchema } = require("../models/schemas");
-const { validateLoginUser } = require("../models/validateSchemas");
+const { usersValidator } = require("../models/validateSchemas");
 const { createToken, decodeToken } = require("../utils/token");
 
 exports.login = async (req, res) => {
     const db = req.app.get("db");
     //validate User
-    const { error: isLoginUser } = validateLoginUser(_.pick(req.body, ["username", "password"]));
+
+    const { error: isLoginUser } = usersValidator.validateLoginUser(
+        _.pick(req.body, ["username", "password"])
+    );
     if (isLoginUser)
         return res.status(400).json({
             success: false,

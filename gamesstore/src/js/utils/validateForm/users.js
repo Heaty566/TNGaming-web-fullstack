@@ -30,7 +30,11 @@ const schemasUserValidate = (type) => {
                     "string.empty": formatError("Username", "string.empty"),
                     "string.min": formatError("Username", "string.min", " six characters"),
                     "string.max": formatError("Username", "string.max", " 50 characters"),
-                    "string.pattern.base": formatError("Username", "string.pattern.base", "string.letterAndNumber"),
+                    "string.pattern.base": formatError(
+                        "Username",
+                        "string.pattern.base",
+                        "string.letterAndNumber"
+                    ),
                     "any.required": formatError("Username", "any.required"),
                 });
 
@@ -61,7 +65,11 @@ const schemasUserValidate = (type) => {
                     "string.empty": formatError("Old password", "string.empty"),
                     "string.min": formatError("Old password", "string.min", " eight characters"),
                     "string.max": formatError("Old password", "string.max", " 32 characters"),
-                    "string.pattern.base": formatError("Old password", "string.pattern.base", "string.letterAndNumber"),
+                    "string.pattern.base": formatError(
+                        "Old password",
+                        "string.pattern.base",
+                        "string.letterAndNumber"
+                    ),
                     "any.required": formatError("Old password", "any.required"),
                 });
 
@@ -76,7 +84,11 @@ const schemasUserValidate = (type) => {
                     "string.empty": formatError("Password", "string.empty"),
                     "string.min": formatError("Password", "string.min", " eight characters"),
                     "string.max": formatError("Password", "string.max", " 32 characters"),
-                    "string.pattern.base": formatError("Password", "string.pattern.base", "string.letterAndNumber"),
+                    "string.pattern.base": formatError(
+                        "Password",
+                        "string.pattern.base",
+                        "string.letterAndNumber"
+                    ),
                     "any.required": formatError("Password", "any.required"),
                 });
 
@@ -115,7 +127,11 @@ const schemasUserValidate = (type) => {
                     "string.empty": formatError("Address", "string.empty"),
                     "string.min": formatError("Address", "string.min", " one character"),
                     "string.max": formatError("Address", "string.max", " 70 characters"),
-                    "string.pattern.base": formatError("Address", "string.pattern.base", "string.letterAndNumber"),
+                    "string.pattern.base": formatError(
+                        "Address",
+                        "string.pattern.base",
+                        "string.letterAndNumber"
+                    ),
                     "any.required": formatError("Address", "any.required"),
                 });
 
@@ -141,56 +157,56 @@ const schemasUserValidate = (type) => {
     }
 };
 
-const validateUser = (user) => {
-    const schema = Joi.object({
-        name: schemasUserValidate("name"),
-        username: schemasUserValidate("username"),
-        email: schemasUserValidate("email"),
-        password: schemasUserValidate("password"),
-        confirm: schemasUserValidate("confirm"),
-        phone: schemasUserValidate("phone"),
-        address: schemasUserValidate("address"),
-    });
+export default {
+    validateUser: (user) => {
+        const schema = Joi.object({
+            name: schemasUserValidate("name"),
+            username: schemasUserValidate("username"),
+            email: schemasUserValidate("email"),
+            password: schemasUserValidate("password"),
+            confirm: schemasUserValidate("confirm"),
+            phone: schemasUserValidate("phone"),
+            address: schemasUserValidate("address"),
+        });
 
-    return schema.validate(user);
+        return schema.validate(user);
+    },
+
+    validateLoginUser: (user) => {
+        const schema = Joi.object({
+            username: schemasUserValidate("username"),
+            password: schemasUserValidate("password"),
+        });
+
+        return schema.validate(user);
+    },
+
+    validateUpdatePassword: (password) => {
+        const schema = Joi.object({
+            oldPassword: schemasUserValidate("oldPassword"),
+            password: schemasUserValidate("password"),
+            confirm: schemasUserValidate("confirm"),
+        });
+
+        return schema.validate(password);
+    },
+
+    validateUpdateProfile: (user) => {
+        const schema = Joi.object({
+            name: schemasUserValidate("name"),
+            email: schemasUserValidate("email"),
+            phone: schemasUserValidate("phone"),
+            address: schemasUserValidate("address"),
+        });
+
+        return schema.validate(user);
+    },
+
+    validateAddBalance: (balance) => {
+        const schema = Joi.object({
+            balance: schemasUserValidate("balance"),
+        });
+
+        return schema.validate(balance);
+    },
 };
-
-const validateLoginUser = (user) => {
-    const schema = Joi.object({
-        username: schemasUserValidate("username"),
-        password: schemasUserValidate("password"),
-    });
-
-    return schema.validate(user);
-};
-
-const validateUpdatePassword = (password) => {
-    const schema = Joi.object({
-        oldPassword: schemasUserValidate("oldPassword"),
-        password: schemasUserValidate("password"),
-        confirm: schemasUserValidate("confirm"),
-    });
-
-    return schema.validate(password);
-};
-
-const validateUpdateProfile = (user) => {
-    const schema = Joi.object({
-        name: schemasUserValidate("name"),
-        email: schemasUserValidate("email"),
-        phone: schemasUserValidate("phone"),
-        address: schemasUserValidate("address"),
-    });
-
-    return schema.validate(user);
-};
-
-const validateAddBalance = (balance) => {
-    const schema = Joi.object({
-        balance: schemasUserValidate("balance"),
-    });
-
-    return schema.validate(balance);
-};
-
-module.exports = { validateUser, validateLoginUser, validateUpdatePassword, validateUpdateProfile, validateAddBalance };

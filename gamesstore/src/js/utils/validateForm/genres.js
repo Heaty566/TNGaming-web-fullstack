@@ -23,12 +23,12 @@ const schemasGenreValidate = (type) => {
     }
 };
 
-const validateGenre = (genre) => {
-    const schema = Joi.object({
-        name: schemasGenreValidate("name"),
-    });
+export default {
+    validateGenre: (genre) => {
+        const schema = Joi.object({
+            name: schemasGenreValidate("name"),
+        });
 
-    return schema.validate(genre);
+        return schema.validate(genre);
+    },
 };
-
-module.exports = { validateGenre };

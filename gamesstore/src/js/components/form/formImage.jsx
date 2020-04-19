@@ -16,7 +16,7 @@ const FormImage = ({ track, name, file = [], ...rest }) => {
             />
             <label htmlFor={name}>
                 {filename}
-                <img src={process.env.PUBLIC_URL + icons.addImage} />
+                <img src={process.env.PUBLIC_URL + icons.addImage} alt="icon" />
             </label>
         </div>
     );

@@ -101,10 +101,12 @@
             display: grid;
             margin-bottom: 20px;
             align-items: stretch;
+
             grid-template-columns: repeat(3, minmax(300px, 1fr));
         }
 
         &__box {
+            max-width: 200px;
             .col__tag {
                 opacity: 0.5;
                 margin-bottom: 10px;
@@ -115,13 +117,60 @@
         }
 
         &__col {
-            &-2 {
+            &-3 {
                 grid-column-start: 1;
                 grid-column-end: 5;
+            }
+
+            .col__tag {
+                opacity: 0.5;
+                margin-bottom: 10px;
+                color: $primary-color-font;
+
+                font-weight: bold;
             }
         }
 
         &__addnewgame {
+        }
+    }
+
+    .table {
+        // padding: 5px;
+        border-collapse: collapse;
+        background-color: $secondary-color-main;
+        display: inline-block;
+        max-height: 500px;
+        overflow: auto;
+        &__thead {
+            color: $primary-color-font;
+        }
+
+        &__tbody {
+            color: $primary-color-font;
+
+            // display: inline;
+        }
+
+        &__tr {
+            // display: block;
+        }
+
+        &__td,
+        &__th {
+            text-align: left;
+            border: 1px solid $primary-color-lighter;
+            padding: 7px 20px;
+            max-width: 200px;
+        }
+
+        &__td {
+        }
+
+        &__th {
+            // overflow: hidden;
+
+            background: $primary-color-lighter;
         }
     }
 }

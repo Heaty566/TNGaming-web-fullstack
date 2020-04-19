@@ -3,16 +3,17 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
+import { colors } from "../constant/";
 import { store } from "../stores/configStore";
 import { loginUser, updateError } from "../stores/auth";
-import { users as validate } from "../utils/validateForm/";
+import { usersValidator } from "../utils/validateForm/";
 import { login } from "../config/linkURL.json";
 
 import FormInput from "../components/form/fromInput";
 import FormPassword from "../components/form/formPassword";
 import FormBtn from "../components/form/formBtn";
 import FormLink from "../components/form/formLink";
-import FormError from "../components/form/formError";
+import FormAlert from "../components/form/formAlert";
 
 const Login = () => {
     document.title = "Login | TNGaming";
@@ -23,7 +24,7 @@ const Login = () => {
 
     async function handOnSubmit(data) {
         store.dispatch({ type: updateError.type, payload: { msg: "" } });
-        const { error } = validate.validateLoginUser(data);
+        const { error } = usersValidator.validateLoginUser(data);
 
         if (error) {
             return store.dispatch({
@@ -44,12 +45,12 @@ const Login = () => {
         <div className="form form__container form__background-img-desktop">
             <form className="login" onSubmit={handleSubmit(handOnSubmit)}>
                 <h3 className="form__title">Login</h3>
-                {auth.error && <FormError error={auth.error} />}
+                {auth.error && <FormAlert error={auth.error} />}
                 <FormInput placeholder="Username" name="username" track={register} />
                 <FormPassword placeholder="Password" name="password" track={register} />
                 <div className="form__column">
                     <FormLink label="Register instead" linkURL={login.registerInstead} />
-                    <FormBtn label="Next" isLoading={auth.loading} />
+                    <FormBtn label="Next" isLoading={auth.loading} color={colors.primaryColorMain} />
                 </div>
             </form>
         </div>

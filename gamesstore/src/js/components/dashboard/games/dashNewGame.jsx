@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
-import { adminService } from "../../../services/";
+import { colors } from "../../../constant/";
+import { genreService, developerService } from "../../../services/";
+import { gamesValidator } from "../../../utils/validateForm/";
 
 import FormInput from "../../form/fromInput";
 import FormCheck from "../../form/formCheck";
@@ -11,15 +13,18 @@ import FormSelectMultiple from "../../form/formSelectMultiple";
 import FormTextArea from "../../form/formTextArea";
 import FormImage from "../../form/formImage";
 import FormBtn from "../../form/formBtn";
-import FormError from "../../form/formError";
+import FormAlert from "../../form/formAlert";
 
-const DashNewGame = () => {
+function DashNewGame() {
     const [genres, setGenres] = useState([]);
     const { register, handleSubmit, watch, setValue } = useForm();
     const auth = useSelector((state) => state.auth);
+    const [alert, setAlert] = useState({ type: "", msg: "" });
+    const [submitLoading, setSubmitLoading] = useState(false);
 
     const bannerWatcher = watch("banner");
-    const imagesWatcher = watch("images");
+    const imagesWatcher = watch("imagesGame");
+    const descriptionWatcher = watch("description");
 
     useEffect(() => {
         register("date");
@@ -27,13 +32,48 @@ const DashNewGame = () => {
     }, [register]);
 
     useEffect(() => {
-        adminService.genres.getAllGenres(auth.token).then(({ data }) => {
-            setGenres(data.data);
-        });
+        if (auth.token)
+            genreService.getAllGenres(auth.token).then(({ data }) => {
+                setGenres(data.data);
+            });
     }, [auth.token]);
 
     const handleOnSubmit = (data) => {
-        console.log(data);
+        setAlert({ type: "", msg: "" });
+
+        data.imagesGame = [data.banner[0], ...data.imagesGame];
+        delete data.banner;
+
+        const { error } = gamesValidator.validateGameNew(data);
+        if (error) return setAlert({ type: "error", msg: error.details[0].message });
+
+        const newGame = new FormData();
+        for (let item of data.imagesGame) {
+            newGame.append("imagesGame", item);
+        }
+
+        for (let item of data.genreId) {
+            newGame.append("genreId", item);
+        }
+
+        newGame.append("name", data.name);
+        newGame.append("price", data.price);
+        newGame.append("publisher", data.publisher);
+        newGame.append("available", data.available);
+        newGame.append("stock", data.stock);
+        newGame.append("description", data.description);
+        newGame.append("date", data.date);
+
+        setSubmitLoading(true);
+        developerService.games
+            .addNewGame(auth.token, newGame)
+            .then(() => {
+                setAlert({ type: "success", msg: "Game uploaded successfully" });
+            })
+            .catch(({ response }) => {
+                setAlert({ type: "error", msg: response.data.msg });
+            })
+            .finally(() => setSubmitLoading(false));
     };
 
     return (
@@ -44,15 +84,15 @@ const DashNewGame = () => {
                     <div className="dash__box">
                         <h4 className="form__title">About Game</h4>
                     </div>
-                    <div className="dash__col dash__box">
-                        <FormError error="Dsads" />
+                    <div className="dash__col ">
+                        {alert.msg && <FormAlert error={alert.msg} type={alert.type} />}
                     </div>
                 </div>
 
                 <div className="dash__row">
                     <div className="dash__col dash__box">
                         <p className="col__tag">Name</p>
-                        <FormInput name="username" track={register} />
+                        <FormInput name="name" track={register} />
                     </div>
                     <div className="dash__box">
                         <p className="col__tag">Price</p>
@@ -113,9 +153,14 @@ const DashNewGame = () => {
                     </div>
                 </div>
                 <div className="dash__row">
-                    <div className="dash__col dash__box dash__col-2">
+                    <div className="dash__col dash__col-3">
                         <p className="col__tag">Description</p>
-                        <FormTextArea name="description" limits={400} track={register} />
+                        <FormTextArea
+                            name="description"
+                            limits={5000}
+                            track={register}
+                            value={descriptionWatcher}
+                        />
                     </div>
                 </div>
                 <div className="dash__row">
@@ -125,15 +170,17 @@ const DashNewGame = () => {
                     </div>
                     <div className="dash__box">
                         <p className="col__tag">Images</p>
-                        <FormImage name="images" track={register} file={imagesWatcher} multiple />
+                        <FormImage name="imagesGame" track={register} file={imagesWatcher} multiple />
                     </div>
                 </div>
                 <div className="dash__row">
-                    <FormBtn label="Submit" />
+                    <div className="dash__box">
+                        <FormBtn label="Submit" isLoading={submitLoading} color={colors.secondaryColorMain} />
+                    </div>
                 </div>
             </form>
         </div>
     );
-};
+}
 
 export default DashNewGame;

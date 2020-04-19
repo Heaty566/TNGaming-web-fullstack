@@ -47,16 +47,21 @@
                 "options": []
             },
             {
-                "section": { "label": "Game", "isAdmin": true, "isDeveloper": false },
+                "section": { "label": "Game", "isAdmin": true, "isDeveloper": true },
                 "options": [
-                    { "label": "Overview", "linkURL": "#", "isAdmin": true, "isDeveloper": true },
+                    { "label": "Overview", "linkURL": "#", "isAdmin": true, "isDeveloper": false },
                     {
                         "label": "Add New Game",
                         "linkURL": "/game/addnewgame",
                         "isAdmin": true,
                         "isDeveloper": true
                     },
-                    { "label": "Edit Game", "linkURL": "#", "isAdmin": true, "isDeveloper": true }
+                    {
+                        "label": "Add New Genre",
+                        "linkURL": "/game/genre/addnewgenre",
+                        "isAdmin": true,
+                        "isDeveloper": false
+                    }
                 ]
             }
         ]

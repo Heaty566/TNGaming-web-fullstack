@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { useSelector } from "react-redux";
 
-import { usersService } from "../../../services/";
+import { authService } from "../../../services/";
 import { navbar } from "../../../config/linkURL.json";
 import { icons } from "../../../constant/";
 import { updateUser } from "../../../stores/auth";
@@ -15,7 +15,7 @@ function NavUser() {
     const auth = useSelector((state) => state.auth);
 
     const handleLogout = async () => {
-        await usersService.users.logoutUser(cookies.get("x-auth-token"));
+        await authService.logoutUser(cookies.get("x-auth-token"));
         cookies.remove("x-auth-token");
         store.dispatch({
             type: updateUser.type,

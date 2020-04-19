@@ -5,7 +5,7 @@ import Cookies from "universal-cookie";
 
 import { updateUser } from "../../js/stores/auth";
 import { store } from "../../js/stores/configStore";
-import { usersService } from "../services/";
+import { authService } from "../services/";
 
 import NavBrand from "../components/navbar/navBrand";
 import NavGroupBtn from "../components/navbar/navGrourpBtn";
@@ -19,7 +19,7 @@ function Navbar() {
 
     useEffect(() => {
         if (cookie.get("x-auth-token") && !auth.token)
-            usersService.users
+            authService
                 .loginUserWithCookie(cookie.get("x-auth-token"))
                 .then(({ data }) => {
                     const user = data.data;

@@ -4,7 +4,7 @@ const _ = require("lodash");
 const config = require("../../config/games.json");
 const { isObjectId } = require("../models/validateSchemas/");
 
-exports.get_all_image = async (req, res) => {
+exports.get_all_game = async (req, res) => {
     const db = req.app.get("db");
     if (req.params.page < 1) req.params.page = 1;
 
@@ -18,7 +18,7 @@ exports.get_all_image = async (req, res) => {
     res.json({ success: true, data: filter });
 };
 
-exports.get_image_by_id = async (req, res) => {
+exports.get_game_by_id = async (req, res) => {
     const db = req.app.get("db");
 
     const { error: isId } = isObjectId("Game", req.params.id);
@@ -30,7 +30,7 @@ exports.get_image_by_id = async (req, res) => {
     res.json({ success: true, data: game });
 };
 
-exports.image_sort_by_genre = async (req, res) => {
+exports.game_sort_by_genre = async (req, res) => {
     const db = req.app.get("db");
     if (req.params.page < 1) req.params.page = 1;
 
@@ -46,7 +46,7 @@ exports.image_sort_by_genre = async (req, res) => {
     res.json({ success: true, data: filter });
 };
 
-exports.image_sort_by_key = async (req, res) => {
+exports.game_sort_by_key = async (req, res) => {
     const db = req.app.get("db");
     if (req.params.page < 1) req.params.page = 1;
 

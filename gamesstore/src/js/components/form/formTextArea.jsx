@@ -1,7 +1,7 @@
 import React from "react";
 
-const FormTextArea = ({ name, limits, label, track }) => {
-    const charactersLeft = limits;
+const FormTextArea = ({ name, limits, label, track, value = "" }) => {
+    const charactersLeft = limits - value.length;
 
     return (
         <div className="form__textarea">

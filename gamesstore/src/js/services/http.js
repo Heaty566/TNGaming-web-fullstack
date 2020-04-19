@@ -4,9 +4,10 @@ import config from "../config/http.json";
 axios.defaults.baseURL =
     process.env.NODE_ENV === "development" ? config.serverURL.development : config.serverURL.production;
 
-export const configHeader = (token) => {
+export const configHeader = (token, contentType) => {
     return {
         headers: {
+            "Content-Type": contentType,
             "x-auth-token": token,
         },
     };

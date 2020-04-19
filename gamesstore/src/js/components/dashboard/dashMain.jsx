@@ -5,6 +5,7 @@ import { routerURL } from "../../config/http.json";
 
 import DashUserSetRole from "../dashboard/user/dashUserSetRole";
 import DashNewGame from "../dashboard/games/dashNewGame";
+import DashNewGenre from "../dashboard/games/dashNewGenre";
 
 const DashMain = () => {
     return (
@@ -12,6 +13,10 @@ const DashMain = () => {
             <Switch>
                 <AdminRouter path={routerURL.dashboard + "/user/setrole"} component={DashUserSetRole} />
                 <AdminRouter path={routerURL.dashboard + "/game/addnewgame"} component={DashNewGame} />
+                <AdminRouter
+                    path={routerURL.dashboard + "/game/genre/addnewgenre"}
+                    component={DashNewGenre}
+                />
             </Switch>
         </div>
     );

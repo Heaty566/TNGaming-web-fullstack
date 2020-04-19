@@ -6,12 +6,7 @@ const _ = require("lodash");
 const { uploadAvatar } = require("../utils/uploadImage/");
 const { removeFile } = require("../utils/removeFile");
 
-const {
-    validateUser,
-    validateUpdatePassword,
-    validateUpdateProfile,
-    validateAddBalance,
-} = require("../models/validateSchemas");
+const { usersValidator } = require("../models/validateSchemas");
 const { logger } = require("../logging");
 const { isUser } = require("../middlewares/");
 const { userSchema } = require("../models/schemas");
@@ -40,7 +35,7 @@ exports.add_balance = [
         const db = req.app.get("db");
 
         //validate balance
-        const { error } = validateAddBalance(_.pick(req.body, ["balance"]));
+        const { error } = usersValidator.validateAddBalance(_.pick(req.body, ["balance"]));
         if (error)
             return res.status(400).json({
                 success: false,
@@ -91,16 +86,9 @@ exports.register = async (req, res) => {
     const db = req.app.get("db");
 
     //validate user
-    const { error: isUser } = validateUser(
-        _.pick(req.body, [
-            "name",
-            "username",
-            "password",
-            "confirm",
-            "email",
-            "phone",
-            "address",
-        ])
+
+    const { error: isUser } = usersValidator.validateUser(
+        _.pick(req.body, ["name", "username", "password", "confirm", "email", "phone", "address"])
     );
     if (isUser)
         return res.status(400).json({
@@ -109,16 +97,7 @@ exports.register = async (req, res) => {
         });
 
     //create new user
-    const user = userSchema(
-        _.pick(req.body, [
-            "name",
-            "username",
-            "password",
-            "email",
-            "phone",
-            "address",
-        ])
-    );
+    const user = userSchema(_.pick(req.body, ["name", "username", "password", "email", "phone", "address"]));
 
     //checking user is unique
     const isUnique = await db.users.findOne({
@@ -159,7 +138,7 @@ exports.change_password = [
         //{confirm: "String", password: "String", "oldPassword": "String"}
         const db = req.app.get("db");
 
-        const { error } = validateUpdatePassword(
+        const { error } = usersValidator.validateUpdatePassword(
             _.pick(req.body, ["confirm", "password", "oldPassword"])
         );
         if (error)
@@ -179,10 +158,7 @@ exports.change_password = [
             });
 
         //checking is correct password
-        const isCorrect = await bcrypt.compare(
-            req.body.oldPassword,
-            user.password
-        );
+        const isCorrect = await bcrypt.compare(req.body.oldPassword, user.password);
         if (!isCorrect)
             return res.status(400).json({
                 success: false,
@@ -226,7 +202,7 @@ exports.update_profile = [
         const db = req.app.get("db");
 
         //validate profile
-        const { error } = validateUpdateProfile(
+        const { error } = usersValidator.validateUpdateProfile(
             _.pick(req.body, ["name", "email", "phone", "address"])
         );
         if (error)
@@ -292,6 +268,8 @@ exports.update_avatar = [
                     msg: error,
                 });
             }
+
+            if (!req.files.length) return res.status(400).json({ success: false, msg: "Images is required" });
 
             const user = await db.users.findOne({
                 _id: ObjectId(req.user._id),
