@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import { icons } from "../../constant/";
 
-function FormSelect({ label, options, fieldName, fileValue, onChange }) {
+function FormSelect({ label, options, fieldName, fieldValue, track, name }) {
     const [value, setValue] = useState(label);
     const [active, setActive] = useState(false);
 
     const handleOnSelect = (data) => {
-        setValue(data[fileValue]);
-        onChange(data);
+        setValue(data[fieldName]);
+        track(name, data[fieldValue]);
     };
 
     return (

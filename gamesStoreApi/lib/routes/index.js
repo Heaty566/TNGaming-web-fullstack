@@ -1,14 +1,16 @@
 //import router
-const genres = require("./genres");
-const users = require("./users");
-const userGames = require("./userGames");
-const games = require("./games");
+const tags = require("./tag");
+const users = require("./user");
+const userGames = require("./userGame");
+const games = require("./game");
 const auth = require("./auth");
 const admin = require("./admin");
-const developer = require("./developers");
+const developer = require("./developer");
+const platforms = require("./platform");
 
 //setting URL
-const genresURL = "/api/users/admin/games/genres";
+const tagsURL = "/api/games/tags";
+const platformsURL = "/api/games/platforms";
 const authURL = "/api/users";
 const usersURL = "/api/users";
 const userGamesURL = "/api/users/games";
@@ -17,8 +19,8 @@ const adminURL = "/api/users/admin";
 const developerURL = "/api/users/developer";
 
 module.exports = {
-    genres,
-    genresURL,
+    tags,
+    tagsURL,
     users,
     usersURL,
     auth,
@@ -31,4 +33,6 @@ module.exports = {
     userGamesURL,
     games,
     gamesURL,
+    platforms,
+    platformsURL,
 };

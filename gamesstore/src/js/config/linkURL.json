@@ -57,8 +57,14 @@
                         "isDeveloper": true
                     },
                     {
-                        "label": "Add New Genre",
-                        "linkURL": "/game/genre/addnewgenre",
+                        "label": "Add New tag",
+                        "linkURL": "/game/tag/addnewtag",
+                        "isAdmin": true,
+                        "isDeveloper": false
+                    },
+                    {
+                        "label": "Add New Platform",
+                        "linkURL": "/game/tag/addnewplatform",
                         "isAdmin": true,
                         "isDeveloper": false
                     }

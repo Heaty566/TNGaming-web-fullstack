@@ -136,24 +136,22 @@
     }
 
     .table {
-        // padding: 5px;
         border-collapse: collapse;
         background-color: $secondary-color-main;
         display: inline-block;
+        animation: fadeIn 0.4s ease-in-out;
         max-height: 500px;
         overflow: auto;
+
         &__thead {
             color: $primary-color-font;
         }
 
         &__tbody {
             color: $primary-color-font;
-
-            // display: inline;
         }
 
         &__tr {
-            // display: block;
         }
 
         &__td,
@@ -168,8 +166,6 @@
         }
 
         &__th {
-            // overflow: hidden;
-
             background: $primary-color-lighter;
         }
     }

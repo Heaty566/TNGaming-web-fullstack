@@ -1,23 +1,32 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-import { colors, animations } from "../../constant";
+const Rotate = keyframes`
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+`;
 
 const SpinnerStyle = styled.div`
     span {
         display: block;
         border-radius: 50%;
-        width: ${(props) => props.height};
-        height: ${(props) => props.height};
-        border: ${(props) => props.border} solid ${colors.color[9]};
-        border-left: ${(props) => props.border} solid ${colors.color[0]};
-        animation: ${animations.rotate} 0.5s infinite linear;
+        width: ${(props) => props.height}px;
+        height: ${(props) => props.height}px;
+        border: ${(props) => props.border}px solid ${(props) => props.color};
+        border-left: ${(props) => props.border}px solid ${(props) => props.borderColor};
+        animation: ${Rotate} 0.5s infinite linear;
     }
 `;
 
-const Spinner = ({ height, border }) => {
+const Spinner = ({ height, border, color, borderColor }) => {
     return (
-        <SpinnerStyle height={height} border={border}>
+        <SpinnerStyle height={height} border={border} color={color} borderColor={borderColor}>
             <span></span>
         </SpinnerStyle>
     );

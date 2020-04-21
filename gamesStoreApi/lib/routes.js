@@ -3,8 +3,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const {
-    genres,
-    genresURL,
+    tags,
+    tagsURL,
     users,
     usersURL,
     auth,
@@ -17,6 +17,8 @@ const {
     userGamesURL,
     games,
     gamesURL,
+    platforms,
+    platformsURL,
 } = require("./routes/");
 
 module.exports = function (app) {
@@ -29,8 +31,9 @@ module.exports = function (app) {
     //main routers
     app.use(usersURL, users);
     app.use(authURL, auth);
-    app.use(genresURL, genres);
+    app.use(tagsURL, tags);
     app.use(adminURL, admin);
+    app.use(platformsURL, platforms);
     app.use(developerURL, developer);
     app.use(userGamesURL, userGames);
     app.use(gamesURL, games);

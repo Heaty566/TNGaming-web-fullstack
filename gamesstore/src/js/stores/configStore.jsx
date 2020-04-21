@@ -7,25 +7,22 @@ import notification from "./notification";
 import auth from "./auth";
 import { loginUserAPI } from "./middlewares/loginUserAPI";
 import { registerUserAPI } from "./middlewares/registerUser";
+import loading from "./loading";
 
 const entities = combineReducers({
-  searchBox,
-  notification,
+    searchBox,
+    notification,
+    loading,
 });
 
 const reducer = combineReducers({
-  entities,
-  auth,
+    entities,
+    auth,
 });
 
 const store = configureStore({
-  reducer,
-  middleware: [
-    ...getDefaultMiddleware(),
-    getSearchResult,
-    registerUserAPI,
-    loginUserAPI,
-  ],
+    reducer,
+    middleware: [...getDefaultMiddleware(), getSearchResult, registerUserAPI, loginUserAPI],
 });
 
 export { store };

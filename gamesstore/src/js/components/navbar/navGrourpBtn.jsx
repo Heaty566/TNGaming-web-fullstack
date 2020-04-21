@@ -4,11 +4,13 @@ import { useSelector } from "react-redux";
 import NavSearchbox from "./common/navSearchbox";
 import NavLink from "./common/navLink";
 import NavUser from "./common/navUser";
-
 import { navbar } from "../../config/linkURL.json";
+let tt = 0;
 
 const NavGroupBtn = () => {
     const auth = useSelector((state) => state.auth);
+    tt++;
+    console.log("---", tt);
 
     return (
         <div className="navbar__groupbtn">

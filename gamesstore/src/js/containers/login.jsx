@@ -8,6 +8,7 @@ import { store } from "../stores/configStore";
 import { loginUser, updateError } from "../stores/auth";
 import { usersValidator } from "../utils/validateForm/";
 import { login } from "../config/linkURL.json";
+import { updateLoading } from "../stores/loading";
 
 import FormInput from "../components/form/fromInput";
 import FormPassword from "../components/form/formPassword";
@@ -33,6 +34,10 @@ const Login = () => {
             });
         }
         store.dispatch({ type: loginUser.type, payload: data });
+        store.dispatch({
+            type: updateLoading.type,
+            payload: { value: 100 },
+        });
     }
 
     useEffect(() => {

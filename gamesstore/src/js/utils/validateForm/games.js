@@ -44,17 +44,29 @@ const schemasGamesValidate = (type) => {
                     "any.required": formatError("stock", "any.required"),
                 });
 
-        case "genreId":
+        case "tagId":
             return Joi.array()
                 .items(Joi.objectId())
                 .max(20)
                 .min(1)
                 .required()
                 .messages({
-                    "string.empty": formatError("Genre", "string.empty"),
-                    "array.max": formatError("Genre", "array.max", " twenty genres"),
-                    "array.min": formatError("Genre", "array.min", " one genre"),
-                    "any.required": formatError("Genre", "any.required"),
+                    "string.empty": formatError("Tag", "string.empty"),
+                    "array.max": formatError("Tag", "array.max", " twenty tags"),
+                    "array.min": formatError("Tag", "array.min", " one tag"),
+                    "any.required": formatError("Tag", "any.required"),
+                });
+        case "platformId":
+            return Joi.array()
+                .items(Joi.objectId())
+                .max(10)
+                .min(1)
+                .required()
+                .messages({
+                    "string.empty": formatError("Platform", "string.empty"),
+                    "array.max": formatError("Platform", "array.max", " twenty platforms"),
+                    "array.min": formatError("Platform", "array.min", " one platform"),
+                    "any.required": formatError("Platform", "any.required"),
                 });
 
         case "images":
@@ -120,7 +132,8 @@ export default {
         const schema = Joi.object({
             name: schemasGamesValidate("name"),
             price: schemasGamesValidate("price"),
-            genreId: schemasGamesValidate("genreId"),
+            tagId: schemasGamesValidate("tagId"),
+            platformId: schemasGamesValidate("platformId"),
             description: schemasGamesValidate("description"),
             available: schemasGamesValidate("available"),
             stock: schemasGamesValidate("stock"),
@@ -135,8 +148,10 @@ export default {
         const schema = Joi.object({
             name: schemasGamesValidate("name"),
             price: schemasGamesValidate("price"),
-            genreId: schemasGamesValidate("genreId"),
+            tagId: schemasGamesValidate("tagId"),
+            platformId: schemasGamesValidate("platformId"),
             description: schemasGamesValidate("description"),
+            stock: schemasGamesValidate("stock"),
             available: schemasGamesValidate("available"),
             date: schemasGamesValidate("date"),
             publisher: schemasGamesValidate("publisher"),

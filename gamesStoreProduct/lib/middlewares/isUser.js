@@ -10,17 +10,11 @@ isUser = async (req, res, next) => {
 
     //checking id
     const { error: isId } = isObjectId("Token", tokenId);
-    if (isId)
-        return res
-            .status(400)
-            .json({ success: false, msg: isId.details[0].message });
+    if (isId) return res.status(400).json({ success: false, msg: isId.details[0].message });
 
     //taking token from database
-    const data = await db
-        .collection("tokens")
-        .findOne({ _id: ObjectId(tokenId) });
-    if (!data)
-        return res.status(401).json({ success: false, msg: "Unauthorized" });
+    const data = await db.collection("tokens").findOne({ _id: ObjectId(tokenId) });
+    if (!data) return res.status(401).json({ success: false, msg: "Unauthorized" });
 
     //checking expired
     if (moment().diff(data.expired, "days") > 3) {
@@ -30,8 +24,7 @@ isUser = async (req, res, next) => {
 
     //decode token
     const decode = decodeToken(data.token);
-    if (!decode)
-        return res.status(401).json({ success: false, msg: "Unauthorized" });
+    if (!decode) return res.status(401).json({ success: false, msg: "Unauthorized" });
     req.user = decode;
     next();
 };

@@ -3,9 +3,13 @@ import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 
 import { colors } from "../../../constant/";
-import { genreService, developerService } from "../../../services/";
+import { tagService, developerService, platformService } from "../../../services/";
 import { gamesValidator } from "../../../utils/validateForm/";
+import { store } from "../../../stores/configStore";
+import { updateLoading } from "../../../stores/loading";
+import { useIsMountedRef } from "../../../utils/hooks/useIsMountedRef";
 
+import Spinner from "../../utils/loading/spinner";
 import FormInput from "../../form/fromInput";
 import FormCheck from "../../form/formCheck";
 import FormDatePicker from "../../form/formDatePicker";
@@ -16,9 +20,12 @@ import FormBtn from "../../form/formBtn";
 import FormAlert from "../../form/formAlert";
 
 function DashNewGame() {
-    const [genres, setGenres] = useState([]);
     const { register, handleSubmit, watch, setValue } = useForm();
     const auth = useSelector((state) => state.auth);
+    const isMounted = useIsMountedRef();
+
+    const [tags, setTags] = useState([]);
+    const [platforms, setPlatforms] = useState([]);
     const [alert, setAlert] = useState({ type: "", msg: "" });
     const [submitLoading, setSubmitLoading] = useState(false);
 
@@ -28,15 +35,20 @@ function DashNewGame() {
 
     useEffect(() => {
         register("date");
-        register("genreId");
+        register("tagId");
+        register("platformId");
     }, [register]);
 
     useEffect(() => {
-        if (auth.token)
-            genreService.getAllGenres(auth.token).then(({ data }) => {
-                setGenres(data.data);
+        if (auth.token) {
+            tagService.getAllTags(auth.token).then(({ data }) => {
+                if (isMounted.current) setTags(data.data);
             });
-    }, [auth.token]);
+            platformService.getAllPlatform(auth.token).then(({ data }) => {
+                if (isMounted.current) setPlatforms(data.data);
+            });
+        }
+    }, [auth.token, isMounted]);
 
     const handleOnSubmit = (data) => {
         setAlert({ type: "", msg: "" });
@@ -52,8 +64,12 @@ function DashNewGame() {
             newGame.append("imagesGame", item);
         }
 
-        for (let item of data.genreId) {
-            newGame.append("genreId", item);
+        for (let item of data.tagId) {
+            newGame.append("tagId[]", item);
+        }
+
+        for (let item of data.platformId) {
+            newGame.append("platformId[]", item);
         }
 
         newGame.append("name", data.name);
@@ -65,7 +81,8 @@ function DashNewGame() {
         newGame.append("date", data.date);
 
         setSubmitLoading(true);
-        developerService.games
+
+        developerService
             .addNewGame(auth.token, newGame)
             .then(() => {
                 setAlert({ type: "success", msg: "Game uploaded successfully" });
@@ -73,7 +90,13 @@ function DashNewGame() {
             .catch(({ response }) => {
                 setAlert({ type: "error", msg: response.data.msg });
             })
-            .finally(() => setSubmitLoading(false));
+            .finally(() => {
+                setSubmitLoading(false);
+                store.dispatch({
+                    type: updateLoading.type,
+                    payload: { value: 100 },
+                });
+            });
     };
 
     return (
@@ -127,29 +150,48 @@ function DashNewGame() {
 
                 <div className="dash__row">
                     <div className="dash__box">
-                        <p className="col__tag">Genre</p>
-                        <FormSelectMultiple
-                            label="Genre"
-                            name="genreId"
-                            options={genres}
-                            fieldName="name"
-                            fieldValue="_id"
-                            onChange={setValue}
-                        />
+                        <p className="col__tag">Tags</p>
+                        {tags.length ? (
+                            <FormSelectMultiple
+                                label="Tags"
+                                name="tagId"
+                                options={tags}
+                                fieldName="name"
+                                fieldValue="_id"
+                                onChange={setValue}
+                            />
+                        ) : (
+                            <Spinner
+                                height={25}
+                                border={5}
+                                color={colors.secondaryColorMain}
+                                borderColor={colors.primaryColorLighter}
+                            />
+                        )}
                     </div>
                     <div className="dash__box">
                         <p className="col__tag">Stock</p>
                         <FormInput name="stock" track={register} />
                     </div>
                     <div className="dash__col dash__box">
-                        {/* <p>Platform</p>
-                        <FormSelectMultiple
-                            label="Genre"
-                            options={genres}
-                            fieldName="name"
-                            fieldValue="_id"
-                            onChange={onChange}
-                        /> */}
+                        <p className="col__tag">Platforms</p>
+                        {platforms.length ? (
+                            <FormSelectMultiple
+                                label="Platforms"
+                                name="platformId"
+                                options={platforms}
+                                fieldName="name"
+                                fieldValue="_id"
+                                onChange={setValue}
+                            />
+                        ) : (
+                            <Spinner
+                                height={25}
+                                border={5}
+                                color={colors.secondaryColorMain}
+                                borderColor={colors.primaryColorLighter}
+                            />
+                        )}
                     </div>
                 </div>
                 <div className="dash__row">

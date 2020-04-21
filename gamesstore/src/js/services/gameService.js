@@ -12,8 +12,8 @@ export default {
         return await http.get(`${endPoint}/${gameId}`);
     },
 
-    getGameByGenre: async (genreId, page) => {
-        return await http.get(`${endPoint}/sortByGenre/${genreId}/${page}`);
+    getGameByTag: async (tagId, page) => {
+        return await http.get(`${endPoint}/sortByTag/${tagId}/${page}`);
     },
 
     getGameBySearchKey: async (searchKey, page) => {

@@ -115,6 +115,7 @@
     &__select {
         position: relative;
         max-width: 200px;
+        animation: fadeIn 0.5s;
         .select {
             &__box {
                 cursor: pointer;
@@ -277,6 +278,8 @@
 
         label {
             max-width: 200px;
+            word-wrap: break-word;
+            overflow: auto;
             padding: 6px 10px;
             background: $secondary-color-main;
             color: $primary-color-font;

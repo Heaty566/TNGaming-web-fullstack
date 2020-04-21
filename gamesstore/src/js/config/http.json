@@ -4,7 +4,8 @@
         "production": "https://gamesstore-demo.herokuapp.com/api"
     },
     "endPointURL": {
-        "genresURL": "/users/admin/games/genres",
+        "tagsURL": "/games/tags",
+        "platformsURL": "/games/platforms",
         "usersURL": "/users",
         "userGamesURL": "/users/games",
         "gamesURL": "/games",
@@ -16,6 +17,7 @@
     "routerURL": {
         "home": "/home",
         "aboutus": "/aboutus",
+        "store": "/store",
         "userLogin": "/users/login",
         "userRegister": "/users/register",
         "dashboard": "/users/dashboard"

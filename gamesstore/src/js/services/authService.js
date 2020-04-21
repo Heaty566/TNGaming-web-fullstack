@@ -5,7 +5,7 @@ const endPoint = config.endPointURL.usersURL;
 
 export default {
     loginUser: async (user) => {
-        return await http.post(`${endPoint}/login`, user);
+        return await http.post(`${endPoint}/login`, user, configHeader("", "application/json"));
     },
 
     loginUserWithCookie: async (token) => {

@@ -69,7 +69,9 @@ function NavUser() {
                         Logout
                     </button>
                 </div>
-                {auth.user.isAdmin && auth.user.isDeveloper && <span className="drawer__divider"></span>}
+                {auth.user.isAdmin || auth.user.isDeveloper ? (
+                    <span className="drawer__divider"></span>
+                ) : null}
 
                 {auth.user.isAdmin && (
                     <div className="drawer__column">

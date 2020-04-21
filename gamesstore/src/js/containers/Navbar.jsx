@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-
 import Cookies from "universal-cookie";
 
 import { updateUser } from "../../js/stores/auth";
@@ -9,11 +8,12 @@ import { authService } from "../services/";
 
 import NavBrand from "../components/navbar/navBrand";
 import NavGroupBtn from "../components/navbar/navGrourpBtn";
+import NavLoading from "../components/navbar/navLoading";
 
 import { navbar } from "../config/linkURL.json";
 import { icons } from "../constant/";
 
-function Navbar() {
+const Navbar = () => {
     const cookie = new Cookies();
     const auth = useSelector((state) => state.auth);
 
@@ -35,8 +35,9 @@ function Navbar() {
         <div className="navbar">
             <NavBrand brandURL={icons.logo} linkURL={navbar.navBrandURL} />
             <NavGroupBtn />
+            <NavLoading />
         </div>
     );
-}
+};
 
 export default Navbar;

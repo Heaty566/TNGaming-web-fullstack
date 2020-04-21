@@ -1,6 +1,5 @@
 process.env.NODE_ENV = "production";
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
-
 const express = require("express");
 const app = express();
 

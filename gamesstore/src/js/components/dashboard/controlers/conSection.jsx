@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import ConColumn from "./conColumn";
 
+import ConColumn from "./conColumn";
 import { icons } from "../../../constant/";
 
 function ConSection({ tag }) {

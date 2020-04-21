@@ -1,5 +1,6 @@
 import gamesValidator from "./games";
 import usersValidator from "./users";
-import genresValidator from "./genres";
+import tagsValidator from "./tags";
+import platformValidator from "./platform";
 
-export { gamesValidator, usersValidator, genresValidator };
+export { gamesValidator, usersValidator, tagsValidator, platformValidator };

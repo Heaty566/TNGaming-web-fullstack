@@ -1,7 +1,8 @@
-const { genresSchema } = require("./genres");
-const { userSchema } = require("./users");
+const { tagsSchema } = require("./tag");
+const { userSchema } = require("./user");
 const { tokenSchema } = require("./token");
-const { gameSchema } = require("./games");
-const { orderSchema } = require("./orders");
+const { gameSchema } = require("./game");
+const { orderSchema } = require("./order");
+const { platformSchema } = require("./platform");
 
-module.exports = { genresSchema, userSchema, tokenSchema, gameSchema, orderSchema };
+module.exports = { tagsSchema, userSchema, tokenSchema, gameSchema, orderSchema, platformSchema };

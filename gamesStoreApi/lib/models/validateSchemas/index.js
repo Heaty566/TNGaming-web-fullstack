@@ -1,9 +1,10 @@
 const Joi = require("@hapi/joi");
 Joi.objectId = require("joi-objectid")(Joi);
 
-const gamesValidator = require("./games");
-const genresValidator = require("./genres");
-const usersValidator = require("./users");
+const gamesValidator = require("./game");
+const tagsValidator = require("./tag");
+const usersValidator = require("./user");
+const platformsValidator = require("./platform");
 
 isObjectId = (label, _id) => {
     const schema = Joi.object({
@@ -18,4 +19,4 @@ isObjectId = (label, _id) => {
     return schema.validate({ _id });
 };
 
-module.exports = { gamesValidator, genresValidator, usersValidator, isObjectId };
+module.exports = { gamesValidator, tagsValidator, usersValidator, platformsValidator, isObjectId };
