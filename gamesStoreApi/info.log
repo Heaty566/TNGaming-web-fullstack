@@ -1443,3 +1443,238 @@
   level: 'info',
   timestamp: '2020-04-21T10:11:09.891Z'
 }
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-21T12:13:55.356Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-21T12:13:56.057Z'
+}
+{
+  message: 'antonette has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:15.487Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:15.510Z'
+}
+{
+  message: 'antonette has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:34.328Z'
+}
+{
+  message: 'samantha has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:40.989Z'
+}
+{
+  message: 'antonette has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:46.223Z'
+}
+{
+  message: 'antonette has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:46.239Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:49.384Z'
+}
+{
+  message: 'antonette has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:20:49.459Z'
+}
+{
+  message: 'samantha has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:21:01.876Z'
+}
+{
+  message: 'samantha has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:21:04.266Z'
+}
+{
+  message: 'samantha has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:21:04.280Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:26:05.309Z'
+}
+{
+  message: 'antonette has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:26:05.346Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:26:58.364Z'
+}
+{
+  message: 'antonette has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:27:24.094Z'
+}
+{
+  message: 'antonette has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:27:50.053Z'
+}
+{
+  message: 'samantha has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:28:56.395Z'
+}
+{
+  message: 'samantha has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:28:56.442Z'
+}
+{
+  message: 'antonette has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:29:32.789Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:29:32.790Z'
+}
+{
+  message: 'antonette has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:30:20.003Z'
+}
+{
+  message: 'antonette has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T12:30:20.018Z'
+}
+{
+  message: 'antonette has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:30:27.354Z'
+}
+{
+  message: 'antonette has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T12:30:27.403Z'
+}
+{
+  message: 'Inserted new game with Id: 5e9f004dcb241b39c8d49e20',
+  level: 'info',
+  timestamp: '2020-04-21T14:16:45.502Z'
+}
+{
+  message: 'Inserted new game with Id: 5e9f0073cb241b39c8d49e21',
+  level: 'info',
+  timestamp: '2020-04-21T14:17:23.125Z'
+}
+{
+  message: 'Inserted new game with Id: 5e9f010bcb241b39c8d49e22',
+  level: 'info',
+  timestamp: '2020-04-21T14:19:55.897Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-21T15:52:17.784Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-21T15:52:18.396Z'
+}
+{
+  message: 'samantha has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:13.497Z'
+}
+{
+  message: 'samantha has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:23.034Z'
+}
+{
+  message: 'samantha has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:23.044Z'
+}
+{
+  message: 'samantha has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:28.422Z'
+}
+{
+  message: 'samantha has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:33.131Z'
+}
+{
+  message: 'samantha has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:33.151Z'
+}
+{
+  message: 'samantha has been toggoled admin role: true',
+  level: 'info',
+  timestamp: '2020-04-21T16:12:40.781Z'
+}
+{
+  message: 'Inserted new game with Id: 5e9f2294d1dc841d80de9180',
+  level: 'info',
+  timestamp: '2020-04-21T16:43:01.058Z'
+}
+{
+  message: 'karianne has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:19.865Z'
+}
+{
+  message: 'karianne has been toggoled developer role: true',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:19.878Z'
+}
+{
+  message: 'karianne has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:23.198Z'
+}
+{
+  message: 'karianne has been toggoled developer role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:24.674Z'
+}
+{
+  message: 'antonette has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:27.984Z'
+}
+{
+  message: 'samantha has been toggoled admin role: false',
+  level: 'info',
+  timestamp: '2020-04-21T16:44:54.010Z'
+}
+{
+  message: 'Listening on port 4000',
+  level: 'info',
+  timestamp: '2020-04-22T10:23:09.308Z'
+}
+{
+  message: 'connect to gamesStore mongoDB on cluster0-2hmvh.mongodb.net successfully',
+  level: 'info',
+  timestamp: '2020-04-22T10:23:09.775Z'
+}

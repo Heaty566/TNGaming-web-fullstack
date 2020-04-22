@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-let tt = 0;
+
 
 const NavBrand = ({ brandURL, linkURL }) => {
-    tt++;
-    console.log(tt);
-
     return (
         <div className="navbar__brand">
             <Link to={linkURL}>

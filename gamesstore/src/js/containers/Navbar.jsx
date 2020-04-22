@@ -14,30 +14,35 @@ import { navbar } from "../config/linkURL.json";
 import { icons } from "../constant/";
 
 const Navbar = () => {
-    const cookie = new Cookies();
-    const auth = useSelector((state) => state.auth);
+  const cookie = new Cookies();
+  const auth = useSelector((state) => state.auth);
 
-    useEffect(() => {
-        if (cookie.get("x-auth-token") && !auth.token)
-            authService
-                .loginUserWithCookie(cookie.get("x-auth-token"))
-                .then(({ data }) => {
-                    const user = data.data;
-                    store.dispatch({
-                        type: updateUser.type,
-                        payload: { user, token: cookie.get("x-auth-token") },
-                    });
-                })
-                .catch(() => cookie.remove("x-auth-token"));
-    }, [auth, cookie]);
+  useEffect(() => {
+    if (cookie.get("x-auth-token") && !auth.token)
+      authService
+        .loginUserWithCookie(cookie.get("x-auth-token"))
+        .then(({ data }) => {
+          const user = data.data;
+          store.dispatch({
+            type: updateUser.type,
+            payload: { user, token: cookie.get("x-auth-token") },
+          });
+        })
+        .catch(() => {
+          const removeInterval = setInterval(() => {
+            cookie.remove("x-auth-token");
+            if (!cookie.get("x-auth-token")) clearInterval(removeInterval);
+          }, 200);
+        });
+  }, [auth, cookie]);
 
-    return (
-        <div className="navbar">
-            <NavBrand brandURL={icons.logo} linkURL={navbar.navBrandURL} />
-            <NavGroupBtn />
-            <NavLoading />
-        </div>
-    );
+  return (
+    <div className="navbar">
+      <NavBrand brandURL={icons.logo} linkURL={navbar.navBrandURL} />
+      <NavGroupBtn />
+      <NavLoading />
+    </div>
+  );
 };
 
 export default Navbar;

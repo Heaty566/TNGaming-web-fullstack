@@ -31,7 +31,7 @@ function DashUserSetRole() {
             setValue("isAdmin", user.isAdmin);
             setValue("isDeveloper", user.isDeveloper);
         }
-    }, [userIdWatcher, setValue]);
+    }, [userIdWatcher, setValue,users]);
 
     useEffect(() => {
         register("userId");
@@ -56,10 +56,10 @@ function DashUserSetRole() {
             data.isDeveloper !== userRef.current.isDeveloper
                 ? adminService.toggleUserDeveloper(token, data.userId)
                 : Promise.resolve();
-        console.log(adminToggle, developerToggle);
+    
         Promise.all([adminToggle, developerToggle])
             .then((prom) => {
-                prom.filter((item) => item).map(({ data: res }) => {
+                prom.filter((item) => item).forEach(({ data: res }) => {
                     setAlert({ msg: res.msg, type: "success" });
                 });
             })

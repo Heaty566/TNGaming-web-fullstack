@@ -5,46 +5,47 @@
 @import "./js/containers/scss/home.scss";
 @import "./js/containers/scss/aboutus.scss";
 @import "./js/components/dashboard/dashboard.scss";
+@import "./js/components/product/product.scss";
 
 html,
 body,
 #root {
-    z-index: -999;
-    font-size: 14px;
-    position: relative;
+  z-index: -999;
+  font-size: 14px;
+  position: relative;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
 }
 
 .layout__container {
-    @include FullDimension;
-    display: flex;
-    flex-direction: column;
-    z-index: -999;
-    position: relative;
-    background: $primary-color-light;
+  @include FullDimension;
+  display: flex;
+  flex-direction: column;
+  z-index: -999;
+  position: relative;
+  background: $primary-color-light;
 
-    position: relative;
+  position: relative;
 }
 
 .navbar__container {
-    @include FullDimension;
-    background: $primary-color-main;
-    height: $navbar-height;
+  @include FullDimension;
+  background: $primary-color-main;
+  height: $navbar-height;
 
-    position: fixed;
+  position: fixed;
 }
 
 .main__container {
-    padding-top: $navbar-height;
-    min-height: 100vh;
-    position: relative;
-    z-index: -1;
+  padding-top: $navbar-height;
+  min-height: 100vh;
+  position: relative;
+  z-index: -1;
 }
 
 // .footer__container {

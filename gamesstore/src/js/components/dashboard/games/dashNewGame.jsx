@@ -195,7 +195,7 @@ function DashNewGame() {
                     </div>
                 </div>
                 <div className="dash__row">
-                    <div className="dash__col dash__col-3">
+                    <div className="dash__col dash__col-2">
                         <p className="col__tag">Description</p>
                         <FormTextArea
                             name="description"

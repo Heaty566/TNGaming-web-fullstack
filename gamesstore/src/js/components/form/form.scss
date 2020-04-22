@@ -248,6 +248,7 @@
     &__textarea {
         @include BorderRadius;
         background: $secondary-color-main;
+    
         textarea {
             background: none;
             min-height: 400px;
