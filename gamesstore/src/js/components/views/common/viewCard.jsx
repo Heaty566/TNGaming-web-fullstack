@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ images, name, price, publisher }) => {
+const ProductCard = ({ images, name, price, publisher, linkURL }) => {
   return (
-    <Link className="product__card" to="#">
+    <Link className="product__card" to={linkURL}>
       <img
         className="card__image"
         alt={name}

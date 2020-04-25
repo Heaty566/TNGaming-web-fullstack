@@ -161,10 +161,10 @@
 
       .navbar__dropdown-mobile {
         position: absolute;
-        top: 64px;
+        top: 63px;
         left: 0;
         width: 100%;
-        transform: translateX(100%);
+        transform: translateX(150%);
 
         transition: 0.3s ease-in;
         background: $primary-color-lighter;
@@ -182,10 +182,14 @@
           transform: translateX(0);
         }
         .btn__link {
+          font-weight: bold;
+          letter-spacing: 0.5px;
           color: $primary-color-font;
           display: block;
         }
         .btn-mobile {
+          font-weight: bold;
+          letter-spacing: 0.5px;
           color: $primary-color-font;
           @include NoBorderOutline;
           background: none;
@@ -288,7 +292,7 @@
 
 @media only screen and (max-width: 900px) {
   .navbar {
-    padding: 0 10px;
+    padding: 0 15px;
 
     &__groupbtn {
       &-desktop {

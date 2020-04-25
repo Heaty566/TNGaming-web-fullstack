@@ -31,18 +31,20 @@ const ViewJumbotron = () => {
         >
           <div className="jumbotron__img">
             <img src={process.env.PUBLIC_URL + item.imageURL} alt="jumbotron" />
-            <div className="jumbotron__indicator">
-              {jumbotron.map((item, index) => (
-                <span
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  className={index === current ? "active" : ""}
-                ></span>
-              ))}
-            </div>
           </div>
           <div className="jumbotron__content">
-            <p className="content__subtitle">{item.contentSubtitle}</p>
+            <div className="content__subtitle">
+              <p>{item.contentSubtitle}</p>
+              <div className="jumbotron__indicator">
+                {jumbotron.map((item, index) => (
+                  <span
+                    key={index}
+                    onClick={() => setCurrent(index)}
+                    className={index === current ? "active" : ""}
+                  ></span>
+                ))}
+              </div>
+            </div>
             <h2 className="content__title">{item.contentTitle}</h2>
             <p className="content__main">{item.contentMain}</p>
 

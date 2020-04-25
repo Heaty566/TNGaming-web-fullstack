@@ -65,19 +65,31 @@ function NavUser() {
         <span className="drawer__divider"></span>
 
         <div className="drawer__column">
-          <Link className="drawer__link" to={navbar.userBtn.profileURL}>
+          <Link
+            className="drawer__link"
+            to={navbar.userBtn.profileURL}
+            onClick={() => setActive(false)}
+          >
             Profile
           </Link>
         </div>
 
         <div className="drawer__column">
-          <Link className="drawer__link" to={navbar.userBtn.libraryURL}>
+          <Link
+            className="drawer__link"
+            to={navbar.userBtn.libraryURL}
+            onClick={() => setActive(false)}
+          >
             Library
           </Link>
         </div>
 
         <div className="drawer__column">
-          <Link className="drawer__link" to={navbar.userBtn.communityURL}>
+          <Link
+            className="drawer__link"
+            to={navbar.userBtn.communityURL}
+            onClick={() => setActive(false)}
+          >
             Community
           </Link>
         </div>
@@ -92,7 +104,11 @@ function NavUser() {
 
         {auth.user.isAdmin || auth.user.isDeveloper ? (
           <div className="drawer__column">
-            <Link className="drawer__link" to={navbar.userBtn.dashboardURL}>
+            <Link
+              className="drawer__link"
+              to={navbar.userBtn.dashboardURL}
+              onClick={() => setActive(false)}
+            >
               Dashboard
             </Link>
           </div>

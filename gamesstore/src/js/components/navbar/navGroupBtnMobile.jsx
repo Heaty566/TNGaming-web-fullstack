@@ -18,6 +18,7 @@ function NavGroupBtnMobile() {
     store.dispatch({ type: updateUser.type, payload: { user: "", token: "" } });
     window.location.reload();
   };
+
   return (
     <div className="navbar__groupbtn-mobile">
       <div
@@ -49,20 +50,48 @@ function NavGroupBtnMobile() {
             <h4 className="name">{auth.user.name}</h4>
           </div>
         )}
-        <NavLink label="store" linkURL={navbar.storeURL} />
-        <NavLink label="About Us" linkURL={navbar.aboutUsURL} />
+        <NavLink
+          label="Store"
+          linkURL={navbar.storeURL}
+          onClick={() => setBtnActive(false)}
+        />
+        <NavLink
+          label="About Us"
+          linkURL={navbar.aboutUsURL}
+          onClick={() => setBtnActive(false)}
+        />
         {!auth.token && (
           <React.Fragment>
-            <NavLink label="Login" linkURL={navbar.loginURL} />
-            <NavLink label="Register" linkURL={navbar.registerURL} />
+            <NavLink
+              label="Login"
+              linkURL={navbar.loginURL}
+              onClick={() => setBtnActive(false)}
+            />
+            <NavLink
+              label="Register"
+              linkURL={navbar.registerURL}
+              onClick={() => setBtnActive(false)}
+            />
           </React.Fragment>
         )}
         {auth.token && (
           <React.Fragment>
             <span className="navbar__divider"></span>
-            <NavLink label="Profile" linkURL={navbar.userBtn.profileURL} />
-            <NavLink label="Library" linkURL={navbar.userBtn.libraryURL} />
-            <NavLink label="Community" linkURL={navbar.userBtn.communityURL} />
+            <NavLink
+              label="Profile"
+              linkURL={navbar.userBtn.profileURL}
+              onClick={() => setBtnActive(false)}
+            />
+            <NavLink
+              label="Library"
+              linkURL={navbar.userBtn.libraryURL}
+              onClick={() => setBtnActive(false)}
+            />
+            <NavLink
+              label="Community"
+              linkURL={navbar.userBtn.communityURL}
+              onClick={() => setBtnActive(false)}
+            />
             <button className="btn-mobile" onClick={handleLogout}>
               Logout
             </button>
@@ -71,7 +100,11 @@ function NavGroupBtnMobile() {
         {auth.user.isAdmin || auth.user.isDeveloper ? (
           <React.Fragment>
             <span className="navbar__divider"></span>
-            <NavLink label="Dashboard" linkURL={navbar.userBtn.dashboardURL} />
+            <NavLink
+              label="Dashboard"
+              linkURL={navbar.userBtn.dashboardURL}
+              onClick={() => setBtnActive(false)}
+            />
           </React.Fragment>
         ) : null}
       </div>

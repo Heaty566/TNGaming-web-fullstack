@@ -15,6 +15,7 @@ import Home from "./js/containers/home";
 import AboutUs from "./js/containers/aboutus";
 import Dashboard from "./js/containers/dashboard";
 import Store from "./js/containers/store";
+import GameProduct from "./js/containers/gameProduct";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path={routerURL.home} exact component={Home} />
             <Route path={routerURL.aboutus} exact component={AboutUs} />
             <Route path={routerURL.store} exact component={Store} />
+            <Route path={routerURL.product} component={GameProduct} />
             <ProtectedRouter path={routerURL.userLogin} component={Login} />
             <ProtectedRouter
               path={routerURL.userRegister}

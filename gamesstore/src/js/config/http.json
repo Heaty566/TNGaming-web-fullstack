@@ -18,6 +18,7 @@
     "home": "/home",
     "aboutus": "/aboutus",
     "store": "/games/store",
+    "product": "/game",
     "userLogin": "/users/login",
     "userRegister": "/users/register",
     "dashboard": "/users/dashboard"

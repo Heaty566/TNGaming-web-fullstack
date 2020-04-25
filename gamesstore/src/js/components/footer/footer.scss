@@ -1,32 +1,41 @@
 .footer {
-    padding: 50px 60px;
+  padding: 20px 60px;
+  background-color: $primary-color-lighter;
+  @include FlexStretch;
+
+  &__col {
+    & > * {
+      margin-bottom: 5px;
+    }
+  }
+
+  h4 {
+    opacity: 0.5;
+    color: $primary-color-font;
+  }
+
+  a {
+    display: block;
+    font-size: 0.88em;
+
+    color: $primary-color-font;
+  }
+
+  p {
+    color: $primary-color-font;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    padding: 20px 10px;
     background-color: $primary-color-lighter;
     @include FlexStretch;
+    flex-direction: column;
 
-    &__wrapper {
-        &-right,
-        &-left {
-            & > * {
-                margin-bottom: 10px;
-            }
-        }
+    &__col {
+      margin-bottom: 20px;
     }
-
-    h3 {
-        color: $primary-color-font;
-    }
-
-    a {
-        font-weight: 500;
-        display: block;
-        font-size: 14px;
-
-        color: $primary-color-font;
-        border-bottom: 1px solid $primary-color-font;
-    }
-
-    p {
-        color: $primary-color-font;
-        font-weight: 500;
-    }
+  }
 }

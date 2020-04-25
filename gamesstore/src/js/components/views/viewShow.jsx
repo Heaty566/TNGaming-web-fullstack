@@ -4,6 +4,7 @@ import _ from "lodash";
 import { useIsMountedRef } from "../../utils/hooks/useIsMountedRef";
 import { gameService } from "../../services";
 import { colors } from "../../constant";
+import { store } from "../../config/linkURL.json";
 import ProductCard from "./common/viewCard";
 import Loading from "../utils/loading/wave";
 
@@ -29,6 +30,7 @@ const ViewShow = () => {
               name={item.name}
               price={item.price}
               publisher={item.publisher}
+              linkURL={store.gameURL + "/" + item._id}
             />
           ))
         ) : (
@@ -48,6 +50,7 @@ const ViewShow = () => {
               images={item.images}
               name={item.name}
               price={item.price}
+              linkURL={store.gameURL + "/" + item._id}
               publisher={item.publisher}
             />
           ))

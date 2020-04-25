@@ -10,9 +10,13 @@
       &-desktop {
         @include ImageBox;
         background-image: url("/pages/images/background-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       &-mobile {
         background-image: url("/pages/images/background-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }
