@@ -7,7 +7,8 @@ import { store } from "../../js/stores/configStore";
 import { authService } from "../services/";
 
 import NavBrand from "../components/navbar/navBrand";
-import NavGroupBtn from "../components/navbar/navGrourpBtn";
+import NavGroupBtnDesktop from "../components/navbar/navGrourpBtnDesktop";
+import NavGroupBtnMobile from "../components/navbar/navGroupBtnMobile";
 import NavLoading from "../components/navbar/navLoading";
 
 import { navbar } from "../config/linkURL.json";
@@ -39,7 +40,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <NavBrand brandURL={icons.logo} linkURL={navbar.navBrandURL} />
-      <NavGroupBtn />
+      <NavGroupBtnDesktop />
+      <NavGroupBtnMobile />
       <NavLoading />
     </div>
   );

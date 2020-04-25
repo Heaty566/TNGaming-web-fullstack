@@ -5,13 +5,13 @@
 @import "./js/containers/scss/home.scss";
 @import "./js/containers/scss/aboutus.scss";
 @import "./js/components/dashboard/dashboard.scss";
-@import "./js/components/product/product.scss";
+@import "./js/components/views/view.scss";
 
 html,
 body,
 #root {
   z-index: -999;
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
 }
 
@@ -20,6 +20,12 @@ body,
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif, Arial, Helvetica;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
 }
 
 .layout__container {
@@ -47,6 +53,3 @@ body,
   position: relative;
   z-index: -1;
 }
-
-// .footer__container {
-// }

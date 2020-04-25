@@ -23,9 +23,8 @@ exports.add_new_platforms = [
     async (req, res) => {
         //{name: "String"}
         const db = req.app.get("db");
-        console.log(req.body);
-        //validate new platform
 
+        //validate new platform
         const { error } = platformsValidator.validatePlatform(_.pick(req.body, ["name"]));
         if (error) return res.status(400).json({ success: false, msg: error.details[0].message });
 

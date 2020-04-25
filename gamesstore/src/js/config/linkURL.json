@@ -11,8 +11,7 @@
       "profileURL": "/users/me",
       "libraryURL": "#",
       "communityURL": "#",
-      "adminDashboardURL": "/users/dashboard",
-      "developerDashboardURL": "/users/dashboard",
+      "dashboardURL": "/users/dashboard",
       "logoutURL": "/home"
     }
   },
@@ -26,7 +25,7 @@
     "loginInstead": "/users/login"
   },
   "introduction": {
-    "bannerURL": "/store"
+    "bannerURL": "games/store"
   },
   "dashboard": {
     "contronller": [

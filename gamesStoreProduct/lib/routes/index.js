@@ -10,13 +10,13 @@ const platforms = require("./platform");
 
 //setting URL
 const tagsURL = "/api/games/tags";
+const platformsURL = "/api/games/platforms";
 const authURL = "/api/users";
 const usersURL = "/api/users";
 const userGamesURL = "/api/users/games";
 const gamesURL = "/api/games";
 const adminURL = "/api/users/admin";
 const developerURL = "/api/users/developer";
-const platformsURL = "/api/games/platforms";
 
 module.exports = {
     tags,

@@ -17,29 +17,35 @@ import Dashboard from "./js/containers/dashboard";
 import Store from "./js/containers/store";
 
 function App() {
-    return (
-        <React.Fragment>
-            <div className="layout__container">
-                <header className="navbar__container">
-                    <Navbar />
-                </header>
-                <main className="main__container">
-                    <Switch>
-                        <Route path={routerURL.home} exact component={Home} />
-                        <Route path={routerURL.aboutus} exact component={AboutUs} />
-                        <Route path={routerURL.store} exact component={Store} />
-                        <ProtectedRouter path={routerURL.userLogin} component={Login} />
-                        <ProtectedRouter path={routerURL.userRegister} component={Register} />
-                        <HigherRoleRouter path={routerURL.dashboard} component={Dashboard} />
-                        {/* <Redirect from="/" exact to="/home" /> */}
-                    </Switch>
-                </main>
-                <footer className="footer__container">
-                    <Footer />
-                </footer>
-            </div>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <div className="layout__container">
+        <header className="navbar__container">
+          <Navbar />
+        </header>
+        <main className="main__container">
+          <Switch>
+            <Route path={routerURL.home} exact component={Home} />
+            <Route path={routerURL.aboutus} exact component={AboutUs} />
+            <Route path={routerURL.store} exact component={Store} />
+            <ProtectedRouter path={routerURL.userLogin} component={Login} />
+            <ProtectedRouter
+              path={routerURL.userRegister}
+              component={Register}
+            />
+            <HigherRoleRouter
+              path={routerURL.dashboard}
+              component={Dashboard}
+            />
+            <Redirect from="/" exact to="/home" />
+          </Switch>
+        </main>
+        <footer className="footer__container">
+          <Footer />
+        </footer>
+      </div>
+    </React.Fragment>
+  );
 }
 
 export default App;
