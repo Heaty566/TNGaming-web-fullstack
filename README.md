@@ -15,9 +15,8 @@ This project contains 3 folders:
 
 # Usage
 
-Replacing your database in config db.json then Npm install to install all the dependencies, and npm run start to run app
+Replacing your database in config db.json then Npm install to install all the dependencies, and npm run start to run app.
 
 # Issue
 
-I stopped this project on April 26, because I got tired when working with everything (Frontend, Backend, Design) that maked this project grown very slow. I think it will be better for me to move on learning something new.
-Thank you so much, I'm always welcome your contribute to this project.
+I stopped this project on April 26, because I got tired when working with everything (Frontend, Backend, Design) that made this project grown very slow. I think it will be better for me to move on to learning something new. Thank you so much, I'm always welcome your contribution to this project.
