@@ -6,7 +6,7 @@ import { gameService } from "../../services";
 import { colors } from "../../constant";
 import { store } from "../../config/linkURL.json";
 import ProductCard from "./common/viewCard";
-import Loading from "../utils/loading/wave";
+import Wave from "../utils/loading/wave";
 
 const ViewShow = () => {
   const [games, setGames] = useState();
@@ -19,9 +19,9 @@ const ViewShow = () => {
   const sliceShowOne = _(games).slice(0, 5).take(5).value();
   const sliceShowTwo = _(games).slice(3, 8).take(5).value();
   return (
-    <div className="product__main">
-      <h2 className="product__title">Trending</h2>
-      <div className="product__show">
+    <div className="view__main">
+      <h2 className="view__title">Trending</h2>
+      <div className="view__show">
         {sliceShowOne.length ? (
           sliceShowOne.map((item) => (
             <ProductCard
@@ -34,15 +34,11 @@ const ViewShow = () => {
             />
           ))
         ) : (
-          <Loading
-            height="24px"
-            width="12px"
-            color={colors.primaryColorLighter}
-          />
+          <Wave height="24px" width="12px" color={colors.primaryColorLighter} />
         )}
       </div>
-      <h2 className="product__title">Hot Sale</h2>
-      <div className="product__show">
+      <h2 className="view__title">Hot Sale</h2>
+      <div className="view__show">
         {sliceShowTwo.length ? (
           sliceShowTwo.map((item) => (
             <ProductCard
@@ -55,11 +51,7 @@ const ViewShow = () => {
             />
           ))
         ) : (
-          <Loading
-            height="24px"
-            width="12px"
-            color={colors.primaryColorLighter}
-          />
+          <Wave height="24px" width="12px" color={colors.primaryColorLighter} />
         )}
       </div>
     </div>

@@ -5,7 +5,7 @@ import ViewShow from "../components/views/viewShow";
 
 const Store = () => {
   return (
-    <div className="product">
+    <div className="view">
       <ViewJumbotron />
       <ViewShow />
     </div>

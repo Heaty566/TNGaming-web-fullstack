@@ -1,4 +1,4 @@
-.product {
+.view {
   min-height: 100vh;
   padding: 50px 120px;
   &__jumbotron {
@@ -168,7 +168,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .product {
+  .view {
     padding: 20px;
     &__jumbotron {
       height: 700px;

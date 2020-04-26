@@ -19,7 +19,7 @@ const ViewJumbotron = () => {
   }, [current]);
 
   return (
-    <div className="product__jumbotron">
+    <div className="view__jumbotron">
       {jumbotron.map((item, index) => (
         <div
           key={item.contentTitle}

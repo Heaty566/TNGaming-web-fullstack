@@ -3,11 +3,8 @@ const { removeFile } = require("../utils/removeFile");
 const { logger } = require("../logging");
 
 formatGameImage = (imageURL) => {
-  //   const path = imageURL.split(".");
-  //   console.log(path);
   Jimp.read(imageURL)
     .then((image) => {
-      //   if (path[1] !== "jpg") removeFile(imageURL);
       image.quality(40).write(imageURL);
     })
     .catch(() => {

@@ -29,7 +29,10 @@ function App() {
             <Route path={routerURL.home} exact component={Home} />
             <Route path={routerURL.aboutus} exact component={AboutUs} />
             <Route path={routerURL.store} exact component={Store} />
-            <Route path={routerURL.product} component={GameProduct} />
+            <Route
+              path={routerURL.gameProduct + "/:gameId"}
+              component={GameProduct}
+            />
             <ProtectedRouter path={routerURL.userLogin} component={Login} />
             <ProtectedRouter
               path={routerURL.userRegister}
