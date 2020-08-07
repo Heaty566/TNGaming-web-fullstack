@@ -1,0 +1,26 @@
+{
+  "serverURL": {
+    "development": "http://localhost:4000/api",
+    "production": "https://gamesstore-demo.herokuapp.com/api"
+  },
+  "endPointURL": {
+    "tagsURL": "/games/tags",
+    "platformsURL": "/games/platforms",
+    "usersURL": "/users",
+    "userGamesURL": "/users/games",
+    "gamesURL": "/games",
+    "authURL": "/users",
+    "adminURL": "/users/admin",
+    "developerURL": "/users/developer"
+  },
+
+  "routerURL": {
+    "home": "/home",
+    "aboutus": "/aboutus",
+    "store": "/games/store",
+    "gameProduct": "/game",
+    "userLogin": "/users/login",
+    "userRegister": "/users/register",
+    "dashboard": "/users/dashboard"
+  }
+}

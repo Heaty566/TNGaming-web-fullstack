@@ -1,0 +1,244 @@
+.view {
+  min-height: 100vh;
+  padding: 50px 120px;
+  &__jumbotron {
+    height: 350px;
+    animation: fadeIn 0.4s;
+    width: 100%;
+    position: relative;
+  }
+
+  .jumbotron {
+    &__slice {
+      height: inherit;
+      position: absolute;
+      transition: 1s ease-in-out;
+      opacity: 0;
+      @include FlexBetween;
+    }
+    &__img {
+      flex: 65%;
+      width: 100%;
+      position: relative;
+      height: inherit;
+      img {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__active {
+      opacity: 1;
+
+      z-index: 10;
+    }
+
+    &__content {
+      flex: 35%;
+      height: inherit;
+      background: $primary-color-lighter;
+      color: $primary-color-font;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 20px 25px 20px;
+      .content {
+        &__subtitle {
+          font-weight: bold;
+          opacity: 0.7;
+          margin-bottom: 10px;
+          @include FlexBetween;
+          .jumbotron__indicator {
+            bottom: 10px;
+
+            width: inherit;
+            transition: 0.2s;
+            @include FlexCenter;
+            .active {
+              background: $primary-color-light;
+            }
+            span {
+              cursor: pointer;
+              @include BorderRadius;
+              display: block;
+              height: 15px;
+              border-radius: 50%;
+              width: 15px;
+              background: $primary-color-font;
+              margin: 0 5px;
+            }
+          }
+        }
+
+        &__title {
+          margin-bottom: 10px;
+        }
+
+        &__main {
+          opacity: 0.7;
+          text-indent: 20px;
+          line-height: 25px;
+          overflow: hidden;
+          margin-bottom: 30px;
+          flex: 1;
+        }
+
+        &__link {
+          display: flex;
+          cursor: pointer;
+          font-weight: bold;
+
+          color: $primary-color-font;
+          transition: 0.1s;
+          p {
+            margin-right: 5px;
+          }
+
+          img {
+            transition: 1s;
+          }
+          &:hover {
+            img {
+              transform: translateX(50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__main {
+    margin: 50px 0 20px 0;
+    color: $primary-color-font;
+  }
+
+  &__title {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+  }
+
+  &__show {
+    display: flex;
+    &:not(:first-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    color: $primary-color-font;
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child):not(:first-child) {
+      margin: 0 10px;
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+    }
+    .card {
+      &__small {
+        opacity: 0.5;
+        display: block;
+        margin: 5px 0;
+      }
+
+      &__image {
+        height: 20vw;
+        object-fit: cover;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      &__price {
+        font-weight: 700;
+        letter-spacing: 1px;
+        &::before {
+          content: "$";
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .view {
+    padding: 20px;
+    &__jumbotron {
+      height: 700px;
+    }
+
+    .jumbotron {
+      &__slice {
+        flex-direction: column;
+        opacity: 0;
+        justify-content: initial;
+        align-items: initial;
+        height: inherit;
+      }
+      &__img {
+        height: 400px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__active {
+        opacity: 1;
+
+        z-index: 10;
+      }
+
+      &__content {
+        height: 300px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    &__show {
+      display: flex;
+      flex-direction: column;
+      &:not(:first-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__card {
+      padding: 0 10px;
+      &:not(:last-child):not(:first-child) {
+        margin: 0 0 20px 0;
+      }
+
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+
+      .card {
+        &__image {
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

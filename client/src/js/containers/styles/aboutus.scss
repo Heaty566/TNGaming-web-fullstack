@@ -1,0 +1,45 @@
+.aboutus {
+  animation: fadeIn 0.5s ease-in-out;
+  color: $primary-color-font;
+  padding: 50px 120px;
+  min-height: 100vh;
+  @include FlexStretch;
+
+  &__container {
+    & > * {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      word-wrap: break-word;
+      text-indent: 20px;
+      opacity: 0.5;
+      letter-spacing: 0.5px;
+      line-height: 30px;
+    }
+
+    .members {
+      display: flex;
+      &__card {
+        img {
+          object-fit: cover;
+          height: 150px;
+          width: 150px;
+        }
+        h4 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .aboutus {
+    padding: 20px 20px;
+  }
+}

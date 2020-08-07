@@ -1,0 +1,125 @@
+{
+  "navbar": {
+    "navBrandURL": "/home",
+    "searchBoxURL": "/games/search",
+    "searchPushToGame": "/game",
+    "loginURL": "/users/login",
+    "registerURL": "/users/register",
+    "aboutUsURL": "/aboutus",
+    "storeURL": "/games/store",
+    "userBtn": {
+      "profileURL": "/users/me",
+      "libraryURL": "#",
+      "communityURL": "#",
+      "dashboardURL": "/users/dashboard",
+      "logoutURL": "/home"
+    }
+  },
+  "login": {
+    "nextURL": "/home",
+    "registerInstead": "/users/register"
+  },
+
+  "register": {
+    "nextURL": "/home",
+    "loginInstead": "/users/login"
+  },
+  "introduction": {
+    "bannerURL": "games/store"
+  },
+  "dashboard": {
+    "contronller": [
+      {
+        "section": { "label": "User", "isAdmin": true, "isDeveloper": false },
+        "options": [
+          {
+            "label": "Overview",
+            "linkURL": "/user/overview",
+            "isAdmin": true,
+            "isDeveloper": false
+          },
+          {
+            "label": "Set Role",
+            "linkURL": "/user/setrole",
+            "isAdmin": true,
+            "isDeveloper": false
+          }
+        ]
+      },
+      {
+        "section": {
+          "label": "Developer",
+          "isAdmin": true,
+          "isDeveloper": true
+        },
+        "options": []
+      },
+      {
+        "section": { "label": "Game", "isAdmin": true, "isDeveloper": true },
+        "options": [
+          {
+            "label": "Overview",
+            "linkURL": "#",
+            "isAdmin": true,
+            "isDeveloper": false
+          },
+          {
+            "label": "Add New Game",
+            "linkURL": "/game/addnewgame",
+            "isAdmin": true,
+            "isDeveloper": true
+          },
+          {
+            "label": "Add New tag",
+            "linkURL": "/game/tag/addnewtag",
+            "isAdmin": true,
+            "isDeveloper": false
+          },
+          {
+            "label": "Add New Platform",
+            "linkURL": "/game/tag/addnewplatform",
+            "isAdmin": true,
+            "isDeveloper": false
+          }
+        ]
+      }
+    ]
+  },
+  "store": {
+    "jumbotron": [
+      {
+        "imageURL": "/pages/images/jumbotrons/slice4.jpg",
+        "contentSubtitle": "NOW AVAILABLE",
+        "contentTitle": "Gris",
+        "contentMain": "Gris is a hopeful young girl lost in her own world, dealing with apainful experience in her life. Her journey through sorrow is manifested in her dress, which grants new abilities to better navigate her faded reality. As the story unfolds, Gris will grow emotionally and see her world in a different way, revealing new paths to explore using her new abilities.",
+        "contentLink": "Learn More",
+        "contentURL": "#"
+      },
+      {
+        "imageURL": "/pages/images/jumbotrons/slice2.jpg",
+        "contentSubtitle": "HOT SALE",
+        "contentTitle": "GTAV",
+        "contentMain": "Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV.",
+        "contentLink": "Learn More",
+        "contentURL": "#"
+      },
+      {
+        "imageURL": "/pages/images/jumbotrons/slice1.jpg",
+        "contentSubtitle": "NOW AVAILABLE",
+        "contentTitle": "The Last Of Us",
+        "contentMain": "The Last of Us is a 2013 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. Players control Joel, a smuggler tasked with escorting a teenage girl, Ellie, across a post-apocalyptic United States. The Last of Us is played from a third-person perspective.",
+        "contentLink": "Learn More",
+        "contentURL": "#"
+      },
+      {
+        "imageURL": "/pages/images/jumbotrons/slice3.jpg",
+        "contentSubtitle": "NOW AVAILABLE",
+        "contentTitle": "Astroneer",
+        "contentMain": "Astroneer is a sandbox adventure game developed by System Era Softworks. An early access version of the game was released on December 16, 2016, and a 1.0 version of the game was released on February 6, 2019. The player is tasked with colonizing planets, creating structures, and mining resources.",
+        "contentLink": "Learn More",
+        "contentURL": "#"
+      }
+    ],
+    "gameURL": "/game"
+  }
+}

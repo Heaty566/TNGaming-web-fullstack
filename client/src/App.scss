@@ -1,0 +1,58 @@
+@import "./constant.scss";
+@import "./js/components/navbar/navbar.scss";
+@import "./js/components/form/form.scss";
+@import "./js/components/footer/footer.scss";
+@import "./js/components/dashboard/dashboard.scss";
+@import "./js/components/views/view.scss";
+@import "./js/containers/styles/home.scss";
+@import "./js/containers/styles/aboutus.scss";
+@import "./js/containers/styles/gameProduct.scss";
+
+html,
+body,
+#root {
+  z-index: -999;
+  font-size: 16px;
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.layout__container {
+  @include FullDimension;
+  display: flex;
+  flex-direction: column;
+  z-index: -999;
+  position: relative;
+  background: $primary-color-light;
+
+  position: relative;
+}
+
+.navbar__container {
+  @include FullDimension;
+  background: $primary-color-main;
+  height: $navbar-height;
+
+  position: fixed;
+}
+
+.main__container {
+  padding-top: $navbar-height;
+  min-height: 100vh;
+  position: relative;
+  z-index: -1;
+}
