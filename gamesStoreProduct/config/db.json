@@ -1,7 +1,0 @@
-{
-  "dataBaseUrl": {
-    "development": "",
-    "production": ""
-  },
-  "dataBaseOptions": { "useUnifiedTopology": true }
-}
